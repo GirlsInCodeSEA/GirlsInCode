@@ -1,28 +1,32 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="{{ url_for('static', filename = 'styles.css')}}">
-        <meta charset = "utf-8">
-        <link  rel="icon" href="https://yt3.googleusercontent.com/ytc/AIdro_mgnodbikJ-Ti1M2Eo9eR5HSjh69ZrKFbUMpactPIe1Xg=s900-c-k-c0x00ffffff-no-rj">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Girls In Code SEA</title>
-    </head>
-    <body>
-        <header>
-            
-            <a id="home" href = "{{url_for('home')}}">Home</a>
-            <a href = "{{url_for('home')}}"><img id="logo" alt="Girls in Code SEA Logo" src ="{{ url_for('static', filename = 'gic_logo.png')}}"></a>
-            <nav>
-                <ul>
-                    <li><a href = "{{ url_for('competitions') }}">Competitions</a></li>
-                    <li><a href="{{ url_for('scoreboard') }}">Scoreboard</a></li>
-                    <li><a href = "{{ url_for('signIn') }}">Sign In</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main class="flex-grow">
-            <h1 class = "title" >2023</h1>
-        </main>
-        {% include 'includes/footer.html' %}
-    </body>
-</html>
+{% extends 'base.html' %}
+{% block title %}2023 questions — Girls In Code{% endblock %}
+{% block content %}
+  <section class="container page-intro">
+    <a class="back-link" href="{{ url_for('competitions') }}">← All competitions</a>
+    <p class="eyebrow">THE COMPETITION ARCHIVE</p>
+    <h1>2023<span>.</span></h1>
+    <p>Behind the Screens: 36 coding questions exploring the apps we use every day.</p>
+    <nav class="button-row" aria-label="Question themes">
+      {% for theme in themes %}
+        <a class="button button-outline button-small" href="#{{ theme|lower }}">{{ theme }}</a>
+      {% endfor %}
+    </nav>
+  </section>
+  <section class="container section section-first" aria-label="2023 questions">
+    <div class="archive-theme-grid">
+      {% for theme in themes %}
+        {% set items = questions|selectattr('theme', 'equalto', theme)|list %}
+        <article class="level-panel archive-theme" id="{{ theme|lower }}" aria-labelledby="{{ theme|lower }}-heading">
+          <span class="level-number">{{ '%02d'|format(loop.index) }} / {{ items[0].character|upper }}</span>
+          <h2 id="{{ theme|lower }}-heading">{{ theme }}</h2>
+          <p>Six questions to explore.</p>
+          <ul>
+            {% for question in items %}
+              <li><a href="{{ url_for('question_2023', number=question.number) }}"><span>{{ question.number }}. {{ question.title }}</span><span aria-hidden="true">↗</span></a></li>
+            {% endfor %}
+          </ul>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

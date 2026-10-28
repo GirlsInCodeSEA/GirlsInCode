@@ -1,0 +1,24 @@
+{
+  "15": {
+    "output": "Restaurant Name:Nobu\nLocation:Four Seasons Hotel Kuala Lumpur\nDish 1:Kampachi Sashimi Salad\nDish 1 rating:7.5\nDish 2:Crispy Soft Shell Crab with Ponzu\nDish 2 rating:8.3\nWould I return? ???"
+  },
+  "22": {
+    "starter": "Song1 = 'Murder And Crime – Sufjan Stevens'\nSong2 = 'To Let A Good Thing Die – Bruno Major'\nSong3 = 'Reach Out – Sufjan Stevens'\nSong4 = 'Home – Bruno Major'\nSong5 = 'Mystery of Love – Sufjan Stevens'",
+    "output": "1. Murder And Crime – Sufjan Stevens\n2. Murder And Crime – Sufjan Stevens\n3. Murder And Crime – Sufjan Stevens\n4. To Let A Good Thing Die – Bruno Major\n5. To Let A Good Thing Die – Bruno Major\n6. To Let A Good Thing Die – Bruno Major\n7. Reach Out – Sufjan Stevens\n8. Reach Out – Sufjan Stevens\n9. Reach Out – Sufjan Stevens\n10. Home – Bruno Major\n11. Home – Bruno Major\n12. Home – Bruno Major\n13. Mystery of Love – Sufjan Stevens\n14. Mystery of Love – Sufjan Stevens\n15. Mystery of Love – Sufjan Stevens"
+  },
+  "23": {
+    "output": "9\n['Here With Me by d4vd']\n5\n['Ghostin by Ariana Grande']\n7\n['Low by SZA']"
+  },
+  "26": {
+    "output": "Top Songs\n1 Baby\n2 FEVER\n3 Easy\n4 No Mercy\n5 That's My Girl\n\nTop Artists\n1 Taylor Swift\n2 5 Seconds of Summer\n3 Queen\n4 miss A\n5 Ariana Grande\n\nTop Genre\nPop\n\nMinutes Listened\n483"
+  },
+  "29": {
+    "output": "Which speed? (0.75, 1.0, 1.25, 1.5, 2.0) 1.25\nSpeed change successful, now playing at 1.25x speed."
+  },
+  "31": {
+    "output": "1. ['curry', 'wellness', 'cooking']\n2. ['fried rice', 'wellness', 'cooking']\n3. ['noodles', 'wellness', 'cooking']\n4. ['marathon', 'wellness', 'fitness']\n5. ['habits', 'wellness', 'study methods']\n6. ['cardio', 'wellness', 'fitness']\n7. ['tips', 'wellness', 'study methods']\n8. ['workout', 'wellness', 'fitness']\n9. ['zumba', 'wellness', 'fitness']\n10. ['schedule', 'wellness', 'study methods']\n11. ['painting', 'arts', 'visual']\n12. ['dancing', 'arts', 'musicals']\n13. ['acrylics', 'arts', 'visual']\n14. ['singing', 'arts', 'musicals']"
+  },
+  "49": {
+    "starter": "import random\n\ndef get_viewing_history(filename):\n    # TODO: Implement this function\n    pass\n\ndef get_favorite_genres(filename):\n    # TODO: Implement this function\n    pass\n\ndef get_recommendations(viewing_history, favorite_genres):\n    # TODO: Implement this function\n    pass\n\nif __name__ == '__main__':\n    viewing_history = get_viewing_history('viewing_history.txt')\n    favorite_genres = get_favorite_genres('favorite_genres.txt')\n    recommendations = get_recommendations(viewing_history, favorite_genres)\n    if recommendations:\n        recommendation = random.choice(recommendations)\n        print(recommendation[0])\n    else:\n        print('Sorry, no recommendations available.')"
+  }
+}

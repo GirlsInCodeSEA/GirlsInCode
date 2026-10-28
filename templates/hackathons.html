@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Hackathon archives — Girls In Code{% endblock %}
+{% block content %}
+  <section class="container page-intro">
+    <p class="eyebrow">GIC EVENT ARCHIVES</p>
+    <h1>Our<br><span>hackathons.</span></h1>
+    <p>A look back at GIC’s hackathon events,<br class="desktop-break"> with event information and a dedicated scoreboard for each available year.</p>
+  </section>
+  <section class="container section section-first">
+    <div class="section-heading"><div><p class="eyebrow">PAST EVENTS</p><h2>The archive.</h2></div></div>
+    <div class="archive-list">
+      <a class="archive-row" href="{{ url_for('hackathon_2025') }}">
+        <span class="archive-index">01</span>
+        <div><span class="eyebrow">COMPLETED / HACKATHON</span><h3>2025</h3></div>
+        <p>The 2030 AI Challenge. Event archive and the 2025 hackathon scoreboard.</p>
+        <span class="circle-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+{% endblock %}

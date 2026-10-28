@@ -1,10 +1,7 @@
 import tokenize
 import os
 import csv
-import re
-import keyword
-from collections import Counter
-import numpy as np
+from pathlib import Path
 import ast
 import pandas as pd
 
@@ -15,7 +12,7 @@ def extract_lexical_features(file):
         meaningful_tokens = [tokval for toknum, tokval, *_ in tokens_list if toknum not in (tokenize.ENCODING, tokenize.ENDMARKER, tokenize.STRING, tokenize.NUMBER)]
         num_comments = sum(1 for tok in tokens_list if tok.type == tokenize.COMMENT)
         num_lines = sum(1 for tok in tokens_list if tok.type == tokenize.NL or tok.type == tokenize.NEWLINE)
-        comment_density = num_comments / num_lines
+        comment_density = num_comments / num_lines if num_lines else 0
         avg_token_length = sum(len(token) for token in meaningful_tokens) / len(meaningful_tokens) if meaningful_tokens else 0
         identifiers = [tok.string for tok in tokens_list if tok.type == tokenize.NAME]
         num_identifiers = len(identifiers)
@@ -36,7 +33,7 @@ def extract_lexical_features(file):
 
 
 def extract_structural_features(file):
-    with open(file, "r", encoding="utf-8") as fin:
+    with tokenize.open(file) as fin:
         lines = fin.readlines()  
         num_lines = len(lines)
         avg_line_length = sum(len(line.strip()) for line in lines) / num_lines if num_lines > 0 else 0
@@ -69,6 +66,9 @@ class ASTFeatureExtractor(ast.NodeVisitor):
 
     def visit_FunctionDef(self, node):
         self.function = True
+        self.generic_visit(node)
+
+    visit_AsyncFunctionDef = visit_FunctionDef
         
 
     def visit_For(self, node):
@@ -78,6 +78,7 @@ class ASTFeatureExtractor(ast.NodeVisitor):
             if isinstance(child, ast.Call) and isinstance(child.func, ast.Attribute):
                 if child.func.attr == "append":
                     self.for_loops_with_append += 1
+                    break
             
         if node.orelse:
             self.else_in_loop += 1
@@ -87,6 +88,8 @@ class ASTFeatureExtractor(ast.NodeVisitor):
     def visit_While(self, node):
         self.while_loop_count += 1
         self.total_loop_count += 1
+        if node.orelse:
+            self.else_in_loop += 1
         self.generic_visit(node)
     
     def visit_Assign(self, node):
@@ -105,7 +108,7 @@ class ASTFeatureExtractor(ast.NodeVisitor):
 
 
 def extract_ast_features(file):
-    with open(file, "r", encoding="utf-8") as fin:
+    with tokenize.open(file) as fin:
         code = fin.read() 
         try:
             tree = ast.parse(code)
@@ -133,29 +136,25 @@ def extract_all_features(file):
     features.update(extract_ast_features(file))
     return features
 
-fout = 'features.csv'
-data = []
-
-for folder, label in [('human_samples', 'human'), ('ai_samples', 'ai')]:
-    for filename in os.listdir(folder):
-        if filename.endswith('.py'):
-            full_path = os.path.join(folder, filename)
-            features={}
-            features["filename"] = filename
-            features.update(extract_all_features(full_path))
-            features["label"] = label
-            data.append(features)
-
-
-with open(fout, 'w', newline='', encoding='utf-8') as csvfile:
-    writer = csv.DictWriter(csvfile, fieldnames=data[0].keys())
-    writer.writeheader()
-    writer.writerows(data)
-
-
+def build_dataset(base_dir=None):
+    base_dir = Path(base_dir) if base_dir else Path(__file__).resolve().parent
+    data = []
+    for folder, label in [('human_samples', 'human'), ('ai_samples', 'ai')]:
+        for path in sorted((base_dir / folder).glob('*.py')):
+            try:
+                features = extract_all_features(path)
+                if "error" in features:
+                    raise ValueError(features["error"])
+            except (SyntaxError, ValueError, tokenize.TokenError) as exc:
+                print(f"Skipping {path.name}: {exc}")
+                continue
+            data.append({"filename": path.name, **features, "label": label})
+    if not data:
+        raise ValueError("No valid Python samples found.")
+    df = pd.DataFrame(data)
+    df.to_csv(base_dir / 'features.csv', index=False)
+    df.sort_values(by='filename').to_csv(base_dir / 'sorted_file.csv', index=False)
 
 
-df = pd.read_csv('features.csv')
-df_sorted = df.sort_values(by='filename')
-df_sorted.to_csv('sorted_file.csv', index=False)
-
+if __name__ == "__main__":
+    build_dataset()

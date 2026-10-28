@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block title %}{{ edition }} — Girls In Code{% endblock %}
+{% block content %}
+  <section class="container page-intro compact-intro">
+    <a class="back-link" href="{{ url_for('competitions_2025') }}">← 2025 competitions</a>
+    <p class="eyebrow">THE COMPETITION ARCHIVE</p>
+    <h1>{{ edition }}<span>.</span>
+    </h1>
+    <p>A chapter worth revisiting. Explore the challenges,<br class="desktop-break"> meet the winners, and keep learning.</p>
+    <div class="button-row">
+      <a class="button button-small" href="{{ url_for('competition_scoreboard_2025') }}">2025 competition scoreboard ↗</a>
+      {% for label, link in resources %}
+        <a class="button button-outline button-small" href="{{ link }}" target="_blank" rel="noopener noreferrer">{{ label }} ↗</a>
+      {% endfor %}
+    </div>
+  </section>
+  <section class="container section section-first">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">PICK YOUR STARTING POINT</p>
+        <h2>Ready, set, think.</h2>
+      </div>
+    </div>
+    {% if not practice_available %}
+      <p class="subtle-note">Online practice questions are temporarily unavailable.{% if booklet_questions %} You can still read all {{ booklet_questions|length }} archived questions below.{% endif %}</p>
+    {% endif %}
+    <div class="question-levels">
+      {% for level, description, items in [('Beginner','Start with the essentials.', beginner),('Intermediate','Connect the dots.', intermediate),('Advanced','Go a little further.', advanced)] %}
+        <article class="level-panel">
+          <span class="level-number">0{{ loop.index }}</span>
+          <h3>{{ level }}</h3>
+          <p>{{ description }}</p>
+          {% if booklet_questions %}
+            <p class="eyebrow">OFFICIAL BOOKLET QUESTIONS</p>
+            <ul>
+              {% for q in booklet_questions if q.level == level %}
+                <li>
+                  <a href="{{ url_for(booklet_endpoint, level=q.level|lower, number=q.number) }}">
+                    <span>{% if q.label %}{{ q.label }}{% else %}{{ q.number }}. {{ q.title }}{% endif %}{% if q.status == 'withdrawn' %} · Withdrawn{% endif %}</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% if items %}<p class="eyebrow">ONLINE PRACTICE</p>{% endif %}
+          {% if items or not booklet_questions %}
+          <ul>
+            {% for q in items %}
+              <li>
+                <a href="{{ url_for('question', question_id=q.id) }}">
+                  <span>{{ q.title }}</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </li>
+            {% else %}
+              <li class="empty-questions">Questions haven’t been added here yet.</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+  <section class="container section section-first">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">A ROUND OF APPLAUSE</p>
+        <h2>Meet the winners.</h2>
+      </div>
+      <span class="heading-spark" aria-hidden="true">✳</span>
+    </div>
+    <div class="winners-grid">
+      {% for category, people in winners %}
+        <article class="winner-panel">
+          <h3>{{ category }}</h3>
+          <ol>
+            {% for medal, name in people %}
+              <li>
+                <span aria-label="{{ medal }} place">{{ medal }}</span>
+                <span>{{ name }}</span>
+              </li>
+            {% endfor %}
+          </ol>
+        </article>
+      {% endfor %}
+    </div>
+    <div class="makers">
+      <span class="eyebrow">THE MINDS BEHIND THE QUESTIONS</span>
+      <p>{{ makers|join(' · ') }}</p>
+    </div>
+  </section>
+{% endblock %}

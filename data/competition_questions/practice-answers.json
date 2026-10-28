@@ -1,0 +1,1764 @@
+{
+  "2023-1": {
+    "cases": [
+      {
+        "label": "Would I return?",
+        "expected": "yes",
+        "mode": "text",
+        "instructions": "Enter only yes or no.",
+        "ignore_case": true
+      }
+    ],
+    "explanation": "7.5 + 8.3 = 15.8, which is at least 12.",
+    "note": "This checks the return decision; the full exercise also asks you to format the restaurant review.",
+    "source": "2023 Behind the Screens slides 15; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-2": {
+    "cases": [
+      {
+        "label": "Feed decisions",
+        "expected": "cooking reels: keep in feed\nclothing posts: keep in feed\nrugby posts: keep in feed\nanything meme related: keep in feed\npolitical posts: hide from feed\ndiving compilations: hide from feed\ncelebrity drama: hide from feed\npet posts: hide from feed",
+        "mode": "unordered_lines",
+        "instructions": "Enter one “content: keep in feed” or “content: hide from feed” line for each of the eight content types, using the names in the question. Any line order is accepted."
+      },
+      {
+        "label": "Counts",
+        "expected": "[4, 4]",
+        "mode": "numbers",
+        "instructions": "Enter the number kept, then the number hidden."
+      }
+    ],
+    "explanation": "Each of the four liked categories stays; each of the four disliked categories is hidden.",
+    "note": "",
+    "source": "2023 Behind the Screens slides 16; independently worked output/checkpoint.",
+    "checkpoint": false
+  },
+  "2023-3": {
+    "cases": [
+      {
+        "label": "Generated password",
+        "expected": "gnidoc",
+        "mode": "choice",
+        "instructions": "Use this practice word list: coding, planet, rocket, galaxy, python, school, garden, friend, future, puzzle. Submit one randomly selected word reversed.",
+        "choices": [
+          "gnidoc",
+          "tenalp",
+          "tekcor",
+          "yxalag",
+          "nohtyp",
+          "loohcs",
+          "nedrag",
+          "dneirf",
+          "erutuf",
+          "elzzup"
+        ]
+      }
+    ],
+    "explanation": "Select any index from 0 through 9, then reverse that word with word[::-1]. Any of the ten valid reversals is accepted.",
+    "note": "New practice word list. A submitted output cannot demonstrate that selection was random or that subroutines were used.",
+    "source": "2023 Behind the Screens slides 17; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-4": {
+    "cases": [
+      {
+        "label": "Follower/post ratios",
+        "expected": "[200, 150, 300]",
+        "mode": "numbers",
+        "instructions": "Practice snapshot (followers, posts): buzzfeedtasty (12000, 60), milktpapi (9000, 60), doobydobap (15000, 50). Enter all three ratios in that order."
+      },
+      {
+        "label": "Most successful account",
+        "expected": "doobydobap",
+        "mode": "text",
+        "instructions": ""
+      }
+    ],
+    "explanation": "Divide followers by posts: 200, 150 and 300. The largest ratio is 300 for doobydobap.",
+    "note": "New illustrative snapshot, not live or historical Instagram statistics. The original question requires changing external data.",
+    "source": "2023 Behind the Screens slides 18; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-5": {
+    "cases": [
+      {
+        "label": "Post 3 state",
+        "expected": "[2, 1, 1]",
+        "mode": "numbers",
+        "instructions": "Starting with the original empty arrays: view post 3 twice, like it once, and comment “Great!”. Enter its final views, likes and number of comments."
+      },
+      {
+        "label": "Comments for post 3",
+        "expected": "[\"Great!\"]",
+        "mode": "sequence",
+        "instructions": "Enter the comments as a list."
+      }
+    ],
+    "explanation": "Each view adds one, one like adds one, and appending the comment leaves a one-item comment list.",
+    "note": "New interaction sequence for checking the original app behaviour.",
+    "source": "2023 Behind the Screens slides 19; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-6": {
+    "cases": [
+      {
+        "label": "Post order",
+        "expected": "[\"B\", \"A\", \"C\"]",
+        "mode": "sequence",
+        "instructions": "New practice CSV rows (post, likes, comments): A,80,20; B,150,50; C,30,20. num_followers = 1000. Enter post IDs in descending engagement order."
+      },
+      {
+        "label": "Engagement rates",
+        "expected": "[0.2, 0.1, 0.05]",
+        "mode": "numbers",
+        "instructions": "Enter the three engagement rates in the same descending order."
+      }
+    ],
+    "explanation": "B: (150+50)/1000 = 0.2; A: 0.1; C: 0.05.",
+    "note": "The original spreadsheet is unavailable. These labelled practice rows replace it only for this check.",
+    "source": "2023 Behind the Screens slides 20; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-7": {
+    "cases": [
+      {
+        "label": "Numbered queue",
+        "expected": "1. Murder And Crime – Sufjan Stevens\n2. Murder And Crime – Sufjan Stevens\n3. Murder And Crime – Sufjan Stevens\n4. To Let A Good Thing Die – Bruno Major\n5. To Let A Good Thing Die – Bruno Major\n6. To Let A Good Thing Die – Bruno Major\n7. Reach Out – Sufjan Stevens\n8. Reach Out – Sufjan Stevens\n9. Reach Out – Sufjan Stevens\n10. Home – Bruno Major\n11. Home – Bruno Major\n12. Home – Bruno Major\n13. Mystery of Love – Sufjan Stevens\n14. Mystery of Love – Sufjan Stevens\n15. Mystery of Love – Sufjan Stevens",
+        "mode": "text",
+        "instructions": "Paste all 15 numbered lines, including song and artist."
+      }
+    ],
+    "explanation": "Repeat each song three times before moving to the next song, numbering continuously from 1 to 15.",
+    "note": "",
+    "source": "2023 Behind the Screens slides 22; independently worked output/checkpoint.",
+    "checkpoint": false
+  },
+  "2023-8": {
+    "cases": [
+      {
+        "label": "Three shuffled tracks",
+        "expected": "9 Here With Me by d4vd\n5 Ghostin by Ariana Grande\n7 Low by SZA",
+        "mode": "track_pairs",
+        "instructions": "Enter three lines, each containing the zero-based track number followed by its name. Repeats are allowed.",
+        "tracks": [
+          "Daydreaming by Harry Styles",
+          "Workin Out by JID",
+          "Old Love by yuji",
+          "Eventually by Tame Impala",
+          "After Hours by The Weekend",
+          "Ghostin by Ariana Grande",
+          "Hey, Mickey! by Baby Tate",
+          "Low by SZA",
+          "Pink + White by Frank Ocean",
+          "Here With Me by d4vd"
+        ]
+      }
+    ],
+    "explanation": "Choose an index in range(10) three times and output the matching track. Every valid combination is accepted.",
+    "note": "This checks track/index consistency, not randomness.",
+    "source": "2023 Behind the Screens slides 23; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-9": {
+    "cases": [
+      {
+        "label": "Songs with both preferred properties",
+        "expected": "[\"above the chinese restaurant\", \"let you break my heart again\", \"someone new\"]",
+        "mode": "unordered_sequence",
+        "instructions": "Enter only the songs tagged both slow and sad, as a list or one per line."
+      }
+    ],
+    "explanation": "Filter songs where both “slow” and “sad” appear in the properties.",
+    "note": "This checkpoint checks the highest-priority group, rather than prescribing an order for the remaining playlist.",
+    "source": "2023 Behind the Screens slides 24; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-10": {
+    "cases": [
+      {
+        "label": "Bad habit by Steve Lacy",
+        "expected": "2 False",
+        "mode": "tokens",
+        "instructions": "Enter the occurrence count followed by True or False."
+      },
+      {
+        "label": "Solo by Future",
+        "expected": "1 True",
+        "mode": "tokens",
+        "instructions": "Enter the occurrence count followed by True or False."
+      }
+    ],
+    "explanation": "Bad habit appears in playlists 2 and 3. Solo appears only in playlist 1.",
+    "note": "",
+    "source": "2023 Behind the Screens slides 25; independently worked output/checkpoint.",
+    "checkpoint": false
+  },
+  "2023-11": {
+    "cases": [
+      {
+        "label": "Spotify Wrapped",
+        "expected": "Top Songs\n1 Baby\n2 FEVER\n3 Easy\n4 No Mercy\n5 That's My Girl\n\nTop Artists\n1 Taylor Swift\n2 5 Seconds of Summer\n3 Queen\n4 miss A\n5 Ariana Grande\n\nTop Genre\nPop\n\nMinutes Listened\n483",
+        "mode": "text",
+        "instructions": "Paste the complete Wrapped report with its headings, ranked songs and artists, genre and minutes."
+      }
+    ],
+    "explanation": "Count song, artist and genre occurrences; rank by count. Sum track durations and convert seconds to minutes.",
+    "note": "The original history file is unavailable, but the original slide supplies the complete expected output. This checks that published report.",
+    "source": "2023 Behind the Screens slides 26; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-12": {
+    "cases": [
+      {
+        "label": "Player state",
+        "expected": "Song B\n45\n70",
+        "mode": "tokens",
+        "instructions": "Practice state: songs [Song A, Song B, Song C], current index 0. Press Next once, set progress to 45 seconds and volume to 70. Enter the current title, progress and volume in that order."
+      }
+    ],
+    "explanation": "Next advances the index to 1 (Song B). The slider values are 45 seconds and 70.",
+    "note": "New state-tracing checkpoint. The graphical interface itself requires manual review.",
+    "source": "2023 Behind the Screens slides 27; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-13": {
+    "cases": [
+      {
+        "label": "Speed confirmation",
+        "expected": "Speed change successful, now playing at 1.25x speed.",
+        "mode": "text",
+        "instructions": "Use the example input 1.25. Submit the success message only."
+      }
+    ],
+    "explanation": "Validate the speed against the allowed list, then insert 1.25 into the confirmation message.",
+    "note": "",
+    "source": "2023 Behind the Screens slides 29; independently worked output/checkpoint.",
+    "checkpoint": false
+  },
+  "2023-14": {
+    "cases": [
+      {
+        "label": "Validation messages",
+        "expected": "Please input a password containing 8 to 20 letters:\npassword has been validated\nlogged in",
+        "mode": "text",
+        "instructions": "Practice inputs: abc, codegirls2023, wrong, codegirls2023. Enter only the three status messages in order; omit input prompts."
+      }
+    ],
+    "explanation": "abc is too short. codegirls2023 is valid. The first confirmation is wrong, so keep asking until the second confirmation matches.",
+    "note": "New interaction sequence. Length validation and the double-entry check are separate loops.",
+    "source": "2023 Behind the Screens slides 30; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-15": {
+    "cases": [
+      {
+        "label": "Feed order",
+        "expected": "[\"curry\", \"fried rice\", \"noodles\", \"schedule\", \"zumba\", \"workout\", \"tips\", \"cardio\", \"habits\", \"marathon\", \"painting\", \"dancing\", \"acrylics\", \"singing\"]",
+        "mode": "priority_sequence",
+        "instructions": "Enter video titles as a list or one per line. Cooking videos first, then other wellness videos, then arts. Any order within each group is accepted.",
+        "groups": [
+          [
+            "curry",
+            "fried rice",
+            "noodles"
+          ],
+          [
+            "schedule",
+            "zumba",
+            "workout",
+            "tips",
+            "cardio",
+            "habits",
+            "marathon"
+          ],
+          [
+            "painting",
+            "dancing",
+            "acrylics",
+            "singing"
+          ]
+        ]
+      }
+    ],
+    "explanation": "Sort by priority: wellness/cooking = 0, other wellness = 1, arts = 2. All 14 videos must appear exactly once.",
+    "note": "",
+    "source": "2023 Behind the Screens slides 31; independently worked output/checkpoint.",
+    "checkpoint": false
+  },
+  "2023-16": {
+    "cases": [
+      {
+        "label": "Likes, comments, shares",
+        "expected": "[80, 13, 2]",
+        "mode": "numbers",
+        "instructions": "Enter final likes, comments, shares in that order. Treat each U as undoing one like."
+      }
+    ],
+    "explanation": "There are 88 L events, 8 U events, 13 C events and 2 S events. Final likes = L − U.",
+    "note": "",
+    "source": "2023 Behind the Screens slides 32; independently worked output/checkpoint.",
+    "checkpoint": false
+  },
+  "2023-17": {
+    "cases": [
+      {
+        "label": "Like percentages",
+        "expected": "[80.0, 90.0, 70.0, 90.0, 70.0, 90.0, 70.0, 80.0]",
+        "mode": "numbers",
+        "instructions": "Enter the eight like percentages in the order of the listed videos (numbers only, without %)."
+      },
+      {
+        "label": "Summary",
+        "expected": "[137000, 14162.5, 80.0]",
+        "mode": "numbers",
+        "instructions": "Enter total views, average likes, and the arithmetic mean of the eight like percentages."
+      }
+    ],
+    "explanation": "For each video, percentage = 100 × likes/views. Sum views and divide total likes by 8. Average the eight percentages.",
+    "note": "This checks the numeric summary. The original question does not define a prediction model, so predicted rankings are not graded.",
+    "source": "2023 Behind the Screens slides 33; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-18": {
+    "cases": [
+      {
+        "label": "Updated topic probabilities",
+        "expected": "[18.75, 25, 18.75, 18.75, 18.75]",
+        "mode": "numbers",
+        "instructions": "Practice convention: start at 20% per topic; a like adds 5 percentage points to that topic and removes 1.25 from each other topic. Then a skip reverses those adjustments. Like gym, then skip gym, then like cooking. Enter gym, cooking, travel, gardening, art percentages."
+      }
+    ],
+    "explanation": "The gym like and skip cancel. The final cooking like gives cooking 25% and each other topic 18.75%.",
+    "note": "New deterministic checkpoint with an explicit probability-redistribution rule, since “5% increased chance” is ambiguous in the source.",
+    "source": "2023 Behind the Screens slides 34; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-19": {
+    "cases": [
+      {
+        "label": "Arrival time",
+        "expected": "08:35",
+        "mode": "text",
+        "instructions": "Practice drivers: A takes 20 minutes; B takes 35 minutes. Choose B and depart at 08:00. Enter arrival as HH:MM."
+      }
+    ],
+    "explanation": "08:00 + 35 minutes = 08:35.",
+    "note": "New driver data. This checks arrival-time calculation; the full exercise also asks for driver selection and a confirmation.",
+    "source": "2023 Behind the Screens slides 36; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-20": {
+    "cases": [
+      {
+        "label": "Driver confirmation",
+        "expected": "Booking successful\nAisha\n* * * *\nABC1234\nToyota Prius",
+        "mode": "text",
+        "instructions": "Practice driver: Aisha, 4 stars, ABC1234, Toyota Prius. Enter five lines: Booking successful, name, stars separated by spaces, plate and model. Centring spaces are ignored."
+      }
+    ],
+    "explanation": "Format the supplied fields and repeat “*” four times. Use str.center(width) for the complete console exercise.",
+    "note": "New driver details; checking the message content does not verify screen alignment.",
+    "source": "2023 Behind the Screens slides 37; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-21": {
+    "cases": [
+      {
+        "label": "Fast Food",
+        "expected": "[\"McDonalds\", \"KFC\"]",
+        "mode": "unordered_sequence",
+        "instructions": "Use input Fast Food. Enter the matching restaurant names as a list or one per line."
+      }
+    ],
+    "explanation": "Filter the dictionaries where Category equals Fast Food.",
+    "note": "",
+    "source": "2023 Behind the Screens slides 38; independently worked output/checkpoint.",
+    "checkpoint": false
+  },
+  "2023-22": {
+    "cases": [
+      {
+        "label": "Running distance and cost",
+        "expected": "5 10\n12 24\n15 30",
+        "mode": "numbers",
+        "instructions": "New rides (distance km, cost): (5,10), (7,14), (3,6). Enter running distance and cost after each ride, one pair per line."
+      }
+    ],
+    "explanation": "Maintain two running totals, adding each new ride: (5,10), (12,24), (15,30).",
+    "note": "New rides for the accumulation checkpoint. Name, ID and locations still belong in the full interactive program.",
+    "source": "2023 Behind the Screens slides 39; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-23": {
+    "cases": [
+      {
+        "label": "Fare",
+        "expected": "6.45",
+        "mode": "numeric",
+        "instructions": "Practice distance is 12 km. Use base $0.75, $0.50/km for the first 10 km and $0.35/km after that. Enter the fare to 2 decimal places."
+      }
+    ],
+    "explanation": "0.75 + 10×0.50 + 2×0.35 = 6.45.",
+    "note": "This checkpoint supplies distance directly to check the fare bands; the complete exercise also needs coordinate-to-distance conversion.",
+    "source": "2023 Behind the Screens slides 40; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-24": {
+    "cases": [
+      {
+        "label": "Chinese cuisine",
+        "expected": "[\"Esquire Kitchen\", \"Din Tai Fung\"]",
+        "mode": "unordered_sequence",
+        "instructions": "Use input Chinese. Enter the matching restaurants from the supplied file."
+      }
+    ],
+    "explanation": "Read alternating restaurant/cuisine lines, group by cuisine, then select Chinese.",
+    "note": "",
+    "source": "2023 Behind the Screens slides 41; independently worked output/checkpoint.",
+    "checkpoint": false
+  },
+  "2023-25": {
+    "cases": [
+      {
+        "label": "Watch later",
+        "expected": "[\"Spirit\", \"Black Beauty\"]",
+        "mode": "sequence",
+        "instructions": "New practice actions: add Spirit, add Black Beauty. Enter the watch-later list in insertion order."
+      }
+    ],
+    "explanation": "Start with an empty list and append the two selected titles.",
+    "note": "This checks a small watchlist operation. The original menu, ten chosen films, ratings and age restrictions require manual review.",
+    "source": "2023 Behind the Screens slides 43; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-26": {
+    "cases": [
+      {
+        "label": "Updated queue",
+        "expected": "[\"C\", \"D\", \"E\"]",
+        "mode": "sequence",
+        "instructions": "New practice queue [A, B, C, D, E]. Mark B watched, then A watched. Enter the remaining queue."
+      }
+    ],
+    "explanation": "Remove watched titles without reordering the remaining entries.",
+    "note": "New deterministic queue checkpoint; it does not test the full interactive five-input interface.",
+    "source": "2023 Behind the Screens slides 44; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-27": {
+    "cases": [
+      {
+        "label": "Space films",
+        "expected": "[\"2001: A Space Odyssey (1968)\", \"Destiny in Space (1994)\", \"Invasion of the Space Lobsters (2006)\", \"It Came From Outer Space (1953)\", \"Office Space (1999)\", \"Plan 9 From Outer Space (1958)\", \"Space Station (2002)\", \"Teenagers from Outer Space (1959)\"]",
+        "mode": "unordered_sequence",
+        "instructions": "Search for the whole word space, case-insensitively, in the supplied file. Include years. Enter one matching film per line or a list; any order is accepted."
+      }
+    ],
+    "explanation": "Read the file line by line and select titles matching the whole word “space”, ignoring case.",
+    "note": "",
+    "source": "2023 Behind the Screens slides 45; independently worked output/checkpoint.",
+    "checkpoint": false
+  },
+  "2023-28": {
+    "cases": [
+      {
+        "label": "Surprise selection",
+        "expected": "The Godfather",
+        "mode": "choice",
+        "instructions": "Submit one randomly chosen movie title from the supplied surprise-movie file.",
+        "choices": [
+          "The Godfather",
+          "The Shawshank Redemption",
+          "Pulp Fiction",
+          "Forrest Gump",
+          "The Dark Knight",
+          "GoodFellas",
+          "The Matrix",
+          "Fight Club",
+          "Schindler's List",
+          "Gladiator",
+          "The Silence of the Lambs",
+          "One Flew Over the Cukoo's Nest",
+          "Braveheart",
+          "Inception",
+          "Titanic",
+          "Seven",
+          "Die Hard",
+          "Rocky",
+          "The Terminator",
+          "Taxi Driver",
+          "The Big Lebowski",
+          "The Departed",
+          "Toy Story",
+          "Resevoir Dogs",
+          "Scarface",
+          "The Lion King",
+          "Good Will Hunting",
+          "The Sixth Sense",
+          "Avatar",
+          "Batman Begins",
+          "Kill Bill Volume 1",
+          "WALL-E",
+          "Casino",
+          "The Pianist",
+          "Whiplash",
+          "The Prestige",
+          "Blade Runner 2049",
+          "A Beautiful Mind",
+          "Finding Nemo",
+          "How to Train Your Dragon",
+          "Shutter Island",
+          "Gone Girl",
+          "Mad Max: Fury Road",
+          "Harry Potter and the Goblet of Fire",
+          "Harry Potter and the Order of the Phoenix",
+          "Harry Potter and the Half Blood Prince",
+          "Harry Potter and the Deathly Hallows - Part 1",
+          "Harry Potter and the Deathly Hallows - Part 2",
+          "Anatomy of a Murder",
+          "Minority Report",
+          "Dracula",
+          "Goldfinger",
+          "Sherlock Holmes: A Game of Shadows",
+          "Jaws",
+          "Die Hard",
+          "Jurassic Park",
+          "Saving Private Ryan",
+          "Indiana Jones: Raiders of the Lost Ark",
+          "The Shining",
+          "E.T. the Extra-Terrestrial",
+          "Casablanca",
+          "Pride and Prejudice",
+          "Mamma Mia!",
+          "The Sound of Music",
+          "The Da Vinci Code",
+          "Cast Away",
+          "Top Gun",
+          "Are We There Yet?",
+          "Mean Girls",
+          "She's the Man",
+          "The Omen",
+          "First Daughter"
+        ]
+      }
+    ],
+    "explanation": "Split this file on commas, then call random.choice on the titles. Any listed title is accepted.",
+    "note": "Checks membership of the output, not randomness.",
+    "source": "2023 Behind the Screens slides 46; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-29": {
+    "cases": [
+      {
+        "label": "6-hour marathon",
+        "expected": "[\"The Incantation\", \"The Invitation\", \"The School for good and evil\"]",
+        "mode": "subset",
+        "instructions": "Without repeating movies, enter any three 2-hour titles from My_list as a list or one per line.",
+        "choices": [
+          "The Incantation",
+          "The Invitation",
+          "The School for good and evil",
+          "Spirited Away",
+          "Your Name",
+          "Enola Holmes",
+          "A Silent Voice",
+          "The Tale of Princess Kaguya",
+          "Pitch Perfect 2"
+        ],
+        "count": 3
+      },
+      {
+        "label": "24-hour marathon",
+        "expected": "impossible",
+        "mode": "text",
+        "instructions": "Using each film at most once, enter possible or impossible.",
+        "ignore_case": true
+      }
+    ],
+    "explanation": "Any three of the nine 2-hour films total 6 hours. All ten films together last 19 hours, so 24 hours is impossible without repeats.",
+    "note": "Practice convention: films cannot repeat; the original question did not specify this.",
+    "source": "2023 Behind the Screens slides 47; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-30": {
+    "cases": [
+      {
+        "label": "Recommended title",
+        "expected": "Orbit",
+        "mode": "choice",
+        "instructions": "New viewing_history.txt: Orbit,Sci-Fi; Meadow,Drama; Comet,Sci-Fi. favorite_genres.txt contains Sci-Fi. Enter a possible recommended title.",
+        "choices": [
+          "Orbit",
+          "Comet"
+        ]
+      }
+    ],
+    "explanation": "Filter history to matching genres, then choose randomly from Orbit and Comet.",
+    "note": "New tiny datasets; the original task asks participants to create their own files.",
+    "source": "2023 Behind the Screens slides 48, 49; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-31": {
+    "cases": [
+      {
+        "label": "Discounted amount",
+        "expected": "80",
+        "mode": "numeric",
+        "instructions": "New practice prices: Shoes RM50, Phone case RM20, Earphones RM30. Buy one of each and select the 20% discount. Enter the final amount."
+      }
+    ],
+    "explanation": "(50 + 20 + 30) × 0.8 = RM80.",
+    "note": "New prices and selections; the original exercise lets participants choose prices.",
+    "source": "2023 Behind the Screens slides 51; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-32": {
+    "cases": [
+      {
+        "label": "Anonymous username",
+        "expected": "v*********8",
+        "mode": "text",
+        "instructions": "Enter the displayed username after hiding the middle characters of valerie8588."
+      }
+    ],
+    "explanation": "valerie8588 has 11 characters. Keep v and the final 8, replacing the nine middle characters with asterisks.",
+    "note": "Checks the anonymisation step; the full exercise also prints the review fields.",
+    "source": "2023 Behind the Screens slides 52; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-33": {
+    "cases": [
+      {
+        "label": "Location and postcode",
+        "expected": "Hanoi 11109",
+        "mode": "tokens",
+        "instructions": "Enter the city and postcode for Valerie’s headphones."
+      }
+    ],
+    "explanation": "Match both owner Valerie and item Headphones, then look up Hanoi in the postcode table.",
+    "note": "",
+    "source": "2023 Behind the Screens slides 53; independently worked output/checkpoint.",
+    "checkpoint": false
+  },
+  "2023-34": {
+    "cases": [
+      {
+        "label": "Sorted purchases",
+        "expected": "[1, 2, 2, 3, 4, 6, 9]",
+        "mode": "numbers",
+        "instructions": "Enter the sorted values as a list or separated by spaces."
+      }
+    ],
+    "explanation": "Swap adjacent out-of-order values until sorted. Retain both occurrences of 2.",
+    "note": "",
+    "source": "2023 Behind the Screens slides 54; independently worked output/checkpoint.",
+    "checkpoint": false
+  },
+  "2023-35": {
+    "cases": [
+      {
+        "label": "Cheapest item",
+        "expected": "P2 Notebook 8",
+        "mode": "tokens",
+        "instructions": "New catalogue rows (ID, name, price): P1 Lamp 20; P2 Notebook 8; P3 Mug 12. Enter ID, name and price of the cheapest item."
+      }
+    ],
+    "explanation": "Parse numeric prices and select the record with minimum price: 8.",
+    "note": "New catalogue; the original question asks participants to create their own file.",
+    "source": "2023 Behind the Screens slides 55; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2023-36": {
+    "cases": [
+      {
+        "label": "Seller order",
+        "expected": "[\"Official Siaome Store\", \"realstore\", \"calastore\", \"mcdecotech\", \"mayatech\", \"Official Xiaomi Store\", \"mmgbpmall\", \"rocketgadgets\", \"spraygadget\", \"caviar\"]",
+        "mode": "sequence",
+        "instructions": "Practice convention: delivery is RM0 for every seller. Apply the given percentage discounts. Enter seller names from cheapest to most expensive."
+      },
+      {
+        "label": "Affordable sellers",
+        "expected": "[\"Official Siaome Store\", \"realstore\", \"calastore\", \"mcdecotech\", \"mayatech\", \"Official Xiaomi Store\", \"mmgbpmall\", \"rocketgadgets\"]",
+        "mode": "unordered_sequence",
+        "instructions": "Use a practice balance of RM3000. Enter every affordable seller."
+      }
+    ],
+    "explanation": "Price after discount = price × (1 − discount/100). Sort these totals and compare each against RM3000.",
+    "note": "New fixed balance and delivery fees (fees were absent from the source). This checks costs and affordability; PIN and purchase flows require manual review.",
+    "source": "2023 Behind the Screens slides 56; independently worked output/checkpoint.",
+    "checkpoint": true
+  },
+  "2024-1": {
+    "cases": [
+      {
+        "label": "Total fuel",
+        "expected": "400",
+        "mode": "numeric",
+        "instructions": "Enter total fuel units."
+      }
+    ],
+    "explanation": "4 tanks × 100 units = 400 units.",
+    "note": "",
+    "source": "User-supplied 2024 solutions PDF, answer slides 5, 7, 9, 11 and 13; calculations independently checked.",
+    "checkpoint": false
+  },
+  "2024-2": {
+    "cases": [
+      {
+        "label": "Safe to land?",
+        "expected": "no",
+        "mode": "choice",
+        "instructions": "At the given velocity of 4 m/s, enter yes or no.",
+        "choices": [
+          "no",
+          "false",
+          "unsafe",
+          "not safe",
+          "Landing not safe! Velocity too high."
+        ],
+        "ignore_case": true
+      }
+    ],
+    "explanation": "4 is not less than 2, so landing is not safe.",
+    "note": "",
+    "source": "User-supplied 2024 solutions PDF, answer slides 5, 7, 9, 11 and 13; calculations independently checked.",
+    "checkpoint": false
+  },
+  "2024-3": {
+    "cases": [
+      {
+        "label": "Decimal value",
+        "expected": "302",
+        "mode": "numeric",
+        "instructions": ""
+      }
+    ],
+    "explanation": "The set bits contribute 256 + 32 + 8 + 4 + 2 = 302.",
+    "note": "",
+    "source": "User-supplied 2024 solutions PDF, answer slides 5, 7, 9, 11 and 13; calculations independently checked.",
+    "checkpoint": false
+  },
+  "2024-4": {
+    "cases": [
+      {
+        "label": "Suitable landing-zone indices",
+        "expected": "[1, 2, 4, 6, 8, 9, 11]",
+        "mode": "numbers",
+        "instructions": "Following the supplied key, enter the zero-based indices of readings from 0 through 20 inclusive, in ascending order. Submit indices, not temperatures."
+      }
+    ],
+    "explanation": "The suitable readings are 0, 4, 12, 14, 7, 10 and 20, at indices 1, 2, 4, 6, 8, 9 and 11.",
+    "note": "",
+    "source": "User-supplied 2024 solutions PDF, answer slides 5, 7, 9, 11 and 13; calculations independently checked.",
+    "checkpoint": false
+  },
+  "2024-5": {
+    "cases": [
+      {
+        "label": "Scenario 1: can land?",
+        "expected": "no",
+        "mode": "choice",
+        "instructions": "Enter yes or no.",
+        "choices": [
+          "no",
+          "cannot land",
+          "false"
+        ],
+        "ignore_case": true
+      },
+      {
+        "label": "Scenario 2: remaining fuel at the surface",
+        "expected": "187",
+        "mode": "numeric",
+        "instructions": "Enter remaining fuel units."
+      }
+    ],
+    "explanation": "Scenario 1 needs 92×5 = 460 units but has only 230. Scenario 2 needs 332×13 = 4316 and has 4503, leaving 187.",
+    "note": "",
+    "source": "User-supplied 2024 solutions PDF, answer slides 5, 7, 9, 11 and 13; calculations independently checked.",
+    "checkpoint": false
+  },
+  "2025-march-beginner-1": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "Your favourite astronaut is Sally Ride.",
+        "mode": "text",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Insert Sally Ride into the sentence template.",
+    "note": "",
+    "source": "Supplied March Beginner answer sheet and booklet page 1; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-beginner-2": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "[\"JavaScript\", \"Python\", \"Ruby\"]",
+        "mode": "sequence",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Sort the three strings alphabetically.",
+    "note": "",
+    "source": "Supplied March Beginner answer sheet and booklet page 1; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-beginner-3": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "Mae Jemison",
+        "mode": "text",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Index 3 is the fourth item because indexing starts at zero.",
+    "note": "",
+    "source": "Supplied March Beginner answer sheet and booklet page 1; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-beginner-4": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "Sheryl Sandberg\nRadia Perlman\nKatherine Johnson\nGrace Hopper\nAda Lovelace",
+        "mode": "text",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Sort names in reverse alphabetical order and print each on its own line.",
+    "note": "",
+    "source": "Supplied March Beginner answer sheet and booklet page 2; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-beginner-5": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "Albert Einstein\nAntoine Laurent Lavoisier\nAndreas Vesalius\nArthur Eddington\nAlbrecht von Haller\nAugust Kekulé\nAlfred Wegener\nAnton van Leeuwenhoek",
+        "mode": "text",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Keep names starting with A, preserving their input order.",
+    "note": "",
+    "source": "Supplied March Beginner answer sheet and booklet page 2; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-beginner-6": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "25",
+        "mode": "numeric",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Count entries whose remainder on division by 4 is zero.",
+    "note": "",
+    "source": "Supplied March Beginner answer sheet and booklet page 3; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-beginner-7": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "19",
+        "mode": "numeric",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Count a, e, i, o and u in the complete string, joining printed line wraps.",
+    "note": "",
+    "source": "Supplied March Beginner answer sheet and booklet page 3; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-beginner-8": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "passionfruit",
+        "mode": "text",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Compare word lengths; passionfruit is the longest.",
+    "note": "",
+    "source": "Supplied March Beginner answer sheet and booklet page 3; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-beginner-9": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "36",
+        "mode": "numeric",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Count every entry longer than five letters, including duplicate entries.",
+    "note": "",
+    "source": "Supplied March Beginner answer sheet and booklet page 3; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-beginner-10": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "5",
+        "mode": "numeric",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Count frequencies; choose the value with the largest count.",
+    "note": "",
+    "source": "Supplied March Beginner answer sheet and booklet page 3; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-beginner-11": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "7.5",
+        "mode": "numeric",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Divide the sum of all word lengths by the number of entries.",
+    "note": "",
+    "source": "Supplied March Beginner answer sheet and booklet page 4; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-beginner-12": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "6703",
+        "mode": "numeric",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Square each number, then sum the squares.",
+    "note": "",
+    "source": "Supplied March Beginner answer sheet and booklet page 4; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-beginner-13": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "99",
+        "mode": "numeric",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "The first 315 is the 100th value, so its zero-based index is 99.",
+    "note": "",
+    "source": "Supplied March Beginner answer sheet and booklet page 4; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-beginner-14": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "6",
+        "mode": "numeric",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Count exact occurrences of the integer 11, not numbers merely containing its digits.",
+    "note": "",
+    "source": "Supplied March Beginner answer sheet and booklet page 4; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-beginner-15": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "1",
+        "mode": "numeric",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "The 57th element is at index 56: 808. Its remainder modulo 3 is 1.",
+    "note": "",
+    "source": "Supplied March Beginner answer sheet and booklet page 5; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-beginner-16": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "96",
+        "mode": "numeric",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Count values strictly greater than 100.",
+    "note": "",
+    "source": "Supplied March Beginner answer sheet and booklet page 5; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-beginner-17": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "[5, 5, 10, 15, 25, 40, 65, 105, 170, 275, 445, 720, 1165, 1885, 3050]",
+        "mode": "numbers",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Start with 5,5; repeatedly append the sum of the previous two values until there are 15 terms.",
+    "note": "",
+    "source": "Supplied March Beginner answer sheet and booklet page 5; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-beginner-18": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "875",
+        "mode": "numeric",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Range = 992 − 117 = 875.",
+    "note": "",
+    "source": "Supplied March Beginner answer sheet and booklet page 6; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-intermediate-1": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "[1621, 2939, 3631, 4201, 6977, 7321, 7499, 7907, 8101, 8443]",
+        "mode": "unordered_sequence",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Test divisors through the square root of each value, discard composites and remove duplicates. Any set order is accepted.",
+    "note": "",
+    "source": "Supplied March Intermediate answer sheet and booklet page 1; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-intermediate-2": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "[2114, 1508, 4462, 3178, 6062, 6188, 3426, 9836, 3512, 6558, 4624, 6464, 4660, 6356, 7926, 5072, 9114, 5712, 9012, 6345, 8879, 6505, 4771, 1285, 1495, 2361, 8895, 3561, 6401, 8215, 8389, 7153, 6159, 6009, 7319, 5065, 1239, 2049, 2021, 4799, 7111, 4457, 5819, 2147, 7623, 2527, 8543, 3829, 6133, 9539]",
+        "mode": "even_odd",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Keep the original multiset of numbers, placing all evens before all odds. Any order within each parity group is accepted.",
+    "note": "",
+    "source": "Supplied March Intermediate answer sheet and booklet page 1; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-intermediate-3": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "10",
+        "mode": "numeric",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Split on the specified punctuation and count non-empty words.",
+    "note": "",
+    "source": "Supplied March Intermediate answer sheet and booklet page 1; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-intermediate-4": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "[80942, 56301, 31458, 33949, 66355, 38743, 75119, 83391, 93763, 74128, 22457, 34728, 12229, 84762, 34225, 88818, 47599, 46639, 19287, 22902, 36443, 35746, 84289]",
+        "mode": "unordered_sequence",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Keep each distinct value once. The question does not require an ordering, so all orders are accepted.",
+    "note": "",
+    "source": "Supplied March Intermediate answer sheet and booklet page 1; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-intermediate-5": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "aad\nada\ndaa",
+        "mode": "text",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Generate permutations, remove duplicates, then sort alphabetically: aad, ada, daa.",
+    "note": "",
+    "source": "Supplied March Intermediate answer sheet and booklet page 2; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-intermediate-6": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "52000",
+        "mode": "numeric",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Any target between 60000 and 62000 minimises the sum of absolute differences; the total is 52000.",
+    "note": "",
+    "source": "Supplied March Intermediate answer sheet and booklet page 3; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-intermediate-7": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "440",
+        "mode": "numeric",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Multiply the population by 1+r each day until it reaches the carrying capacity. High-precision decimal arithmetic gives the first qualifying day.",
+    "note": "",
+    "source": "Supplied March Intermediate answer sheet and booklet page 4; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-intermediate-8": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "-118895",
+        "mode": "numeric",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "The data sum for one cycle is -553; multiply by 215.",
+    "note": "",
+    "source": "Supplied March Intermediate answer sheet and booklet page 5; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-intermediate-9": {
+    "cases": [],
+    "explanation": "",
+    "note": "The organisers withdrew this question because the original problem contains a mistake. It is not graded.",
+    "source": "Supplied March Intermediate answer sheet and booklet page 6; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-intermediate-10": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "girlscodedocslrig",
+        "mode": "choice",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line.",
+        "choices": [
+          "girlscodedocslrig"
+        ]
+      }
+    ],
+    "explanation": "Expand around every odd and even centre; keep the longest matching substring. Any equally long palindrome is accepted.",
+    "note": "",
+    "source": "Supplied March Intermediate answer sheet and booklet page 8; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-intermediate-11": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "16\n14999997",
+        "mode": "numbers",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "After minute 2, live counts alternate 4 and 16. Every odd minute from minute 3 creates three non-reproducing alomomoja.",
+    "note": "",
+    "source": "Supplied March Intermediate answer sheet and booklet page 9; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-advanced-1": {
+    "cases": [
+      {
+        "label": "Case 1",
+        "expected": "183",
+        "mode": "numbers",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      },
+      {
+        "label": "Case 2",
+        "expected": "172",
+        "mode": "numbers",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Each maximal consecutive run of mismatches requires one flip. Count starts of mismatch runs.",
+    "note": "",
+    "source": "Supplied March Advanced answer sheet and booklet page 1; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-advanced-2": {
+    "cases": [
+      {
+        "label": "Case 1",
+        "expected": "53",
+        "mode": "numbers",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      },
+      {
+        "label": "Case 2",
+        "expected": "62",
+        "mode": "numbers",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Add the interval lengths, subtracting their overlap once.",
+    "note": "",
+    "source": "Supplied March Advanced answer sheet and booklet page 4; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-advanced-3": {
+    "cases": [
+      {
+        "label": "Case 1",
+        "expected": "0\n695789\n295509",
+        "mode": "numbers",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      },
+      {
+        "label": "Case 2",
+        "expected": "381199206\n687926653\n826393766",
+        "mode": "numbers",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Simulate all 100 pours cyclically, transferring min(source amount, destination free capacity) each time.",
+    "note": "",
+    "source": "Supplied March Advanced answer sheet and booklet page 5; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-advanced-4": {
+    "cases": [
+      {
+        "label": "Case 1",
+        "expected": "15",
+        "mode": "numbers",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      },
+      {
+        "label": "Case 2",
+        "expected": "12",
+        "mode": "numbers",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Expand each road and journey segment mile by mile. Take max(0, actual speed − limit) across all 100 miles.",
+    "note": "",
+    "source": "Supplied March Advanced answer sheet and booklet page 6; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-advanced-5": {
+    "cases": [
+      {
+        "label": "Case 1",
+        "expected": "480 533\n467 573",
+        "mode": "numbers",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      },
+      {
+        "label": "Case 2",
+        "expected": "469 529\n409 542",
+        "mode": "numbers",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Propagate interval bounds forwards for final traffic, and backwards with on/off reversed for initial traffic. Intersect at every none sensor.",
+    "note": "",
+    "source": "Supplied March Advanced answer sheet and booklet page 14; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-advanced-6": {
+    "cases": [
+      {
+        "label": "Case 1",
+        "expected": "33",
+        "mode": "numbers",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      },
+      {
+        "label": "Case 2",
+        "expected": "35",
+        "mode": "numbers",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Compare the direct distance with both possible directions through the teleporter.",
+    "note": "",
+    "source": "Supplied March Advanced answer sheet and booklet page 19; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-advanced-7": {
+    "cases": [
+      {
+        "label": "Case 1",
+        "expected": "26505\n50846\n21729",
+        "mode": "numbers",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      },
+      {
+        "label": "Case 2",
+        "expected": "12399\n99932\n95060",
+        "mode": "numbers",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "Gold→platinum is the platinum increase. Add the gold increase for silver→gold, then the silver increase for bronze→silver.",
+    "note": "The supplied answer sheet disagrees with the worked result. This checker uses the recalculated answer; the original sheet is retained below for reference.",
+    "source": "Supplied March Advanced answer sheet and booklet page 19; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-march-advanced-8": {
+    "cases": [
+      {
+        "label": "Case 1",
+        "expected": "75355967 404409755 466389109",
+        "mode": "numbers",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      },
+      {
+        "label": "Case 2",
+        "expected": "63126710 326552445 372909989",
+        "mode": "numbers",
+        "instructions": "Use the corresponding input from the question. For lists, brackets and commas are optional for numeric answers; text lists may also be entered one item per line."
+      }
+    ],
+    "explanation": "The two smallest values are A and B; subtract them from the largest (A+B+C) to find C.",
+    "note": "",
+    "source": "Supplied March Advanced answer sheet and booklet page 21; independently recalculated.",
+    "checkpoint": false
+  },
+  "2025-november-beginner-1": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "1144-ROTCES-ATLED-EMIRP-ELCYC-TOOBER-AGEMO-YRTIUCRIC-YOLLA-RETTIMSNART-YAR-EGATLOV-ROSSERPMOC-DLEIF-NORTUEN-7655-EDON-ARTLU-REZILIBATS-EROC-EVIRD-AMMAG-ELUDOM-AMSALP-1899-ECNEUQES-TRATS-LOCOTORP-AGEMO-77KM-ATEZ-0394-ATLED-NOISAVNI-TOBOR-AHPLA39ZXQ",
+        "mode": "text",
+        "instructions": "Reverse the entire command, joining the printed line wraps first. Submit one continuous string."
+      }
+    ],
+    "explanation": "Join the wrapped command without adding spaces, then take command[::-1].",
+    "note": "",
+    "source": "Worked independently from the November 2025 booklet, page 3. No official answer key was found.",
+    "checkpoint": false
+  },
+  "2025-november-beginner-2": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "56",
+        "mode": "numeric",
+        "instructions": "Use the question input above. Enter only the output."
+      }
+    ],
+    "explanation": "Count from index zero; delta-spark is at index 56.",
+    "note": "",
+    "source": "Worked independently from the November 2025 booklet, page 3. No official answer key was found.",
+    "checkpoint": false
+  },
+  "2025-november-beginner-3": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "49.5",
+        "mode": "numeric",
+        "instructions": "Use the question input above. Enter only the output."
+      }
+    ],
+    "explanation": "Sort all 120 supplied readings, then average the two middle entries.",
+    "note": "The printed count is inaccurate: there are 120 supplied entries. This check uses all of them.",
+    "source": "Worked independently from the November 2025 booklet, page 4. No official answer key was found.",
+    "checkpoint": false
+  },
+  "2025-november-beginner-4": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "98",
+        "mode": "numeric",
+        "instructions": "Use the question input above. Enter only the output."
+      }
+    ],
+    "explanation": "Count characters in each complete name, including hyphens and spaces; retain only lengths greater than 6.",
+    "note": "",
+    "source": "Worked independently from the November 2025 booklet, page 4. No official answer key was found.",
+    "checkpoint": false
+  },
+  "2025-november-beginner-5": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "55.00",
+        "mode": "numeric",
+        "instructions": "Use the question input above. Enter only the output."
+      }
+    ],
+    "explanation": "Sum the 58 even entries, divide by 58, and round to two decimal places.",
+    "note": "The printed count is inaccurate: there are 110 supplied entries. This check uses all of them.",
+    "source": "Worked independently from the November 2025 booklet, page 5. No official answer key was found.",
+    "checkpoint": false
+  },
+  "2025-november-beginner-6": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "forward",
+        "mode": "text",
+        "instructions": "Use the question input above. Enter only the output."
+      }
+    ],
+    "explanation": "Use one-based step numbering: (2911−1) modulo 3 is 0, which is forward.",
+    "note": "",
+    "source": "Worked independently from the November 2025 booklet, page 6. No official answer key was found.",
+    "checkpoint": false
+  },
+  "2025-november-beginner-7": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "[1111, 1112, 1234, 1235, 1236, 1237, 1238, 1239, 1240, 1241, 1242, 1243, 1244, 1245, 1246, 1298, 2340, 2341, 2342, 2343, 2344, 2345, 2346, 2347, 2348, 2349, 3210, 3450, 3451, 3452, 3453, 3454, 3455, 3456, 3457, 3458, 3459, 4320, 4321, 4322, 4323, 4324, 4325, 4326, 4327, 4328, 4329, 4330, 4331, 4332, 4333, 4334, 4532, 5670, 5671, 5672, 5673, 5674, 5675, 5676, 5677, 5678, 5678, 5679, 6543, 6780, 6781, 6782, 6783, 6784, 6785, 6786, 6787, 6788, 6789, 6789, 7654, 7821, 8760, 8761, 8762, 8763, 8764, 8765, 8766, 8767, 8768, 8769, 8770, 8771, 8772, 8773, 8774, 8775, 9080, 9081, 9082, 9083, 9084, 9085, 9086, 9087, 9088, 9089, 9090, 9091, 9092, 9093, 9094, 9095]",
+        "mode": "numbers",
+        "instructions": "Use the question input above. Enter only the output."
+      }
+    ],
+    "explanation": "Sort every supplied serial number in ascending order, retaining repeated values.",
+    "note": "The printed count is inaccurate: there are 110 supplied entries. This check uses all of them.",
+    "source": "Worked independently from the November 2025 booklet, page 6. No official answer key was found.",
+    "checkpoint": false
+  },
+  "2025-november-beginner-8": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "[\"Aero\", \"Alloy\", \"Alpha\", \"Arc\", \"Atlas\", \"Binary\", \"Blaze\", \"Blitz\", \"Bolt\", \"Circuit\", \"Cobalt\", \"Comet\", \"Cyclone\", \"Delta\", \"Drift\", \"Droid\", \"Dynamo\", \"Echo\", \"Eclipse\", \"Ember\", \"Enigma\", \"Falcon\", \"Flux\", \"Forge\", \"Gamma\", \"Gearbox\", \"Glider\", \"Helix\", \"Horizon\", \"Hyperion\", \"Ignite\", \"Inferno\", \"Ion\", \"Jaguar\", \"Javelin\", \"Jetstream\", \"Kappa\", \"Kodiak\", \"Krypton\", \"Lambda\", \"Lancer\", \"Lumina\", \"Magnetron\", \"Matrix\", \"Mirage\", \"Nebula\", \"Neptune\", \"Nimbus\", \"Nova\", \"Obsidian\", \"Omega\", \"Onyx\", \"Orion\", \"Phoenix\", \"Photon\", \"Prism\", \"Pulse\", \"Quanta\", \"Quantum\", \"Quantum-X\", \"Quark\", \"Radiant\", \"Raptor\", \"Reactor\", \"Rift\", \"Sentinel\", \"Sigma\", \"Solaris\", \"Specter\", \"Striker\", \"Tempest\", \"Titan\", \"Titan-X\", \"Turbo\", \"Ultravolt\", \"Ultron\", \"Umbra\", \"Vector\", \"Vector-X\", \"Volt\", \"Vortex\", \"Warp\", \"Whisper\", \"Wyvern\", \"Xenon\", \"Xylo\", \"Xylon\", \"Yarder\", \"Yarrow\", \"Yukon\", \"Zenith\", \"Zenith-X\", \"Zephyr\", \"Zeta\"]",
+        "mode": "sequence",
+        "instructions": "Enter the sorted robot names as a list or one name per line."
+      }
+    ],
+    "explanation": "Sort the supplied names alphabetically, keeping hyphenated suffixes.",
+    "note": "There are 94 listed robot types, despite the printed count of 100. Use all listed names.",
+    "source": "Worked independently from the November 2025 booklet, page 6. No official answer key was found.",
+    "checkpoint": false
+  },
+  "2025-november-beginner-9": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "QV18",
+        "mode": "text",
+        "instructions": "Use the question input above. Enter only the output."
+      }
+    ],
+    "explanation": "The 49th item uses zero-based index 48: QV18.",
+    "note": "",
+    "source": "Worked independently from the November 2025 booklet, page 7. No official answer key was found.",
+    "checkpoint": false
+  },
+  "2025-november-beginner-10": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "56",
+        "mode": "numeric",
+        "instructions": "Use the question input above. Enter only the output."
+      }
+    ],
+    "explanation": "Count all battery readings at least 50, including readings equal to 50.",
+    "note": "The first sentence is truncated in the booklet. This check uses the stated threshold of at least 50.",
+    "source": "Worked independently from the November 2025 booklet, page 7. No official answer key was found.",
+    "checkpoint": false
+  },
+  "2025-november-intermediate-1": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "A",
+        "mode": "text",
+        "instructions": "Use the question input above. Enter only the output."
+      }
+    ],
+    "explanation": "Split the 600 attacks into 20 groups of 30. In each group choose the highest frequency, breaking ties alphabetically. Apply the same rule to group winners.",
+    "note": "The booklet supplies 636 characters but declares 600 attacks. For this practice check, use only the first 600 characters; ignore the extra 36.",
+    "source": "Worked independently from the November 2025 booklet, page 9. No official answer key was found.",
+    "checkpoint": true
+  },
+  "2025-november-intermediate-2": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "5750",
+        "mode": "numeric",
+        "instructions": "Use the question input above. Enter only the output."
+      }
+    ],
+    "explanation": "Assign shipments to eligible hours to maximise total calories. A shipment arriving at t is usable at t through t+K−1; each shipment can supply at most one burger.",
+    "note": "Practice convention: each shipment is consumed once. Read the printed “2, 45” as the pair (2,45).",
+    "source": "Worked independently from the November 2025 booklet, page 10. No official answer key was found.",
+    "checkpoint": true
+  },
+  "2025-november-intermediate-3": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "820",
+        "mode": "numeric",
+        "instructions": "Use the question input above. Enter only the output."
+      }
+    ],
+    "explanation": "Binary-search a maximum workload. Greedily form contiguous groups under that limit; accept a limit if it needs no more than 25 groups.",
+    "note": "",
+    "source": "Worked independently from the November 2025 booklet, page 11. No official answer key was found.",
+    "checkpoint": false
+  },
+  "2025-november-intermediate-4": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "eeeeeetttttaaaasssshhiinnrrdlo",
+        "mode": "text",
+        "instructions": "Use the question input above. Enter only the output."
+      }
+    ],
+    "explanation": "Count letters; order them by decreasing frequency and alphabetically for tied counts.",
+    "note": "",
+    "source": "Worked independently from the November 2025 booklet, page 12. No official answer key was found.",
+    "checkpoint": false
+  },
+  "2025-november-intermediate-5": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "4",
+        "mode": "numeric",
+        "instructions": "Use the question input above. Enter only the output."
+      }
+    ],
+    "explanation": "Sort by date, then extend a streak only when the date is the next day and repetitions strictly increase.",
+    "note": "",
+    "source": "Worked independently from the November 2025 booklet, page 12. No official answer key was found.",
+    "checkpoint": false
+  },
+  "2025-november-intermediate-6": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "A",
+        "mode": "text",
+        "instructions": "Check the complete published sample instead: p=9, n=3, s=AABBCCBAA. Break any tie alphabetically."
+      }
+    ],
+    "explanation": "The three groups are AAB, BCC and BAA; their winners are A, C and A.",
+    "note": "The final input declares 24 characters but supplies 23. The checker uses the complete sample, not a guessed missing character.",
+    "source": "Worked independently from the November 2025 booklet, page 13. No official answer key was found.",
+    "checkpoint": true
+  },
+  "2025-november-intermediate-7": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "4.0",
+        "mode": "numeric",
+        "instructions": "Use the question input above. Enter only the output."
+      }
+    ],
+    "explanation": "Block medians are 4, 9, 4, 5 and 8. The most frequent is 4.",
+    "note": "",
+    "source": "Worked independently from the November 2025 booklet, page 13. No official answer key was found.",
+    "checkpoint": false
+  },
+  "2025-november-intermediate-8": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "[32, 29]",
+        "mode": "numbers",
+        "instructions": "For this check, distance means final Manhattan distance from (0,0): |x|+|y|. IDs start at 1. Enter ID and distance."
+      }
+    ],
+    "explanation": "Compute final horizontal and vertical displacements for each robot, then maximise their absolute-value sum; choose the first ID on ties.",
+    "note": "The printed sample conflicts with standard distance definitions. This check explicitly uses final Manhattan distance for all 32 final-input robots.",
+    "source": "Worked independently from the November 2025 booklet, page 14. No official answer key was found.",
+    "checkpoint": true
+  },
+  "2025-november-intermediate-9": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "F1J4A3Z4B3C2D3E3F2G2H2I4K2L2M4N4O3P3Q4R4S2T3U3V3W2X3Y3Z2A3B2C4D4E3F3G3H3I2J3K3L3M3N3O3P3Q4R4S4T3U4V4W4X3Y3Z3A4B3C3D4E3F3G3H4I4J4K3L3M3N4O4P3Q4R4S4T3U4V4W4X3Y4Z4A4B4C3D4E3F3G3H4I4J4K4L4M3N4O4P3Q4R4S4T3U4V4W4X4Y4Z4A4B4C4D4E3F3G3H4I4J4K4L4M3N4O4P3Q4R4S4T3U4V4W4X4Y4Z4A4B4C4D4E4F3G3H4I4J4K4L4M3N4O4P3Q4R4S4T3U4V4W4X4Y4Z4A4B4C3D4E3F3G3H4I4J4K4L4M3N4O4P3Q4R4S4T3U4V4W4X4Y4Z4A4B4C4D4E3F3G3H4I4J4K4L4M3N4O4P3Q4R4S4T3U4V4W4X4Y4Z4",
+        "mode": "text",
+        "instructions": "Use the question input above. Enter only the output."
+      }
+    ],
+    "explanation": "Scan maximal runs and emit their character followed by run length, including runs of length 1. Join wrapped lines before counting.",
+    "note": "The printed length 1233 disagrees with the 746 supplied characters. This check compresses the full supplied string without padding.",
+    "source": "Worked independently from the November 2025 booklet, page 15. No official answer key was found.",
+    "checkpoint": false
+  },
+  "2025-november-intermediate-10": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "ABCEFGHJKLMNOPQRSTUVWXYZABCEFGHJKLMNOPQRSTUVWXYZABCEFGHJKLMNOPQRSTUVWXYZABCEFGHJKLMNOPQRSTUVWXYZABCEFGHJKLMNOPQRSTUVWXYZABCEFGHJKLMNOPQRSTUVWXYZ",
+        "mode": "text",
+        "instructions": "Use the question input above. Enter only the output."
+      }
+    ],
+    "explanation": "Use a stack. Pop when the next character equals the top; otherwise push it. The final stack is the reduced string.",
+    "note": "The header says 1014, but only 468 characters are supplied. Use the full supplied string. The sample output also conflicts with the stated pair-removal rule; the checker follows the rule.",
+    "source": "Worked independently from the November 2025 booklet, page 16. No official answer key was found.",
+    "checkpoint": false
+  },
+  "2025-november-advanced-1": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "34",
+        "mode": "numbers",
+        "instructions": "Check the published sample: n=7, k=3, costs x=8, y=2, z=5; health [2,3,1,4,2,3,2]. Enter minimum bullets under the printed rules."
+      }
+    ],
+    "explanation": "NovaStrike costs 2 per health removed. Photon costs 8 for only 3 health (worse than 6); Lumina costs 5 and can reduce the middle health by at most 1. Therefore all 17 health units cost 34 bullets.",
+    "note": "The large input is malformed (its first case declares 83 robots but supplies only 35 before the next case), so it cannot be graded reliably. This check uses the complete sample; its printed answer 31 conflicts with the printed rules, which give 34.",
+    "source": "Worked independently from the November 2025 booklet, page 18. No official answer key was found.",
+    "checkpoint": true
+  },
+  "2025-november-advanced-2": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "9251\n2983\n4265\n2087\n9581\n5315\n4245\n3710\n4294\n5675\n4739\n1316\n4325\n5945\n3580\n5801\n8894\n4927\n6496\n9475\n8476\n227\n6378\n1676\n9819\n3562\n5464\n2189\n393\n6626\n2184\n4823\n1134\n3776\n2535\n2243\n1322\n2139\n2341\n3852\n6455",
+        "mode": "numbers",
+        "instructions": "Use the question input above. Enter only the output."
+      }
+    ],
+    "explanation": "The optimum is the k-th largest element: choose those k elements as singleton subarrays. Any k disjoint subarrays with average at least X would each need a distinct element at least X, proving the upper bound.",
+    "note": "The header claims 50 cases, but only 41 complete cases are supplied. Submit one output for each of those 41 cases in order.",
+    "source": "Worked independently from the November 2025 booklet, page 24. No official answer key was found.",
+    "checkpoint": false
+  },
+  "2025-november-advanced-3": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "1208",
+        "mode": "numbers",
+        "instructions": "Use the question input above. Enter only the output."
+      }
+    ],
+    "explanation": "Use Dijkstra’s algorithm on orthogonal non-wall neighbours with cost 1+(A−B)². Start and target cells have energy 0 for this check; return −1 if unreachable.",
+    "note": "Practice convention: S and T have energy 0 and moves are up/down/left/right. The published sample output conflicts with that convention; this check uses the stated cost formula on the full final grid.",
+    "source": "Worked independently from the November 2025 booklet, page 30. No official answer key was found.",
+    "checkpoint": true
+  },
+  "2025-november-advanced-4": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "6\n3\n7\n0\n-1\n-1\n7",
+        "mode": "numbers",
+        "instructions": "Use all seven published sample cases. Enter one minimum energy per line."
+      }
+    ],
+    "explanation": "First greedily match requirements without insertion. Otherwise try supplying each requirement with the new core; match the remaining ordered requirements against existing cores and minimise the supplied requirement value.",
+    "note": "The linked final-input download could not be retrieved (checked 28 October 2026). This checks the complete published sample, not the unavailable final input.",
+    "source": "Worked independently from the November 2025 booklet, page 33. No official answer key was found.",
+    "checkpoint": true
+  },
+  "2025-november-advanced-5": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "5\n4\n4\n1",
+        "mode": "numbers",
+        "instructions": "Use the published five-attraction example, with thresholds 1, 3, 5 and 7. Enter four counts in that order."
+      }
+    ],
+    "explanation": "For each threshold traverse only qualifying edges from node 1. Include node 1 itself in the count.",
+    "note": "The linked final-input download could not be retrieved (checked 28 October 2026). This checks the complete published sample, not the unavailable final input.",
+    "source": "Worked independently from the November 2025 booklet, page 35. No official answer key was found.",
+    "checkpoint": true
+  },
+  "2025-november-advanced-6": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "3",
+        "mode": "numbers",
+        "instructions": "Use the published sample: N=4 and powers [1,1,1,2]. Enter the maximum obtainable power."
+      }
+    ],
+    "explanation": "Merge the second and third 1 into 2, then merge that 2 with the last 2 to create power 3. Interval dynamic programming handles general inputs.",
+    "note": "The linked final-input download could not be retrieved (checked 28 October 2026). This checks the complete published sample, not the unavailable final input.",
+    "source": "Worked independently from the November 2025 booklet, page 37. No official answer key was found.",
+    "checkpoint": true
+  },
+  "2025-november-advanced-7": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "11846",
+        "mode": "numbers",
+        "instructions": "Use the question input above. Enter only the output."
+      }
+    ],
+    "explanation": "Try every strictly separating horizontal and vertical cut. For each, sum the two minimum bounding-box areas. Subtract the minimum sum from the one-box area.",
+    "note": "The final input declares 100 points but supplies 103. This check uses all 103 supplied points.",
+    "source": "Worked independently from the November 2025 booklet, page 38. No official answer key was found.",
+    "checkpoint": false
+  },
+  "2025-november-advanced-8": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "10",
+        "mode": "numbers",
+        "instructions": "Use the question input above. Enter only the output."
+      }
+    ],
+    "explanation": "Consider each unordered pair once, using its order in the first round. Count it only if that same order holds in all ten rounds.",
+    "note": "",
+    "source": "Worked independently from the November 2025 booklet, page 43. No official answer key was found.",
+    "checkpoint": false
+  },
+  "2025-november-advanced-9": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "2",
+        "mode": "numbers",
+        "instructions": "Use the published seven-robot sample. Enter the smallest possible maximum quadrant count."
+      }
+    ],
+    "explanation": "Try even barriers just past each distinct x and y coordinate. Count all four quadrants and minimise their largest count.",
+    "note": "The linked final-input download could not be retrieved (checked 28 October 2026). This checks the complete published sample, not the unavailable final input.",
+    "source": "Worked independently from the November 2025 booklet, page 45. No official answer key was found.",
+    "checkpoint": true
+  },
+  "2025-november-advanced-10": {
+    "cases": [
+      {
+        "label": "Your output",
+        "expected": "3\n2\n0",
+        "mode": "numbers",
+        "instructions": "Use the three published sample cases. Enter the minimum merge counts in order."
+      }
+    ],
+    "explanation": "Try candidate counts of equal-sum contiguous groups from largest to smallest. If a partition exists, merges = original length − group count. All-zero arrays need no merges.",
+    "note": "The linked final-input download could not be retrieved (checked 28 October 2026). This checks the complete published sample, not the unavailable final input.",
+    "source": "Worked independently from the November 2025 booklet, page 47. No official answer key was found.",
+    "checkpoint": true
+  }
+}

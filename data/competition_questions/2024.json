@@ -1,0 +1,38 @@
+[
+  {
+    "number": 1,
+    "source_page": 4,
+    "statement": "The lunar lander has 4 fuel tanks, each with a capacity of 100 units. Write a program to calculate the total fuel available for the landing.",
+    "examples": [{"label": "Starting values", "text": "fuel_per_tank = 100\nnum_tanks = 4"}]
+  },
+  {
+    "number": 2,
+    "source_page": 6,
+    "statement": "The lunar lander needs to slow down during descent. Write a program that takes the current velocity (in meters per second) as input and determines if it's safe to land (velocity less than 2 meters per second).",
+    "examples": [{"label": "Starting values", "text": "safe_landing_velocity = 2\ncurrent_velocity = 4"}]
+  },
+  {
+    "number": 3,
+    "source_page": 8,
+    "statement": "The lunar module has various sensors that send data as binary strings (0s and 1s). Write a program that takes a binary string as input and converts it to decimal.",
+    "examples": [{"label": "Binary input", "text": "0100101110"}]
+  },
+  {
+    "number": 4,
+    "source_page": 10,
+    "statement": "The lunar lander needs to identify potential landing zones based on surface temperature data. Write a program that takes a list of temperature readings (in degrees Celsius) and identifies areas with a temperature between 0 and 20 degrees Celsius (suitable for landing).",
+    "examples": [
+      {"label": "Temperature readings to try", "text": "25, 0, 4, 37, 12, 85, 14, 63, 7, 10, -3, 20, 56"},
+      {"label": "Starting code", "text": "temperatures = [int(x) for x in input(\"Enter temperature readings (space-separated): \").split()]"}
+    ]
+  },
+  {
+    "number": 5,
+    "source_page": 12,
+    "statement": "The lunar lander has limited fuel and needs to optimize its descent path. Write a program that simulates a simple descent with varying fuel consumption based on altitude. The program should calculate the remaining fuel after each step and determine if the lander can reach the surface with the remaining fuel.",
+    "examples": [
+      {"label": "Scenario 1", "text": "initial_fuel = 230\naltitude = 92\nfuel_consumption_per_meter = 5"},
+      {"label": "Scenario 2", "text": "initial_fuel = 4503\naltitude = 332\nfuel_consumption_per_meter = 13"}
+    ]
+  }
+]

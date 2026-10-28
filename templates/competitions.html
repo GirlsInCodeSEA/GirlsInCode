@@ -1,49 +1,39 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="{{ url_for('static', filename = 'styles.css')}}">
-        <meta charset = "utf-8">
-        <link  rel="icon" href="https://yt3.googleusercontent.com/ytc/AIdro_mgnodbikJ-Ti1M2Eo9eR5HSjh69ZrKFbUMpactPIe1Xg=s900-c-k-c0x00ffffff-no-rj">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Girls In Code SEA</title>
-    </head>
-    <body>
-        <header>
-            <a id="home" href="{{ url_for('home') }}">Home</a>
-        
-            <a href="{{ url_for('home') }}">
-                <img id="logo" alt="Girls in Code SEA Logo" src="{{ url_for('static', filename='gic_logo.png') }}">
-            </a>
-        
-            <nav>
-                <ul>
-                    <li><a href="{{ url_for('competitions') }}">Annual Competitions</a></li>
-                    <li><a href="{{ url_for('scoreboard') }}">Scoreboard</a></li>
-                    <li><a href="{{ url_for('hackathon') }}">Hackathon</a></li>
-        
-                    {% if session.get("user_name") %}
-                        <li class="user-tag">👤 {{ session["user_name"] }}</li>
-                        <li><a href="{{ url_for('logout') }}">Logout</a></li>
-                    {% else %}
-                        <li><a href="{{ url_for('signIn') }}">Sign In</a></li>
-                    {% endif %}
-                </ul>
-            </nav>
-        </header>     
-        <main class="flex-grow">
-            <h1 class = "title" >Annual Competitions</h1>
-            <section class="center-text">
-                <h3>Running competition:</h3>
-                <p>No Ongoing Competitions, look out on social media for more updates</p>
-            </section>
-            <section class="center-text">
-                <h3>Have a go at some of our past competition questions:</h3>
-                <p><a href = "{{ url_for('y2025n') }}">2025 November</a></p>
-                <p><a href = "{{ url_for('y2025m') }}">2025 March</a></p>
-                <p><a href = "{{ url_for('y2024') }}">2024</a></p>
-                <p><a href = "{{ url_for('y2023') }}">2023</a></p>
-            </section>
-        </main>
-        {% include 'includes/footer.html' %}
-    </body>
-</html>
+{% extends 'base.html' %}
+{% block title %}Competitions — Girls In Code{% endblock %}
+{% block content %}
+  <section class="container page-intro">
+    <p class="eyebrow">GIRLS IN CODE EVENTS</p>
+    <h1>Our coding<br><span>competitions.</span>
+    </h1>
+    <p>GIC competitions bring students together through programming challenges.<br class="desktop-break"> Explore our past editions, questions, and results.</p>
+  </section>
+  <section class="container competition-notice">
+    <span class="notice-symbol" aria-hidden="true">✳</span>
+    <div>
+      <h2>Competition updates</h2>
+      <p>There isn’t a competition running right now. Event announcements are shared on our Instagram.</p>
+    </div>
+    <a class="text-link" href="https://www.instagram.com/girlsincodesea/" target="_blank" rel="noopener noreferrer">Follow for updates ↗</a>
+  </section>
+  <section class="container section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">THE GIC ARCHIVE</p>
+        <h2>Past competitions.</h2>
+      </div>
+    </div>
+    <div class="archive-list">
+      {% for title, tag, description, endpoint in [('2025','COMPETITION ARCHIVE','March and November editions, questions, winners, and the 2025 scoreboard.','competitions_2025'),('2024','EARLIER EDITION','Take a look back at our competition archive.','y2024'),('2023','BEHIND THE SCREENS','36 questions exploring Instagram, Spotify, TikTok, Grab, Netflix, and Shopee.','y2023')] %}
+        <a class="archive-row" href="{{ url_for(endpoint) }}">
+          <span class="archive-index">0{{ loop.index }}</span>
+          <div>
+            <span class="eyebrow">{{ tag }}</span>
+            <h3>{{ title }}</h3>
+          </div>
+          <p>{{ description }}</p>
+          <span class="circle-arrow" aria-hidden="true">↗</span>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

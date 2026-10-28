@@ -1,0 +1,1311 @@
+[
+  {
+    "number": 1,
+    "title": "Restaurant reviews",
+    "theme": "Instagram",
+    "character": "Finnick",
+    "author": "Elena",
+    "source_label": "Beginner 1",
+    "source_pages": [
+      15
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Finnick has an Instagram account where he posts restaurant reviews. For consistency, every post he makes follows the format (variables)"
+      },
+      {
+        "type": "paragraph",
+        "text": "Restaurant Name:"
+      },
+      {
+        "type": "paragraph",
+        "text": "Location:"
+      },
+      {
+        "type": "paragraph",
+        "text": "Dish 1:"
+      },
+      {
+        "type": "paragraph",
+        "text": "Dish 1 Rating:"
+      },
+      {
+        "type": "paragraph",
+        "text": "Dish 2:"
+      },
+      {
+        "type": "paragraph",
+        "text": "Dish 2 Rating:"
+      },
+      {
+        "type": "paragraph",
+        "text": "Would I return:"
+      },
+      {
+        "type": "paragraph",
+        "text": "Finnick recently visited a restaurant with the following details"
+      },
+      {
+        "type": "paragraph",
+        "text": "Nobu"
+      },
+      {
+        "type": "paragraph",
+        "text": "Four Seasons Hotel Kuala Lumpur"
+      },
+      {
+        "type": "paragraph",
+        "text": "Kanpachi Sashimi Salad"
+      },
+      {
+        "type": "paragraph",
+        "text": "7.5"
+      },
+      {
+        "type": "paragraph",
+        "text": "Crispy Soft Shell Crab with Ponzu"
+      },
+      {
+        "type": "paragraph",
+        "text": "8.3"
+      },
+      {
+        "type": "paragraph",
+        "text": "Write a program that allows Finnick to input these details into the stated variables. For the \"Would I return variable\", it should output yes if the total rating of dish 1 and dish 2 is 12 or higher."
+      },
+      {
+        "type": "paragraph",
+        "text": "The final output should look like this:"
+      },
+      {
+        "type": "code",
+        "text": "Restaurant Name:Nobu\nLocation:Four Seasons Hotel Kuala Lumpur\nDish 1:Kampachi Sashimi Salad\nDish 1 rating:7.5\nDish 2:Crispy Soft Shell Crab with Ponzu\nDish 2 rating:8.3\nWould I return? ???"
+      },
+      {
+        "type": "paragraph",
+        "text": "(??? is to indicate that you have to find out what the correct output is"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "Personalised feed",
+    "theme": "Instagram",
+    "character": "Finnick",
+    "author": "Araa",
+    "source_label": "Beginner 2",
+    "source_pages": [
+      16
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "The Instagram algorithm notes the type of content Finnick likes or skips past."
+      },
+      {
+        "type": "paragraph",
+        "text": "Finnick likes cooking reels, clothing posts, rugby posts and anything meme related. Finnick skips past political posts, diving compilations, celebrity drama and pet posts."
+      },
+      {
+        "type": "paragraph",
+        "text": "Use while loops to program an algorithm that decides what type of content will show up in Finnick’s feed again based on his likes and dislikes. The program should print out all eight examples of content with either “keep in feed” or “hide from feed” e.g."
+      },
+      {
+        "type": "paragraph",
+        "text": "rugby posts: keep in feed"
+      },
+      {
+        "type": "paragraph",
+        "text": "political posts: hide from feed"
+      },
+      {
+        "type": "paragraph",
+        "text": "And at the end it should also print out the amount of posts that stay or do not stay in Finnicks feed e.g."
+      },
+      {
+        "type": "paragraph",
+        "text": "Posts that will stay in Finnick's feed: 4"
+      },
+      {
+        "type": "paragraph",
+        "text": "Posts that will not stay in Finnick's feed: 4"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "title": "Password generator",
+    "theme": "Instagram",
+    "character": "Finnick",
+    "author": "Eleonora",
+    "source_label": "Intermediate 1",
+    "source_pages": [
+      17
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Finnick has recently set up an Instagram account and needs to create a secure password for it. He has chosen to use an array of words and subroutines to do this for him. Do the following tasks:"
+      },
+      {
+        "type": "paragraph",
+        "text": "Task 1: Create an array of 10 words with at least 6 characters in each word."
+      },
+      {
+        "type": "paragraph",
+        "text": "Task 2: Create a subroutine to randomly select one of the words from the array."
+      },
+      {
+        "type": "paragraph",
+        "text": "Task 3: Create a subroutine to reverse the selected word."
+      },
+      {
+        "type": "paragraph",
+        "text": "(Hint: For string reversal, explore a concept called \"slicing\")"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "title": "Food account ratios",
+    "theme": "Instagram",
+    "character": "Finnick",
+    "author": "Elena",
+    "source_label": "Intermediate 2",
+    "source_pages": [
+      18
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Finnick wants to find the inspiration from the most successful food instagram account. To do this, he wants to find the best ratio between the number of posts and the number of followers out of a few instagram accounts."
+      },
+      {
+        "type": "paragraph",
+        "text": "First, extract data from instagram using the Instagramy Module. Here is a resource that teaches you how to install and use this module:"
+      },
+      {
+        "type": "link",
+        "url": "https://www.javatpoint.com/python-instagramy-module",
+        "label": "Original reference link"
+      },
+      {
+        "type": "paragraph",
+        "text": "Secondly, extract the number of posts and followers from the following instagram accounts:"
+      },
+      {
+        "type": "paragraph",
+        "text": "buzzfeedtasty"
+      },
+      {
+        "type": "paragraph",
+        "text": "milktpapi"
+      },
+      {
+        "type": "paragraph",
+        "text": "doobydobap"
+      },
+      {
+        "type": "paragraph",
+        "text": "Thirdly, use the formula:"
+      },
+      {
+        "type": "paragraph",
+        "text": "ratio = number of followers / number of posts"
+      },
+      {
+        "type": "paragraph",
+        "text": "The instagram account with the largest value as its ratio is the most successful food instagram account."
+      },
+      {
+        "type": "paragraph",
+        "text": "Finally, output all three ratios from the given instagram accounts and what the ratio of the most successful instagram account is."
+      },
+      {
+        "type": "paragraph",
+        "text": "The Instagramy module only works on Jupyter Notebook (google search it to use it)"
+      },
+      {
+        "type": "paragraph",
+        "text": "(Even though this is an intermediate question, I decided to introduce the concept of modules as it is what takes you from intermediate to advanced. If you are struggling with modules, that's ok! You can skip this question and move on)"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "title": "Post interactions",
+    "theme": "Instagram",
+    "character": "Finnick",
+    "author": "Dhivyesh",
+    "source_label": "Advanced 1",
+    "source_pages": [
+      19
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Here are a few arrays that represent properties such as number of likes, number of comments and number of views in Finnick's feed."
+      },
+      {
+        "type": "code",
+        "text": "posts = [1, 2, 3, 4, 5]\nlikes = [0, 0, 0, 0, 0]\ncomments = [[], [], [], [], []]\nviews = [0, 0, 0, 0, 0]"
+      },
+      {
+        "type": "paragraph",
+        "text": "Use these arrays to do the following:"
+      },
+      {
+        "type": "paragraph",
+        "text": "asks the user for an input as to which post he wants to view"
+      },
+      {
+        "type": "paragraph",
+        "text": "every time the user views the element, increment the number of views by 1"
+      },
+      {
+        "type": "paragraph",
+        "text": "include functionality for likes and comments such as incrementing likes and appending comments"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "title": "Engagement rankings",
+    "theme": "Instagram",
+    "character": "Finnick",
+    "author": "Aaleyah",
+    "source_label": "Advanced 2",
+    "source_pages": [
+      20
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "A social media star named Finnick wants to examine his Instagram account to determine which photos have received the most likes and comments. He wants to learn which postings receive the most likes, comments, and interactions. He keeps track of the likes and comments received on his Instagram postings. To read this data and determine the interaction for each article, he wants to create a Python programme."
+      },
+      {
+        "type": "paragraph",
+        "text": "He wants to apply the algorithm below to determine engagement:"
+      },
+      {
+        "type": "paragraph",
+        "text": "Engagement is calculated as (likes + comments) / the number of followers."
+      },
+      {
+        "type": "paragraph",
+        "text": "To see which posts are performing the best, he also wants to display the posts in descending order of interaction."
+      },
+      {
+        "type": "paragraph",
+        "text": "Task:"
+      },
+      {
+        "type": "paragraph",
+        "text": "Write a Python program that can read in the list of Instagram posts, calculate the engagement for each post using the formula provided, and display the posts in descending order of engagement."
+      },
+      {
+        "type": "paragraph",
+        "text": "Your program should have the following functionalities:"
+      },
+      {
+        "type": "paragraph",
+        "text": "Read the list of Instagram posts from a CSV file:"
+      },
+      {
+        "type": "link",
+        "url": "https://docs.google.com/spreadsheets/d/1fHIrVG8q9YDPMmga0XcidVsmZ8FiBXsGpDS7qM2zrSM/edit?usp=sharing",
+        "label": "Instagram posts CSV",
+        "local_file": null,
+        "unavailable": true
+      },
+      {
+        "type": "paragraph",
+        "text": "The CSV file will have two columns: \"likes\" and \"comments\". Each row will correspond to one post."
+      },
+      {
+        "type": "paragraph",
+        "text": "Store the number of followers in a variable called num_followers."
+      },
+      {
+        "type": "paragraph",
+        "text": "Calculate the engagement for each post using the formula provided and store it in an engagement list."
+      },
+      {
+        "type": "paragraph",
+        "text": "Display the posts in descending order of engagement and the number of likes, comments, and engagement."
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "title": "Song queue",
+    "theme": "Spotify",
+    "character": "Vignesh",
+    "author": "Tze Wey",
+    "source_label": "Beginner 1",
+    "source_pages": [
+      22
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Vignesh’s favourite Spotify artists are Sufjan Stevens and Bruno Major. He has decided that he wants the songs ‘Murder And Crime’, ‘To Let A Good Thing Die’ ‘Reach Out’, ‘Home’ and ‘Mystery of Love’ to be queued thrice each. Print his Spotify queue list in the following format ‘number. song name’, with each subsequent song starting on a new line. Use a loop function to generate the numbers of the song queue."
+      },
+      {
+        "type": "paragraph",
+        "text": "Use the following code as a starting point:"
+      },
+      {
+        "type": "code",
+        "text": "Song1 = 'Murder And Crime – Sufjan Stevens'\nSong2 = 'To Let A Good Thing Die – Bruno Major'\nSong3 = 'Reach Out – Sufjan Stevens'\nSong4 = 'Home – Bruno Major'\nSong5 = 'Mystery of Love – Sufjan Stevens'"
+      },
+      {
+        "type": "paragraph",
+        "text": "The output should look like this:"
+      },
+      {
+        "type": "code",
+        "text": "1. Murder And Crime – Sufjan Stevens\n2. Murder And Crime – Sufjan Stevens\n3. Murder And Crime – Sufjan Stevens\n4. To Let A Good Thing Die – Bruno Major\n5. To Let A Good Thing Die – Bruno Major\n6. To Let A Good Thing Die – Bruno Major\n7. Reach Out – Sufjan Stevens\n8. Reach Out – Sufjan Stevens\n9. Reach Out – Sufjan Stevens\n10. Home – Bruno Major\n11. Home – Bruno Major\n12. Home – Bruno Major\n13. Mystery of Love – Sufjan Stevens\n14. Mystery of Love – Sufjan Stevens\n15. Mystery of Love – Sufjan Stevens"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "title": "Shuffle play",
+    "theme": "Spotify",
+    "character": "Vignesh",
+    "author": "Elena",
+    "source_label": "Beginner 2",
+    "source_pages": [
+      23
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Vignesh likes to use the shuffle play function on Spotify so that he gets a diverse and unique listening experience. Shuffling happens at random."
+      },
+      {
+        "type": "paragraph",
+        "text": "Output a random track number e,g. \"Daydreaming by Harry Styles\" is 0 AND its track name. Use a count loop to output this three times."
+      },
+      {
+        "type": "paragraph",
+        "text": "(Hint: explore the import random function)"
+      },
+      {
+        "type": "paragraph",
+        "text": "Use the following code as a starting point:"
+      },
+      {
+        "type": "code",
+        "text": "import random\ntrack = [[\"Daydreaming by Harry Styles\"],\n[ \"Workin Out by JID\"],\n[\"Old Love by yuji\"],\n[\"Eventually by Tame Impala\"],\n[\"After Hours by The Weekend\"],\n[\"Ghostin by Ariana Grande\"],\n[\"Hey, Mickey! by Baby Tate\"],\n[\"Low by SZA\"],\n[\"Pink + White by Frank Ocean\"],\n[\"Here With Me by d4vd\"]]"
+      },
+      {
+        "type": "paragraph",
+        "text": "Example of output (everyone's output will be different since it is randomised):"
+      },
+      {
+        "type": "code",
+        "text": "9\n['Here With Me by d4vd']\n5\n['Ghostin by Ariana Grande']\n7\n['Low by SZA']"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "title": "Mood playlist",
+    "theme": "Spotify",
+    "character": "Vignesh",
+    "author": "Ariz",
+    "source_label": "Intermediate 1",
+    "source_pages": [
+      24
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Vignesh discovers an artist, Laufey, on Spotify, however, he isn’t sure what songs to start with. He has heard the hits but he wants to find some deep cuts that he’d actually like. Vignesh prefers slow and sad songs. Create a Laufey playlist prioritising songs with slow and sad properties."
+      },
+      {
+        "type": "paragraph",
+        "text": "Starter code:"
+      },
+      {
+        "type": "code",
+        "text": "songs = [[\"above the chinese restaurant\", \"slow\", \"sad\"],\n[\"love to keep me warm\", \"fast\", \"upbeat\"],\n[\"let you break my heart again\", \"slow\", \"sad\"],\n[\"street by street\", \"upbeat\"], [\"like the movies\", \"slow\"],\n[\"falling behind\", \"fast\", \"sad\"],\n[\"the christmas waltz\", \"slow\", \"upbeat\"],\n[\"i wish you love\", \"fast\", \"sad\"], [\"someone new\", \"slow\", \"sad\"],\n[\"james\", \"slow\"]]\nplaylist = []"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "title": "Unique playlists",
+    "theme": "Spotify",
+    "character": "Vignesh",
+    "author": "Elena",
+    "source_label": "Intermediate 2",
+    "source_pages": [
+      25
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Vignesh likes his playlists to all be unique. But sometimes Vignesh accidentally adds the same song to different playlists. Program a function that does the following:"
+      },
+      {
+        "type": "paragraph",
+        "text": "asks the user to input a song from the list"
+      },
+      {
+        "type": "paragraph",
+        "text": "outputs the amount of times the song appears from all 3 playlists"
+      },
+      {
+        "type": "paragraph",
+        "text": "returns and outputs True if the track is exclusively in one playlist"
+      },
+      {
+        "type": "paragraph",
+        "text": "returns and outputs False if the track is in multiple playlists"
+      },
+      {
+        "type": "paragraph",
+        "text": "Run this code for two song inputs"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bad habit by Steve Lacy"
+      },
+      {
+        "type": "paragraph",
+        "text": "Solo by Future"
+      },
+      {
+        "type": "paragraph",
+        "text": "(Remember to screenshot outputs for both songs)"
+      },
+      {
+        "type": "paragraph",
+        "text": "Starter code:"
+      },
+      {
+        "type": "code",
+        "text": "playlist1 = [\"Solo by Future\", \"After Dark by Mr.Kitty\",\"Those Eyes by New West\",\"Golden Hour by JVKE\",\"505 by Arctic Monkeys\"]\nplaylist2 = [\"No Surprises by Radiohead\", \"Viva La Vida by Coldplay\",\"Woo by Rihanna\", \"Bad habit by Steve Lacy\", \"Hope by NF\"]\nplaylist3 = [\"Glue Song by beabadoobee\", \"About You by 1975\",\"Nonsense by Sabrina Carpenter\", \"Bad habit by Steve Lacy\", \"Midnight Rain by Taylor Swift\"]\nsong = input(\"What song do you want to check? \")\nnum_of_appears = 0"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "title": "Spotify Wrapped",
+    "theme": "Spotify",
+    "character": "Vignesh",
+    "author": "Amanda",
+    "source_label": "Advanced 1",
+    "source_pages": [
+      26
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Who doesn't love Spotify Wrapped? Make a Spotify Wrapped for Vignesh. His song history has been compiled as a txt file (attached below) in the format “song;artist;genre;length of track”. Eg. Fireflies;Owl City;Pop;3:48."
+      },
+      {
+        "type": "link",
+        "url": "https://drive.google.com/file/d/1n_caCy8EiixYgIOB7Jwo31D_N19hRsac/view?usp=sharing",
+        "label": "Spotify listening history",
+        "local_file": null,
+        "unavailable": true
+      },
+      {
+        "type": "paragraph",
+        "text": "The Wrapped should include his top 5 artists, his top 5 songs, total minutes listened and his top genre (all determined individually based on how frequent they appear in his history)."
+      },
+      {
+        "type": "paragraph",
+        "text": "(Explore how to open and read text files)"
+      },
+      {
+        "type": "paragraph",
+        "text": "The correct output is:"
+      },
+      {
+        "type": "code",
+        "text": "Top Songs\n1 Baby\n2 FEVER\n3 Easy\n4 No Mercy\n5 That's My Girl\n\nTop Artists\n1 Taylor Swift\n2 5 Seconds of Summer\n3 Queen\n4 miss A\n5 Ariana Grande\n\nTop Genre\nPop\n\nMinutes Listened\n483"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "title": "Music player interface",
+    "theme": "Spotify",
+    "character": "Vignesh",
+    "author": "Dhivyesh",
+    "source_label": "Advanced 2",
+    "source_pages": [
+      27
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Make a list of songs which can be cycled through with an interface using tkinter. Use the slider to show a bar that shows the progress of the song over time. Also, include a slider to change the volume. (You don’t need to actually play the song)"
+      },
+      {
+        "type": "paragraph",
+        "text": "Start Code:"
+      },
+      {
+        "type": "code",
+        "text": "import tkinter as tk"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "title": "Playback speed",
+    "theme": "TikTok",
+    "character": "Sofea",
+    "author": "Amanda",
+    "source_label": "Beginner 1",
+    "source_pages": [
+      29
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Sofea is scrolling through TikTok and wants to change the speed on the videos she watches. Write a program that prompts her to input either 0.75, 1.0, 1.25, 1.5, 2.0 and prints a success message."
+      },
+      {
+        "type": "paragraph",
+        "text": "Example of output:"
+      },
+      {
+        "type": "code",
+        "text": "Which speed? (0.75, 1.0, 1.25, 1.5, 2.0) 1.25\nSpeed change successful, now playing at 1.25x speed."
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "title": "Password validation",
+    "theme": "TikTok",
+    "character": "Sofea",
+    "author": "Ella",
+    "source_label": "Beginner 2",
+    "source_pages": [
+      30
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Sofea is creating a new account on TikTok. The app has asked her to input a password with 8 to 20 characters. Write a program that validates the input of the user. The program should begin with the prompt “input password :”. The user should be able to input the password. If the user inputs a password that doesn’t fit these requirements display the message “Please input a password containing 8 to 20 letters: ” After the message, there should be an input prompt again. This loop should occur until an appropriate password is inputted. After an appropriate password is inputted the console should display “password has been validated”. The user must then retype the password as a double-entry check. This is done by prompting the user to type “Enter the same password :” until the user types in the same password. At the end of the program the console should display “logged in”"
+      },
+      {
+        "type": "paragraph",
+        "text": "(Explore if and while loops)"
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "title": "Wellness feed",
+    "theme": "TikTok",
+    "character": "Sofea",
+    "author": "Tze Wey",
+    "source_label": "Intermediate 1",
+    "source_pages": [
+      31
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Sofea is a Tik Tok user. She only enjoys watching videos about wellness. These includes videos related to cooking, which she particularly enjoys, fitness and study methods. Sort the array provided below in an order where wellness videos appear at the top of her feed, with the cooking videos being prioritised at the start. Print the array with each element on a new line, numbering each element."
+      },
+      {
+        "type": "paragraph",
+        "text": "Starter Code:"
+      },
+      {
+        "type": "code",
+        "text": "Videos = [['painting','arts','visual'],\n['curry','wellness','cooking'],\n['schedule','wellness','study methods'],\n['dancing','arts','musicals'],\n['zumba','wellness','fitness'],\n['fried rice','wellness','cooking'],\n['workout','wellness','fitness'],\n['acrylics','arts','visual'],\n['tips','wellness','study methods'],\n['cardio','wellness','fitness'],\n['habits','wellness','study methods'],\n['singing','arts','musicals'],\n['noodles','wellness','cooking'],\n['marathon','wellness','fitness']]"
+      },
+      {
+        "type": "paragraph",
+        "text": "Output should look like this:"
+      },
+      {
+        "type": "code",
+        "text": "1. ['curry', 'wellness', 'cooking']\n2. ['fried rice', 'wellness', 'cooking']\n3. ['noodles', 'wellness', 'cooking']\n4. ['marathon', 'wellness', 'fitness']\n5. ['habits', 'wellness', 'study methods']\n6. ['cardio', 'wellness', 'fitness']\n7. ['tips', 'wellness', 'study methods']\n8. ['workout', 'wellness', 'fitness']\n9. ['zumba', 'wellness', 'fitness']\n10. ['schedule', 'wellness', 'study methods']\n11. ['painting', 'arts', 'visual']\n12. ['dancing', 'arts', 'musicals']\n13. ['acrylics', 'arts', 'visual']\n14. ['singing', 'arts', 'musicals']"
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "title": "Video engagement",
+    "theme": "TikTok",
+    "character": "Sofea",
+    "author": "Amanda",
+    "source_label": "Intermediate 2",
+    "source_pages": [
+      32
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Sofea has posted a TikTok video showing off her latest outfit. Her audience’s engagement and insights is saved as a string, where L is like, U is unlike, C is comment and S is shares."
+      },
+      {
+        "type": "code",
+        "text": "\"LUCLLSLLLULLLLLCLLLLLLLLULLLLLCLLULLLLLLLULLLLLLULLCLCCCLLLLLLLUULLLLLCLLLLLLLLLCLLLLLSLCLLLLLLCLLLLLLLLLLLCLLC\""
+      },
+      {
+        "type": "paragraph",
+        "text": "Print the number of likes, comments, and shares on her video."
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "title": "Video predictions",
+    "theme": "TikTok",
+    "character": "Sofea",
+    "author": "Ariz",
+    "source_label": "Advanced 1",
+    "source_pages": [
+      33
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Sofea is a content creator. She wants to find out how her videos are doing. Create a summary of her current videos and use it to predict how her next videos will do based on the tags and like percentage. The summary should include: the total views, total likes and calculate the percentage of how many people like the video for each video. The summary should also include the collective view count of each video, average like count and average like percentage. You should sort the video ideas by order of predicted success (in terms of like percentage)"
+      },
+      {
+        "type": "paragraph",
+        "text": "(Hint: Starter code can be sorted into a regular array or a numpy array)"
+      },
+      {
+        "type": "paragraph",
+        "text": "Starter Code:"
+      },
+      {
+        "type": "code",
+        "text": "Videos :\n“Bench press PR”, tags: #gym #pr, likes: 13.6k, views: 17k\n“Leg day L”, tags: #gym #funny, likes: 21.6k, views: 24k\n“Travel vlog: Japan”, tags: #travel #japan, likes: 6.3k, views: 9k\n“5 types of gamers”, tags: #gaming #funny, likes: 17.1k views: 19k\n“Battle station tour”, tags: #gaming #pcsetup, likes: 7.7k, views: 11k\n“Ego lifter L”, tags: #gym #funny, likes: 23.4k views: 26k\n“1v5 clutch”, tags: #gaming #clips, likes: 8.4k, views: 12k\n“Squat PR” tags: #gym #pr, likes: 15.2k, views: 19k\nVideo Ideas :\n“Deadlift PR” topics: gym, pr\n“5 types of people at the gym” topics: gym, funny\n“Travel vlog: Switzerland” topics: travel,switzerland\n“Ranking up to plat” topics: gaming"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "title": "Personalised recommendations",
+    "theme": "TikTok",
+    "character": "Sofea",
+    "author": "Yu Shen",
+    "source_label": "Advanced 2",
+    "source_pages": [
+      34
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Sofea is a TikTok user. Topics she likes include gym, cooking, travel, gardening and art. Imagine her TikTok feed is a 1D array that starts with 5 elements and can constantly be updated. Make a text-based user interface where a subject she likes will be displayed as a string (simulating a post) with equal chance of being about gym, cooking, travel, gardening or art, Provide functions that allow her to like, scroll past, or refresh when given a new post. Make sure user input is validated."
+      },
+      {
+        "type": "paragraph",
+        "text": "If she likes the post, append a new element to the 1D array with a 5% increased chance of it being that topic (e.g. if she likes ‘easy cake recipe’, the future post should have an increased chance of it being about cooking), make sure the new probability of that topic is stored. Then, clear the console (not the 1D array) and print the next post."
+      },
+      {
+        "type": "paragraph",
+        "text": "If she scrolls past the post, append a new element to the 1D array with a 5% decreased chance of being that topic, make sure the new probability of that topic is stored. Then, clear the console and print the next post."
+      },
+      {
+        "type": "paragraph",
+        "text": "If she refreshes at that post, clear the 1D array and append 5 new elements to it based on the stored probabilities, repeating the process."
+      },
+      {
+        "type": "paragraph",
+        "text": "(it’s ok if posts are repeated in the feed)"
+      },
+      {
+        "type": "paragraph",
+        "text": "Starter code:"
+      },
+      {
+        "type": "code",
+        "text": "posts = [ [['gym etiquette'], ['shoulder workouts'], ['how to get a six pack fast'], ['stop doing this at the gym'], ['best leg day workouts']] , [['easy cake recipe'], ['essential ingredients for sushi'], ['my life as a 5* cook'], ['making subs in a subway'], ['top 5 chinese takeouts in London']] , [['how i got 9 for my IGCSE art'], ['tips for beginner artists'], ['draw spongebob, win $5'], ['the history of Banksy'], ['how to draw anime eyes']] , [['my trip to Ghana'], ['climbing 10 mountains in 100 days'], ['top 3 travel essentials'], ['how to pack efficiently'], ['top 5 places to visit in Mumbai']] , [['watching grass grow until 1M followers'], ['top 10 fruits to homegrow'], ['how to grow oranges'], ['this is the best fertiliser (not sponsored)'], ['why you should plant aloe vera at home']] ]\nfeed = []"
+      }
+    ]
+  },
+  {
+    "number": 19,
+    "title": "Airport pickup",
+    "theme": "Grab",
+    "character": "Tristan",
+    "author": "Shriya",
+    "source_label": "Beginner 1",
+    "source_pages": [
+      36
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Tristan is on the way to Singapore for a photography competition. He wants to catch a grab to the airport at 8am from his house."
+      },
+      {
+        "type": "paragraph",
+        "text": "Show a list of available drivers and the time it will take for them to take Tristan to the airport in minutes."
+      },
+      {
+        "type": "paragraph",
+        "text": "Create a userinput function that allows the user to choose which driver they want and then output the time Tristan reaches the airport. After that, also print a statement showing the driver is on the way."
+      },
+      {
+        "type": "paragraph",
+        "text": "(Hint: the list should display the travel time in minutes. If he is to be picked up at 8am, then the time he reaches would have to be 8am + the travel time)"
+      }
+    ]
+  },
+  {
+    "number": 20,
+    "title": "Driver confirmation",
+    "theme": "Grab",
+    "character": "Tristan",
+    "author": "Amanda",
+    "source_label": "Beginner 2",
+    "source_pages": [
+      37
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Tristan wants to book a Grab driver. He inputs all his details, and the system finds a driver for him. The app now needs to output a message to inform Tristan about his driver and the details. It should include:"
+      },
+      {
+        "type": "paragraph",
+        "text": "A success message"
+      },
+      {
+        "type": "paragraph",
+        "text": "Driver’s name"
+      },
+      {
+        "type": "paragraph",
+        "text": "Rating in stars (eg. * * * *)"
+      },
+      {
+        "type": "paragraph",
+        "text": "Car number plate"
+      },
+      {
+        "type": "paragraph",
+        "text": "Car model"
+      },
+      {
+        "type": "paragraph",
+        "text": "Print all this information with centre alignment."
+      }
+    ]
+  },
+  {
+    "number": 21,
+    "title": "Restaurant categories",
+    "theme": "Grab",
+    "character": "Tristan",
+    "author": "Natalie",
+    "source_label": "Intermediate 1",
+    "source_pages": [
+      38
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Tristan is feeling hungry, he wants to eat something from: Restaurant Food, Fast Food, Beverages. Create a function which asks Tristan what he feels like eating. Then, from the list below, display the options based on what he wants to eat."
+      },
+      {
+        "type": "paragraph",
+        "text": "Starter Code:"
+      },
+      {
+        "type": "code",
+        "text": "grab = [{\"Restaurant\": \"Esquire Kitchen\",\n\"Category\":\"Restaurant Food\"},\n{\"Restaurant\": \"McDonalds\",\"Category\":\"Fast Food\"},\n{\"Restaurant\": \"KFC\", \"Category\":\"Fast Food\"},\n{\"Restaurant\": \"Jin Xuan Hong Kong\",\n\"Category\": \"Restaurant Food\"},\n{\"Restaurant\": \"Gong Cha\", \"Category\": \"Beverages\"},\n{\"Restaurant\": \"Boost Juice\", \"Category\": \"Beverages\"},\n{\"Restaurant\": \"Sushi Zanmai\",\"Category\":\"Restaurant Food\"},\n{\"Restaurant\": \"Yomie's Rice X Yogurt\",\n\"Category\":\"Beverages\"}]"
+      }
+    ]
+  },
+  {
+    "number": 22,
+    "title": "Driver earnings",
+    "theme": "Grab",
+    "character": "Tristan",
+    "author": "Aaleyah",
+    "source_label": "Intermediate 2",
+    "source_pages": [
+      39
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "This question is not so much related to Tristan but more so about how Grab operates. Write a Python program that tracks the drivers' salaries. Information such as the driver's name, driver ID, start location of ride, end location of ride, total distance and total cost must be outputted at the end. Driver Name and ID are constant variables, however start location of ride, end location of ride, total distance and total cost must be updated with each new ride. Your should input three test cases of your choice and screenshot all three updated outputs."
+      }
+    ]
+  },
+  {
+    "number": 23,
+    "title": "Distance and fares",
+    "theme": "Grab",
+    "character": "Tristan",
+    "author": "Phuong Nghi",
+    "source_label": "Advanced 1",
+    "source_pages": [
+      40
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Tristan would need to know the distance between the place he is standing right now and his destination in order to find out the Grab fare that he has to pay. Create a function in which it will takes two different set of longitude and latitude (staring point and destination) and return the displacement between the locations and calculate the fare using the following scheme:"
+      },
+      {
+        "type": "paragraph",
+        "text": "The base fare is $0.75"
+      },
+      {
+        "type": "paragraph",
+        "text": "For each next 10km the fare is $0.5/km"
+      },
+      {
+        "type": "paragraph",
+        "text": "For each km after the first 10km, the fare is $0.35/km"
+      }
+    ]
+  },
+  {
+    "number": 24,
+    "title": "Cuisine finder",
+    "theme": "Grab",
+    "character": "Tristan",
+    "author": "Taysia",
+    "source_label": "Advanced 2",
+    "source_pages": [
+      41
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Tristan wants to order food to his house through Grab. The file below contains restaurants and their cuisines. Use this information to create a nested dictionary, which can then be filtered and displayed, so that Tristan can choose what cuisine he wants and see the restaurants that meet his criteria."
+      },
+      {
+        "type": "link",
+        "url": "https://drive.google.com/file/d/1HqdAe1InVlW00i3IMCNKwa6eAKOgUpr1/view?usp=sharing",
+        "label": "Grab restaurants and cuisines",
+        "local_file": "documents/2023/grab-restaurants.txt",
+        "unavailable": false
+      }
+    ]
+  },
+  {
+    "number": 25,
+    "title": "Horse riding watchlist",
+    "theme": "Netflix",
+    "character": "Charlotte",
+    "author": "Shriya",
+    "source_label": "Beginner 1",
+    "source_pages": [
+      43
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Charlotte loves watching horse riding shows. Create a two column user menu that lets you view a list of ten different horse riding movies of your choice."
+      },
+      {
+        "type": "paragraph",
+        "text": "Create a function allowing the user to look at the rating of the movie as well as age restriction (3 movies)."
+      },
+      {
+        "type": "paragraph",
+        "text": "Finally you want the user to be able to add whichever movie of choice to a watch later list that can be updated continuously (minimum of 2 movies)"
+      }
+    ]
+  },
+  {
+    "number": 26,
+    "title": "Viewing queue",
+    "theme": "Netflix",
+    "character": "Charlotte",
+    "author": "Aaleyah",
+    "source_label": "Beginner 2",
+    "source_pages": [
+      44
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Charlotte enjoys watching movies and television series on Netflix when she has free time. She has a to-do list of numerous films and TV episodes, but she frequently loses track of which ones she's already seen. She wants to programme in Python to keep track of her Netflix queue. There needs to be a user input function that asks Charlotte which movie she has watched and then output the current queue. Create 5 movie inputs of your choice which should also print the updated queue 5 times."
+      },
+      {
+        "type": "paragraph",
+        "text": "(There are multiple ways to attempt this problem but you could use count loops)"
+      }
+    ]
+  },
+  {
+    "number": 27,
+    "title": "Movie search",
+    "theme": "Netflix",
+    "character": "Charlotte",
+    "author": "Phuong Nghi",
+    "source_label": "Intermediate 1",
+    "source_pages": [
+      45
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "The file provided in the question contains a list of movies. Charlotte would want to search for a film in which it has the word “space” in the title. Write a code that takes a string as an input and returns a list of films which contains the word that has been inputted, if there is no equivalent film return “No result found”"
+      },
+      {
+        "type": "link",
+        "url": "https://drive.google.com/file/d/1jCT7W5Z0YqSRaF-sj8T-HR_G_OP2Wk0k/view?usp=sharing",
+        "label": "Movie search input",
+        "local_file": "documents/2023/netflix-search.txt",
+        "unavailable": false
+      },
+      {
+        "type": "paragraph",
+        "text": "(Explore opening and reading text files)"
+      }
+    ]
+  },
+  {
+    "number": 28,
+    "title": "Surprise me",
+    "theme": "Netflix",
+    "character": "Charlotte",
+    "author": "Taysia",
+    "source_label": "Intermediate 2",
+    "source_pages": [
+      46
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Charlotte is struggling to pick a movie to watch on Netflix. Import the .txt file of movies below and convert it into a list, to create a “Surprise me” function that randomly selects a movie for her to watch."
+      },
+      {
+        "type": "link",
+        "url": "https://drive.google.com/file/d/1eebscVivfUrpdifCPJU7u5IP32tnbS6V/view?usp=sharing",
+        "label": "Surprise me movie list",
+        "local_file": "documents/2023/netflix-surprise.txt",
+        "unavailable": false
+      },
+      {
+        "type": "paragraph",
+        "text": "(Hint: import random)"
+      }
+    ]
+  },
+  {
+    "number": 29,
+    "title": "Movie marathon",
+    "theme": "Netflix",
+    "character": "Charlotte",
+    "author": "Natalie",
+    "source_label": "Advanced 1",
+    "source_pages": [
+      47
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "After a tiring week, Charlotte wants to have a movie marathon from the movies that she’s added to her list on Netflix. Below shows Charlotte's list of movies, help her choose the movies by randomly choosing movies from her list below that sums up to the duration she wants her movie marathon to be. Use 6 hours and 24 hours as inputs, remember to screenshot both test cases."
+      },
+      {
+        "type": "paragraph",
+        "text": "Starter Code:"
+      },
+      {
+        "type": "code",
+        "text": "My_list = [{\"Movie\": \"The Incantation\", \"Duration\":2},\n{\"Movie\":\"The Invitation\", \"Duration\": 2},\n{\"Movie\":\"The School for good and evil\", \"Duration\": 2},\n{\"Movie\":\"Spirited Away\", \"Duration\": 2},\n{\"Movie\":\"Your Name\", \"Duration\": 2},\n{\"Movie\":\"Enola Holmes\", \"Duration\": 2},\n{\"Movie\":\"A Silent Voice\", \"Duration\": 2},\n{\"Movie\":\"The Tale of Princess Kaguya\", \"Duration\": 2},\n{\"Movie\":\"Corpse Bride\", \"Duration\": 1},\n{\"Movie\":\"Pitch Perfect 2\", \"Duration\": 2}]"
+      }
+    ]
+  },
+  {
+    "number": 30,
+    "title": "Viewing recommendations",
+    "theme": "Netflix",
+    "character": "Charlotte",
+    "author": "Eleonora",
+    "source_label": "Advanced 2",
+    "source_pages": [
+      48,
+      49
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Charlotte has a Netflix account with thousands of movies and TV shows. She wants to create a program that can recommend a movie or TV show for her to watch based on her previous viewing history."
+      },
+      {
+        "type": "paragraph",
+        "text": "To do this, Charlotte has collected a dataset of her previous viewing history in a text file called \"viewing_history.txt\". Each line of the file contains the title of a movie or TV show she has watched, followed by a comma, and the genre of the movie or TV show."
+      },
+      {
+        "type": "paragraph",
+        "text": "Charlotte also has a list of favorite genres, which she has stored in a separate text file called \"favorite_genres.txt\". Each line of the file contains a single genre."
+      },
+      {
+        "type": "paragraph",
+        "text": "Your task is to write a program that uses this data to recommend a movie or TV show for Charlotte to watch. Your program should satisfy the following requirements:"
+      },
+      {
+        "type": "paragraph",
+        "text": "1. The program should read in the \"viewing_history.txt\" file and store the data in a list of tuples, where each tuple contains the title of a movie or TV show and its genre."
+      },
+      {
+        "type": "paragraph",
+        "text": "2. The program should read in the \"favorite_genres.txt\" file and store the data in a list of strings."
+      },
+      {
+        "type": "paragraph",
+        "text": "3. The program should define a subroutine that takes the list of tuples and the list of favorite genres as input, and returns a list of movies or TV shows that match one of the favorite genres."
+      },
+      {
+        "type": "paragraph",
+        "text": "4. The program should use the \"random\" module to randomly select a movie or TV show from the list returned by the subroutine."
+      },
+      {
+        "type": "paragraph",
+        "text": "5. The program should print the title of the selected movie or TV show to the console."
+      },
+      {
+        "type": "paragraph",
+        "text": "This question requires you to create your own text file"
+      },
+      {
+        "type": "paragraph",
+        "text": "Starter code:"
+      },
+      {
+        "type": "code",
+        "text": "import random\n\ndef get_viewing_history(filename):\n    # TODO: Implement this function\n    pass\n\ndef get_favorite_genres(filename):\n    # TODO: Implement this function\n    pass\n\ndef get_recommendations(viewing_history, favorite_genres):\n    # TODO: Implement this function\n    pass\n\nif __name__ == '__main__':\n    viewing_history = get_viewing_history('viewing_history.txt')\n    favorite_genres = get_favorite_genres('favorite_genres.txt')\n    recommendations = get_recommendations(viewing_history, favorite_genres)\n    if recommendations:\n        recommendation = random.choice(recommendations)\n        print(recommendation[0])\n    else:\n        print('Sorry, no recommendations available.')"
+      }
+    ]
+  },
+  {
+    "number": 31,
+    "title": "Shopping cart",
+    "theme": "Shopee",
+    "character": "Valerie",
+    "author": "Shriya",
+    "source_label": "Beginner 1",
+    "source_pages": [
+      51
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Valerie enjoys buying various items from Shopee."
+      },
+      {
+        "type": "paragraph",
+        "text": "Define each of the following products to be a variable with its value being the price of the product which you must decide (can be any number)."
+      },
+      {
+        "type": "paragraph",
+        "text": "Shoes, Phone case, Suitcase, Earphones, T-shirt, Sunscreen, Microwave, Bath towel, Socks, Dried fruit"
+      },
+      {
+        "type": "paragraph",
+        "text": "Create a user prompt that asks the user what item they would like to purchase (they can enter the number associated with the product e.g. 1 for Shoes). There should be at least 3 prompts so the user can add 3 items to the cart."
+      },
+      {
+        "type": "paragraph",
+        "text": "Create a variable that is equal to the total price of the items added by the user."
+      },
+      {
+        "type": "paragraph",
+        "text": "Create a condition that adds the price of the item chosen to that total price value."
+      },
+      {
+        "type": "paragraph",
+        "text": "Create a user prompt asking for the user to choose between the following discount coupons:"
+      },
+      {
+        "type": "paragraph",
+        "text": "20% discount"
+      },
+      {
+        "type": "paragraph",
+        "text": "10rm cashback"
+      },
+      {
+        "type": "paragraph",
+        "text": "50% cashback (as a choice for purchases above RM150 only)"
+      },
+      {
+        "type": "paragraph",
+        "text": "Create a condition that applies the appropriate discount to the total price value depending on the user’s choice."
+      },
+      {
+        "type": "paragraph",
+        "text": "Display the total amount to be paid by the user."
+      }
+    ]
+  },
+  {
+    "number": 32,
+    "title": "Anonymous reviews",
+    "theme": "Shopee",
+    "character": "Valerie",
+    "author": "Amanda",
+    "source_label": "Beginner 2",
+    "source_pages": [
+      52
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Valerie received a package of headphones from Shoppee a week ago. She enjoys using them and wants to leave a review on the product. However, she does not want to show her username. Create a code that will prompt her to enter her review, which includes rating, performance, best feature, product quality, review and if she wants to leave her review anonymously. Her username is valerie8588. She would rate it 4/5, and likes that it has a powerful sound performance. She finds that the best feature is how it is easy to use and thinks the headphones are of superb quality. In her review she writes “Thank you for the fast and smooth transaction. The item arrived in good condition and is working well.” Print the review that is posted on the product’s page."
+      },
+      {
+        "type": "paragraph",
+        "text": "Hint: hidden usernames show only the first and last letter, and the rest are replaced with asterisks(eg. tristangrab would become t*********b)"
+      }
+    ]
+  },
+  {
+    "number": 33,
+    "title": "Package tracking",
+    "theme": "Shopee",
+    "character": "Valerie",
+    "author": "Ella",
+    "source_label": "Intermediate 1",
+    "source_pages": [
+      53
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Valerie has ordered a few items off shoppee. However, once she got home She got a call saying they have lost the packages! Valerie needs her new headphones as she has a DJ gig and wants to find out where her package is. All the packages ordered are stored in a 2D array in which each index stores 3 variables in the corresponding order : [Name, Current location, item]. Search through the array to find where Valeries package is located and find the corresponding postcode."
+      },
+      {
+        "type": "code",
+        "text": "Array1 = [['Tristan', 'Hanoi', 'Book'], ['Tristan', 'Hanoi', 'HDMI'], ['Vignesh', 'Kuala Lumpur', 'Book'], ['Sofea', 'Jakarta', 'Book'], ['Finnick', 'Hanoi', 'Headphones'], ['Tristan', 'Manila', 'HDMI'], ['Charlotte', 'Manila', 'Shirt'], ['Valerie', 'Manila', 'Shirt'], ['Tristan', 'Hanoi', 'Headphones'], ['Valerie', 'Manila', 'Mouse'], ['Vignesh', 'Hanoi', 'Book'], ['Sofea', 'Taipei', 'Mama Noodles'], ['Sofea', 'Taipei', 'Mama Noodles'], ['Charlotte', 'Vientiane', 'HDMI'], ['Vignesh', 'Jakarta', 'HDMI'], ['Valerie', 'Hanoi', 'Headphones'], ['Tristan', 'Jakarta', 'Shirt'], ['Vignesh', 'Vientiane', 'Mama Noodles'], ['Vignesh', 'Kuala Lumpur', 'Book'], ['Charlotte', 'Vientiane', 'Shirt'], ['Valerie', 'Manila', 'Book'], ['Finnick', 'Manila', 'Headphones'], ['Finnick', 'Manila', 'Shirt']]\npostcodes = [[\"Bangkok\", \"10110\"], [\"Kuala Lumpur\", \"43200\"], [\"Manila\", \"1000\"], [\"Taipei\", \"100019\"], [\"Jakarta\", \"10120\"], [\"Hanoi\", \"11109\"], [\"Vientiane\", \"0604\"]]"
+      }
+    ]
+  },
+  {
+    "number": 34,
+    "title": "Delivery order",
+    "theme": "Shopee",
+    "character": "Valerie",
+    "author": "Elena",
+    "source_label": "Intermediate 2",
+    "source_pages": [
+      54
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Valerie has ordered a few items off a shopee bakery. She wants the orders to arrive in the order they are completed. The bakery has informed her that the lesser orders will be completed quicker and thus also delivered sooner. Valerie wants to know which items will arrive first."
+      },
+      {
+        "type": "paragraph",
+        "text": "Here is the quantity of each of her purchases:"
+      },
+      {
+        "type": "code",
+        "text": "list = [4, 9, 2, 1, 2, 6, 3]"
+      },
+      {
+        "type": "paragraph",
+        "text": "Use the bubble sort algorithm to sort the array so that it displays the least amount of purchases to the largest amount (from left to right)"
+      }
+    ]
+  },
+  {
+    "number": 35,
+    "title": "Lowest price",
+    "theme": "Shopee",
+    "character": "Valerie",
+    "author": "Eleonora",
+    "source_label": "Advanced 1",
+    "source_pages": [
+      55
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Valerie is trying to order a birthday gift for her mom from Shopee. She has looked at the catalogue available on Shopee, and now she needs to find the item that she wants to buy. Valerie has downloaded a text file from the Shopee website which contains the item information for each item in the catalogue. The text file is made up of two columns. The first column contains the item ID and the second column has the item name and item price. Valerie wants to find the item with the lowest price so that she can buy it for her mom. She is going to use Python functions to find the item with the lowest price. Valerie first needs to read in the text file using the open() function. She will then use the readlines() function to create a list of the items in the file. Next, Valerie needs to create an empty list to store the item prices. She will use a for loop to iterate through the list of items and store the item prices in the empty list. Now Valerie has a list of all the item prices, she can use the min() function to find the item with the lowest price."
+      },
+      {
+        "type": "paragraph",
+        "text": "This question requires you to create your own text file"
+      }
+    ]
+  },
+  {
+    "number": 36,
+    "title": "Compare sellers",
+    "theme": "Shopee",
+    "character": "Valerie",
+    "author": "Yu Shen",
+    "source_label": "Advanced 2",
+    "source_pages": [
+      56
+    ],
+    "source_url": "https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view",
+    "blocks": [
+      {
+        "type": "paragraph",
+        "text": "Valerie is a Shopee user. She really likes buying tech-related stuff. Recently she has been looking to buy a Xiaomi 13, but is not sure which seller to buy from. Using the below dictionary, write a program for Valerie that tallies and displays the total cost of buying a Xiaomi 13 from each seller (including delivery fees and available discounts) then sorts them from least expensive to most expensive, telling her which ones she can afford. She starts with a random amount of money in her account between RM3000 and RM5000."
+      },
+      {
+        "type": "paragraph",
+        "text": "Valerie must then be able to select which seller she wants to visit and is given the option to buy the product or exit the seller’s page. Visiting a seller’s page clears the previous list from the screen."
+      },
+      {
+        "type": "paragraph",
+        "text": "If ‘buy’ is chosen, the program must check whether she has enough money in her account. If she does, she’ll be asked for her pin number (the pin number must be 6 digits long and must be a specific permutation of integers). Getting the pin number right will allow her to proceed with the purchase, while getting the pin number wrong more than twice in a row will suspend her account for 365 days. If she doesn’t have enough money, invalidate the purchase."
+      },
+      {
+        "type": "paragraph",
+        "text": "If ‘exit’ is chosen, the program will clear the screen and return to the previous list."
+      },
+      {
+        "type": "code",
+        "text": "xm13 = {'Official Xiaomi Store' : {'price' : 2999.0, 'dis%' : 30}, 'Official Siaome Store' : {'price' : 0.99, 'dis%' : 90}, 'mmgbpmall' : {'price' : 3499.0, 'dis%' : 40}, 'spraygadget' : {'price' : 4599.0, 'dis%' : 25}, 'calastore' : {'price' : 1905.0, 'dis%' : 33}, 'mayatech' : {'price' : 2555.0, 'dis%' : 22}, 'mcdecotech' : {'price' : 2359.0, 'dis%' : 20}, 'caviar' : {'price' : 59999.0, 'dis%' : 0}, 'rocketgadgets' : {'price' : 3349.0, 'dis%' : 12}, 'realstore' : {'price' : 20.0, 'dis%' : 50}}"
+      }
+    ]
+  }
+]

@@ -1,0 +1,33 @@
+{% if practice is not defined %}{% set practice = practice_key(practice_id) %}{% endif %}
+{% if practice %}
+  <section class="answer-check" id="check-{{ practice_id }}" aria-labelledby="check-title-{{ practice_id }}">
+    <p class="eyebrow">{% if practice.checkpoint %}PRACTICE CHECK{% else %}CHECK YOUR ANSWER{% endif %}</p>
+    <h2 id="check-title-{{ practice_id }}">Try your answer.</h2>
+    {% if practice.note %}<p class="answer-check-note">{{ practice.note }}</p>{% endif %}
+    {% if practice.cases %}
+      <p class="subtle-note">Run your program in your own editor, then paste its output below. This checks the stated output{% if practice.checkpoint %} or checkpoint{% endif %}; it does not assess your full program. Practice attempts do not affect competition scores.</p>
+      <form method="post" action="{{ url_for('check_practice', key=practice_id) }}" data-answer-check>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        {% for part in practice.cases %}
+          <div class="answer-field">
+            <label for="answer-{{ practice_id }}-{{ loop.index0 }}">{{ part.label }}</label>
+            {% if part.instructions %}<p class="subtle-note" id="instructions-{{ practice_id }}-{{ loop.index0 }}">{{ part.instructions }}</p>{% endif %}
+            <textarea id="answer-{{ practice_id }}-{{ loop.index0 }}" name="answer_{{ loop.index0 }}" rows="{{ 5 if part.mode in ['sequence', 'unordered_sequence', 'unordered_lines', 'priority_sequence', 'track_pairs', 'even_odd'] else 3 }}" required maxlength="20000" spellcheck="false" autocapitalize="off" aria-describedby="{% if part.instructions %}instructions-{{ practice_id }}-{{ loop.index0 }} {% endif %}feedback-{{ practice_id }}-{{ loop.index0 }}">{% if submitted is defined %}{{ submitted[loop.index0] }}{% endif %}</textarea>
+            <p class="answer-field-feedback" id="feedback-{{ practice_id }}-{{ loop.index0 }}" data-answer-field-feedback>{% if result is defined and result.fields %}{{ 'Correct' if result.fields[loop.index0] else 'Not quite — try this part again.' }}{% endif %}</p>
+          </div>
+        {% endfor %}
+        <button class="button" type="submit">Check answer <span aria-hidden="true">→</span></button>
+        <p class="answer-feedback{% if result is defined %} is-{{ result.status }}{% endif %}" role="status" aria-live="polite" aria-atomic="true" data-answer-feedback>{% if result is defined %}{{ result.message }}{% endif %}</p>
+      </form>
+      <details class="practice-solution">
+        <summary>Reveal worked answer</summary>
+        {% for part in practice.cases %}
+          <h3>{{ part.label }}{% if part.mode in ['choice', 'subset', 'track_pairs', 'priority_sequence', 'unordered_sequence', 'even_odd'] %} · one valid answer{% endif %}</h3>
+          <pre>{{ part.expected }}</pre>
+        {% endfor %}
+        <p>{{ practice.explanation }}</p>
+        <p class="subtle-note">{{ practice.source }}</p>
+      </details>
+    {% endif %}
+  </section>
+{% endif %}

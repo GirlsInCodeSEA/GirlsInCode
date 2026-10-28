@@ -1,0 +1,744 @@
+[
+  {
+    "number": 1,
+    "level": "Beginner",
+    "source_level": 1,
+    "source_number": 1,
+    "title": "Level 1 · Question 1",
+    "label": "Level 1 · Question 1",
+    "source_page": 1,
+    "source_file": "documents/gic-march-2025-beginner.pdf",
+    "status": "archived",
+    "statement": "Give your answer in the same format as the sample output.\nWrite a program that asks the user “Who’s your favourite astronaut?” and prints a\nmessage saying, \"Your favourite astronaut is [Name].\"\nSample Input:\nNeil Armstrong\nSample Output:\nYour favourite astronaut is Neil Armstrong.\nYour Input:\nSally Ride",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "Your favourite astronaut is Sally Ride.",
+        "source_header": "L1 Q1 Output"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "level": "Beginner",
+    "source_level": 1,
+    "source_number": 2,
+    "title": "Level 1 · Question 2",
+    "label": "Level 1 · Question 2",
+    "source_page": 1,
+    "source_file": "documents/gic-march-2025-beginner.pdf",
+    "status": "archived",
+    "statement": "Give your answer in the same format as the sample output.\nCreate a list of programming languages used by women in technology. Print the list in\nalphabetical order.\nSample Output:\n[‘English’, ‘Spanish’, ‘French’]\nGiven Input:\nPython, JavaScript, Ruby",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "['JavaScript', 'Python', 'Ruby']",
+        "source_header": "L1 Q2 Output"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "level": "Beginner",
+    "source_level": 1,
+    "source_number": 3,
+    "title": "Level 1 · Question 3",
+    "label": "Level 1 · Question 3",
+    "source_page": 1,
+    "source_file": "documents/gic-march-2025-beginner.pdf",
+    "status": "archived",
+    "statement": "Give your answer in the same format as the sample output.\nCreate a program that stores a list of inspiring women ('Marie Curie', 'Ada\nLovelace', 'Katherine Johnson', 'Mae Jemison', ‘Radia Perlman’)\nin STEM. Then, ask the user to input a number between 0 and 4 inclusive and print the\nname at that index.\nSample Output: (output only the name)\nAlbert Einstein\nGiven Input:\nUser enters: 3",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "Mae Jemison",
+        "source_header": "L1 Q3 Output"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "level": "Beginner",
+    "source_level": 1,
+    "source_number": 4,
+    "title": "Level 1 · Question 4",
+    "label": "Level 1 · Question 4",
+    "source_page": 2,
+    "source_file": "documents/gic-march-2025-beginner.pdf",
+    "status": "archived",
+    "statement": "Give your answer in the same format as the sample output.\nCreate a list of five women who have contributed to technology. Print each name on a\nnew line in reverse alphabetical order.\nOutput Format:\nName\nName\nName\nGiven Input:\nSheryl Sandberg\nRadia Perlman\nGrace Hopper\nAda Lovelace\nKatherine Johnson",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "Sheryl Sandberg\nRadia Perlman\nKatherine Johnson\nGrace Hopper\nAda Lovelace",
+        "source_header": "L1 Q4 Output"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "level": "Beginner",
+    "source_level": 1,
+    "source_number": 5,
+    "title": "Level 1 · Question 5",
+    "label": "Level 1 · Question 5",
+    "source_page": 2,
+    "source_file": "documents/gic-march-2025-beginner.pdf",
+    "status": "archived",
+    "statement": "Give your answer in the same format as the sample output.\nCreate a program that stores a list of scientists. Ask the user to input a letter. Print all\nthe names (each on a separate line) that start with that letter in the same order as\ngiven in the list.\nSample Output:\nCharles Babbage\nClaude Shannon\nCraig Newmark\nCathy Fosnot\nChris Lattner\nGiven Input:\nUser enters: A\nList:\nnames = [ \"Isaac Newton\", \"Albert Einstein\", \"Neils Bohr\", \"Charles Darwin\", \"Louis\nPasteur\", \"Sigmund Freud\", \"Galileo Galilei\", \"Antoine Laurent Lavoisier\",\n\"Johannes Kepler\", \"Nicolaus Copernicus\", \"Michael Faraday\", \"James Clerk\nMaxwell\", \"Claude Bernard\", \"Franz Boas\", \"Werner Heisenberg\", \"Linus Pauling\",\n\"Rudolf Virchow\", \"Erwin Schrödinger\", \"Ernest Rutherford\", \"Paul Dirac\", \"Andreas\nVesalius\", \"Tycho Brahe\", \"Comte de Buffon\", \"Ludwig Boltzmann\", \"Max Planck\",\n\"Marie Curie\", \"William Herschel\", \"Charles Lyell\", \"Pierre Simon de Laplace\",\n\"Edwin Hubble\", \"Joseph J. Thomson\", \"Max Born\", \"Francis Crick\", \"Enrico Fermi\",\n\"Justus Liebig\", \"Arthur Eddington\", \"William Harvey\", \"Marcello Malpighi\",\n\"Christiaan Huygens\", \"Carl Gauss\", \"Albrecht von Haller\", \"August Kekulé\",\n\"Robert Koch\", \"Murray Gell-Mann\", \"Emil Fischer\", \"Dmitri Mendeleev\", \"Sheldon\nGlashow\", \"James Watson\", \"John Bardeen\", \"John von Neumann\", \"Richard\nFeynman\", \"Alfred Wegener\", \"Stephen Hawking\", \"Anton van Leeuwenhoek\",\n\"Max von Laue\" ]",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "Albert Einstein\nAntoine Laurent Lavoisier\nAndreas Vesalius\nArthur Eddington\nAlbrecht von Haller\nAugust Kekulé\nAlfred Wegener\nAnton van Leeuwenhoek",
+        "source_header": "L1 Q5 Output"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "level": "Beginner",
+    "source_level": 2,
+    "source_number": 1,
+    "title": "Level 2 · Question 1",
+    "label": "Level 2 · Question 1",
+    "source_page": 3,
+    "source_file": "documents/gic-march-2025-beginner.pdf",
+    "status": "archived",
+    "statement": "Give only the answer and no other words.\nCount how many numbers in the list are a multiple of 4.\nnumbers = [12, 45, 8, 23, 16, 89, 4, 64, 72, 31, 50, 28, 90, 37, 48, 55, 76, 99, 20, 32,\n60, 17, 80, 7, 40, 52, 88, 33, 24, 97, 36, 19, 44, 2, 96, 25, 84, 13, 68, 56, 3, 92, 75, 39,\n29, 100, 21, 66, 70, 6, 14, 18, 9, 63, 47, 27, 22, 79, 30, 53, 26, 11, 54, 35, 58, 43, 62,\n15, 95, 46, 59, 10, 85, 5, 41, 98, 34, 1, 42, 49, 82, 86, 67, 91, 38, 77, 51, 61, 81, 87,\n83, 78, 57, 71, 74, 93, 94, 65, 73, 59]",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "25",
+        "source_header": "L2 Q1 Output"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "level": "Beginner",
+    "source_level": 2,
+    "source_number": 2,
+    "title": "Level 2 · Question 2",
+    "label": "Level 2 · Question 2",
+    "source_page": 3,
+    "source_file": "documents/gic-march-2025-beginner.pdf",
+    "status": "archived",
+    "statement": "Give only the answer and no other words.\nCount the number of vowels in the given string (all characters in the string are in lower\ncase).\nVowels = [‘a’,’e’,’i’,’o’,’u’]\nString =\n\"zqweoprtyuiasdghjklxcvbnmpoiuytrewqlkjhgfdsamnbvcxzoiuytrewqasdfghjklmnbvcxzq\nwertyuioplkjhgfds\"",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "19",
+        "source_header": "L2 Q2 Output"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "level": "Beginner",
+    "source_level": 2,
+    "source_number": 3,
+    "title": "Level 2 · Question 3",
+    "label": "Level 2 · Question 3",
+    "source_page": 3,
+    "source_file": "documents/gic-march-2025-beginner.pdf",
+    "status": "archived",
+    "statement": "Give only the answer and no other words.\nPrint the longest word in the list\nwords = [\"apple\", \"banana\", \"strawberry\", \"grape\", \"pineapple\", \"orange\", \"blueberry\",\n\"watermelon\", \"kiwi\", \"mango\", \"peach\", \"apricot\", \"blackberry\", \"coconut\", \"cranberry\",\n\"dragonfruit\", \"elderberry\", \"fig\", \"gooseberry\", \"guava\", \"honeydew\", \"jackfruit\",\n\"kiwifruit\", \"lemon\", \"lime\", \"lychee\", \"mandarin\", \"mulberry\", \"nectarine\", \"olive\",\n\"papaya\", \"passionfruit\", \"pear\", \"persimmon\", \"plum\", \"pomegranate\", \"quince\",\n\"raspberry\", \"redcurrant\", \"starfruit\", \"tamarillo\", \"tangerine\", \"tomato\", \"ugli\", \"vanilla\",\n\"watermelon\", \"yuzu\", \"zucchini\", \"boysenberry\", \"cloudberry\"]",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "passionfruit",
+        "source_header": "L2 Q3 Output"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "level": "Beginner",
+    "source_level": 2,
+    "source_number": 4,
+    "title": "Level 2 · Question 4",
+    "label": "Level 2 · Question 4",
+    "source_page": 3,
+    "source_file": "documents/gic-march-2025-beginner.pdf",
+    "status": "archived",
+    "statement": "Give only the answer and no other words.\nCount how many words in the list have more than 5 letters.\nwords = [\"apple\", \"banana\", \"strawberry\", \"grape\", \"pineapple\", \"orange\", \"blueberry\",\n\"watermelon\", \"kiwi\", \"mango\", \"peach\", \"apricot\", \"blackberry\", \"coconut\", \"cranberry\",\n\"dragonfruit\", \"elderberry\", \"fig\", \"gooseberry\", \"guava\", \"honeydew\", \"jackfruit\",\n\"kiwifruit\", \"lemon\", \"lime\", \"lychee\", \"mandarin\", \"mulberry\", \"nectarine\", \"olive\",\n\"papaya\", \"passionfruit\", \"pear\", \"persimmon\", \"plum\", \"pomegranate\", \"quince\",\n\"raspberry\", \"redcurrant\", \"starfruit\", \"tamarillo\", \"tangerine\", \"tomato\", \"ugli\", \"vanilla\",\n\"watermelon\", \"yuzu\", \"zucchini\", \"boysenberry\", \"cloudberry\"]",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "36",
+        "source_header": "L2 Q4 Output"
+      }
+    ]
+  },
+  {
+    "number": 10,
+    "level": "Beginner",
+    "source_level": 2,
+    "source_number": 5,
+    "title": "Level 2 · Question 5",
+    "label": "Level 2 · Question 5",
+    "source_page": 3,
+    "source_file": "documents/gic-march-2025-beginner.pdf",
+    "status": "archived",
+    "statement": "Give only the answer and no other words.\nPrint the element that appears most frequently in the list.\nnumbers = [5, 8, 12, 5, 9, 15, 5, 7, 3, 8, 6, 5, 2, 8, 14, 9, 12, 5, 7, 3, 8, 10, 5, 6, 4, 8, 9,\n13, 7, 5, 2, 8, 14, 9, 12, 5, 7, 3, 8, 10,  5, 6, 4, 8, 9, 13, 7, 5, 2, 8, 14, 9, 12, 5, 7, 3, 8,\n10, 5, 6, 4, 8, 9, 13, 7, 5, 2, 8, 14, 9, 12, 5, 7, 3, 8, 10, 5, 6, 4, 8, 9, 13, 7, 5, 2, 8, 14, 9,\n12, 5, 7, 3, 8, 10, 5, 6, 4, 8, 9, 13]",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "5",
+        "source_header": "L2 Q5 Output"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "level": "Beginner",
+    "source_level": 2,
+    "source_number": 6,
+    "title": "Level 2 · Question 6",
+    "label": "Level 2 · Question 6",
+    "source_page": 4,
+    "source_file": "documents/gic-march-2025-beginner.pdf",
+    "status": "archived",
+    "statement": "Give only the answer and no other words.\nCompute the average length of words in the given list. Give your answer as a float.\nwords = [\"apple\", \"banana\", \"strawberry\", \"grape\", \"pineapple\", \"orange\", \"blueberry\",\n\"watermelon\", \"kiwi\", \"mango\", \"peach\", \"apricot\", \"blackberry\", \"coconut\", \"cranberry\",\n\"dragonfruit\", \"elderberry\", \"fig\", \"gooseberry\", \"guava\", \"honeydew\", \"jackfruit\",\n\"kiwifruit\", \"lemon\", \"lime\", \"lychee\", \"mandarin\", \"mulberry\", \"nectarine\", \"olive\",\n\"papaya\", \"passionfruit\", \"pear\", \"persimmon\", \"plum\", \"pomegranate\", \"quince\",\n\"raspberry\", \"redcurrant\", \"starfruit\", \"tamarillo\", \"tangerine\", \"tomato\", \"ugli\", \"vanilla\",\n\"watermelon\", \"yuzu\", \"zucchini\", \"boysenberry\", \"cloudberry\"]",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "7.5",
+        "source_header": "L2 Q6 Output"
+      }
+    ]
+  },
+  {
+    "number": 12,
+    "level": "Beginner",
+    "source_level": 3,
+    "source_number": 1,
+    "title": "Level 3 · Question 1",
+    "label": "Level 3 · Question 1",
+    "source_page": 4,
+    "source_file": "documents/gic-march-2025-beginner.pdf",
+    "status": "archived",
+    "statement": "Give only the answer and no other words.\nFind the sum of the square of each number in the list\nnumbers = [5, 8, 12, 5, 9, 15, 5, 7, 3, 8, 6, 5, 2, 8, 14, 9, 12, 5, 7, 3, 8, 10, 5, 6, 4, 8, 9,\n13, 7, 5, 2, 8, 14, 9, 12, 5, 7, 3, 8, 10,  5, 6, 4, 8, 9, 13, 7, 5, 2, 8, 14, 9, 12, 5, 7, 3, 8,\n10, 5, 6, 4, 8, 9, 13, 7, 5, 2, 8, 14, 9, 12, 5, 7, 3, 8, 10, 5, 6, 4, 8, 9, 13, 7, 5, 2, 8, 14, 9,\n12, 5, 7, 3, 8, 10, 5, 6, 4, 8, 9, 13]",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "6703",
+        "source_header": "L3 Q1 Output"
+      }
+    ]
+  },
+  {
+    "number": 13,
+    "level": "Beginner",
+    "source_level": 3,
+    "source_number": 2,
+    "title": "Level 3 · Question 2",
+    "label": "Level 3 · Question 2",
+    "source_page": 4,
+    "source_file": "documents/gic-march-2025-beginner.pdf",
+    "status": "archived",
+    "statement": "Give only the answer and no other words.\nFind the index of the element containing the value “315”\nnumbers = [ 12, 45, 78, 23, 89, 56, 90, 34, 67, 21, 5, 99, 87, 43, 76, 54, 32, 11, 66, 88,\n101, 222, 333, 444, 555, 666, 777, 888, 999, 111, 213, 435, 678, 890, 321, 234, 567,\n789, 432, 654, 876, 98, 123, 456, 789, 147, 258, 369, 741, 852, 963, 357, 159, 951,\n753, 159, 852, 741, 639, 528, 417, 326, 235, 144, 278, 395, 183, 726, 819, 237, 564,\n891, 320, 465, 678, 902, 147, 951, 357, 654, 846, 129, 738, 564, 372, 918, 246, 537,\n729, 804, 612, 435, 729, 102, 948, 567, 234, 678, 901, 315, # 315 appears here 246,\n135, 753, 864, 987, 204, 306, 708, 129, 537, 816, 402, 729, 153, 867, 534, 789, 102,\n348, 267, 456, 789, 543, 231, 678, 321, 987, 543, 678, 432, 109, 328, 547, 266, 488,\n699, 832, 740, 290, 157, 236, 478, 920, 346, 271, 843, 152, 964, 375, 839, 273, 645,\n908, 123, 546, 789, 312, 645, 978, 246, 753, 159, 357, 264, 891, 678, 543, 901, 738,\n465, 372, 912, 543, 276, 819, 357, 642, 975, 138, 429, 357, 123, 678, 456, 789, 312,\n645, 978, 159, 456, 273, 789, 642, 975, 318, 492, 675, 321, 789, 654 ]",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "99",
+        "source_header": "L3 Q2 Output"
+      }
+    ]
+  },
+  {
+    "number": 14,
+    "level": "Beginner",
+    "source_level": 3,
+    "source_number": 3,
+    "title": "Level 3 · Question 3",
+    "label": "Level 3 · Question 3",
+    "source_page": 4,
+    "source_file": "documents/gic-march-2025-beginner.pdf",
+    "status": "archived",
+    "statement": "Give only the answer and no other words.\nFind the number of times “11” occurs in the list\nnumbers = [ 34, 56, 78, 90, 23, 45, 67, 89, 12, 98, 76, 54, 32, 21, 43, 65, 87, 109, 321,\n543, 765, 987, 234, 456, 678, 890, 102, 213, 435, 657, 879, 111, 222, 333, 444, 555,\n666, 777, 888, 999, 112, 223, 334, 445, 556, 667, 778, 889, 990, 101, 202, 303, 404,\n505, 606, 707, 808, 909, 110, 220, 330, 440, 550, 660, 770, 880, 990, 100, 200, 300,\n400, 500, 600, 700, 800, 900, 150, 250, 350, 450, 550, 650, 750, 850, 950, 11, 123,\n234, 345, 456, 567, 678, 789, 890, 901, 1002, 1103, 1204, 1305, 1406, 1507, 1608,\n1709, 1800, 1901, 2002, 2103, 2204, 2305, 11, 2507, 2608, 2709, 2800, 2901, 3002,\n3103, 3204, 3305, 3406, 3507, 3608, 3709, 11, 3901, 4002, 4103, 4204, 4305, 4406,\n4507, 4608, 4709, 4800, 11, 5002, 5103, 5204, 5305, 5406, 5507, 5608, 5709, 5800,\n5901, 6002, 11, 6204, 6305, 6406, 6507, 6608, 6709, 6800, 6901, 7002, 7103, 7204,\n7305, 7406, 7507, 7608, 7709, 7800, 7901, 8002, 8103, 8204, 8305, 8406, 8507,\n8608, 8709, 8800, 11, 9002, 9103, 9204, 9305, 9407, 9508, 9609, 9700, 9801, 9902,\n10003, 10104, 10205, 10306, 10407, 10508, 10609, 10700, 10801, 10902, 11003,\n11104, 11205 ]",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "6",
+        "source_header": "L3 Q3 Output"
+      }
+    ]
+  },
+  {
+    "number": 15,
+    "level": "Beginner",
+    "source_level": 3,
+    "source_number": 4,
+    "title": "Level 3 · Question 4",
+    "label": "Level 3 · Question 4",
+    "source_page": 5,
+    "source_file": "documents/gic-march-2025-beginner.pdf",
+    "status": "archived",
+    "statement": "Give only the answer and no other words.\nFind the remainder when the 57th element is divided by 3\nnumbers = [ 34, 56, 78, 90, 23, 45, 67, 89, 12, 98, 76, 54, 32, 21, 43, 65, 87, 109, 321,\n543, 765, 987, 234, 456, 678, 890, 102, 213, 435, 657, 879, 111, 222, 333, 444, 555,\n666, 777, 888, 999, 112, 223, 334, 445, 556, 667, 778, 889, 990, 101, 202, 303, 404,\n505, 606, 707, 808, 909, 110, 220, 330, 440, 550, 660, 770, 880, 990, 100, 200, 300,\n400, 500, 600, 700, 800, 900, 150, 250, 350, 450, 550, 650, 750, 850, 950, 11, 123,\n234, 345, 456, 567, 678, 789, 890, 901, 1002, 1103, 1204, 1305, 1406, 1507, 1608,\n1709, 1800, 1901, 2002, 2103, 2204, 2305, 11, 2507, 2608, 2709, 2800, 2901, 3002,\n3103, 3204, 3305, 3406, 3507, 3608, 3709, 11, 3901, 4002, 4103, 4204, 4305, 4406,\n4507, 4608, 4709, 4800, 11, 5002, 5103, 5204, 5305, 5406, 5507, 5608, 5709, 5800,\n5901, 6002, 11, 6204, 6305, 6406, 6507, 6608, 6709, 6800, 6901, 7002, 7103, 7204,\n7305, 7406, 7507, 7608, 7709, 7800, 7901, 8002, 8103, 8204, 8305, 8406, 8507,\n8608, 8709, 8800, 11, 9002, 9103, 9204, 9305, 9407, 9508, 9609, 9700, 9801, 9902,\n10003, 10104, 10205, 10306, 10407, 10508, 10609, 10700, 10801, 10902, 11003,\n11104, 11205 ]",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "1",
+        "source_header": "L3 Q4 Output"
+      }
+    ]
+  },
+  {
+    "number": 16,
+    "level": "Beginner",
+    "source_level": 3,
+    "source_number": 5,
+    "title": "Level 3 · Question 5",
+    "label": "Level 3 · Question 5",
+    "source_page": 5,
+    "source_file": "documents/gic-march-2025-beginner.pdf",
+    "status": "archived",
+    "statement": "Give only the answer and no other words.\nFind the number of elements that contain values greater than 100\nnumbers = [ 3, 12, 47, 89, 156, 230, 412, 678, 999, 1023, 2056, 3210, 4789, 5123,\n6780, 7895, 8120, 9321, 10456, 11789, 7, 21, 34, 56, 98, 23, 67, 45, 90, 19, 76, 88,\n53, 66, 32, 11, 5, 27, 81, 94, 1345, 2789, 3567, 4892, 5230, 6741, 7896, 8023, 9124,\n10256, 11234, 12478, 13569, 14789, 15923, 16789, 17892, 18956, 19345, 20478,\n21678, 22890, 23999, 25412, 26789, 27890, 28901, 29999, 31234, 32456, 33567,\n34890, 35999, 37234, 38956, 39876, 41230, 42345, 43567, 44890, 17, 29, 61, 83, 48,\n91, 77, 24, 36, 58, 79, 64, 15, 55, 31, 42, 73, 87, 95, 28, 45999, 47890, 48921, 49567,\n51234, 52890, 53999, 54812, 55999, 57890, 58921, 59345, 60234, 61789, 62345,\n63567, 64890, 65789, 67892, 68956, 9, 33, 75, 18, 92, 46, 20, 63, 70, 85, 30, 50, 97,\n80, 40, 68, 12, 22, 13, 14, 69567, 71234, 72890, 73999, 74812, 75999, 77890, 78921,\n79345, 80234, 81789, 82345, 83567, 84890, 85789, 87892, 88956, 89567, 90234,\n91789, 27, 49, 59, 16, 74, 93, 37, 86, 52, 60, 25, 35, 57, 44, 10, 69, 71, 43, 99, 39 ]",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "96",
+        "source_header": "L3 Q5 Output"
+      }
+    ]
+  },
+  {
+    "number": 17,
+    "level": "Beginner",
+    "source_level": 3,
+    "source_number": 6,
+    "title": "Level 3 · Question 6",
+    "label": "Level 3 · Question 6",
+    "source_page": 5,
+    "source_file": "documents/gic-march-2025-beginner.pdf",
+    "status": "archived",
+    "statement": "Give only the answer and no other words.\nCreate a function that takes an input n and returns a list containing a Fibonacci\nsequence of length 15, where T1 = n & T2 = n.\nInput 1:\n5",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "[5, 5, 10, 15, 25, 40, 65, 105, 170, 275, 445, 720, 1165, 1885, 3050]",
+        "source_header": "L3 Q6 Output"
+      }
+    ]
+  },
+  {
+    "number": 18,
+    "level": "Beginner",
+    "source_level": 3,
+    "source_number": 7,
+    "title": "Level 3 · Question 7",
+    "label": "Level 3 · Question 7",
+    "source_page": 6,
+    "source_file": "documents/gic-march-2025-beginner.pdf",
+    "status": "archived",
+    "statement": "Give only the answer and no other words.\nFind the range of values in the following list. (range = max - min)\nInput:\nlist1 = [187, 992, 681, 828, 278, 186, 508, 418, 117, 738, 171, 882,\n927, 665, 821, 975, 738, 906, 696, 746, 403, 223, 658, 371, 230, 447,\n204, 624, 174, 923]",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "875",
+        "source_header": "L3 Q7 Output"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "level": "Intermediate",
+    "source_level": 1,
+    "source_number": 1,
+    "title": "Level 1 · Question 1",
+    "label": "Level 1 · Question 1",
+    "source_page": 1,
+    "source_file": "documents/gic-march-2025-intermediate.pdf",
+    "status": "archived",
+    "statement": "Create a function that finds all prime numbers in a list and returns them as a set.\nInput:\nlist = [7458, 7501, 8443, 7907, 6977, 1264, 9272, 7269, 3814, 2455, 1970,\n2288, 4614, 9718, 6523, 1631, 3631, 7023, 8101, 4201, 7261, 6448, 5611, 7907,\n1953, 9959, 7499, 9256, 4684, 4071, 1621, 4510, 1509, 1810, 6660, 2507, 8566,\n5466, 2939, 6516, 7238, 1813, 8567, 2548, 9779, 1556, 6753, 7321, 6049, 6395]",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "{6977, 7907, 2939, 8101, 4201, 7499, 3631, 1621, 7321, 8443}",
+        "source_header": "L1 Q1 Output"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "level": "Intermediate",
+    "source_level": 1,
+    "source_number": 2,
+    "title": "Level 1 · Question 2",
+    "label": "Level 1 · Question 2",
+    "source_page": 1,
+    "source_file": "documents/gic-march-2025-intermediate.pdf",
+    "status": "archived",
+    "statement": "Create a function that takes a list and returns a new list whereby all even numbers come\nbefore all odd numbers (no need to arrange in ascending order).\nlist = [6345, 8879, 6505, 4771, 2114, 1285, 1508, 1495, 2361, 8895, 3561,\n6401, 8215, 8389, 7153, 6159, 6009, 7319, 5065, 4462, 1239, 2049, 2021, 3178,\n4799, 6062, 7111, 4457, 6188, 3426, 9836, 5819, 3512, 6558, 4624, 2147, 6464,\n4660, 6356, 7926, 7623, 5072, 2527, 9114, 8543, 5712, 3829, 6133, 9012, 9539]",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "[2114, 1508, 4462, 3178, 6062, 6188, 3426, 9836, 3512, 6558, 4624, 6464, 4660, 6356, 7926, 5072, 9114, 5712, 9012, 6345, 8879, 6505, 4771, 1285, 1495, 2361, 8895, 3561, 6401, 8215, 8389, 7153, 6159, 6009, 7319, 5065, 1239, 2049, 2021, 4799, 7111, 4457, 5819, 2147, 7623, 2527, 8543, 3829, 6133, 9539]",
+        "source_header": "L1 Q2 Output"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "level": "Intermediate",
+    "source_level": 1,
+    "source_number": 3,
+    "title": "Level 1 · Question 3",
+    "label": "Level 1 · Question 3",
+    "source_page": 1,
+    "source_file": "documents/gic-march-2025-intermediate.pdf",
+    "status": "archived",
+    "statement": "Create a function that takes a string  and returns the number of words in that string (a ‘word’ is\ndefined by any character separated by ‘punctuation’)\npunctuation = [' ', ',', '.', '!', '?', '-']\nInput:\nstring1 = \"AH-pateu apateu, apateu apateu, apateu apateu, ugh, ahah\nahah!\"",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "10",
+        "source_header": "L1 Q3 Output"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "level": "Intermediate",
+    "source_level": 1,
+    "source_number": 4,
+    "title": "Level 1 · Question 4",
+    "label": "Level 1 · Question 4",
+    "source_page": 1,
+    "source_file": "documents/gic-march-2025-intermediate.pdf",
+    "status": "archived",
+    "statement": "Create a function that removes duplicates in a list and returns it as a new list.\nInput:\nList = [80942, 56301, 31458, 33949, 66355, 38743, 75119, 83391, 93763, 74128,\n22457, 34728, 12229, 84762, 74128, 74128, 34225, 88818, 47599, 46639, 19287,\n22457, 22902, 74128, 88818, 36443, 35746, 84289, 33949, 35746]",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "[80942, 56301, 31458, 33949, 66355, 38743, 75119, 83391, 93763, 74128, 22457, 34728, 12229, 84762, 34225, 88818, 47599, 46639, 19287, 22902, 36443, 35746, 84289]",
+        "source_header": "L1 Q4 Output"
+      },
+      {
+        "label": "Alternative output",
+        "output": "[74128, 84762, 33949, 35746, 34728, 80942, 46639, 34225, 66355, 22457, 83391, 84289, 93763, 12229, 19287, 38743, 36443, 31458, 56301, 75119, 47599, 88818, 22902]",
+        "source_header": "L1 Q4 Output"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "level": "Intermediate",
+    "source_level": 2,
+    "source_number": 1,
+    "title": "Level 2 · Question 1",
+    "label": "Level 2 · Question 1",
+    "source_page": 2,
+    "source_file": "documents/gic-march-2025-intermediate.pdf",
+    "status": "archived",
+    "statement": "Scenario: A STEM awareness campaign wants to generate unique hashtags based on the\ninitials of notable women in STEM. A campaign focuses on Marie Curie (Physics &\nChemistry), Ada Lovelace (Computer Science), and Rosalind Franklin (Biology).\nThey use their initials (mar) to generate unique permutations for hashtag variations:\n●   mar, mra, amr, arm, rma, ram\nProblem Statement:\nGiven a string S (1 ≤ |S| ≤ 8), consisting of lowercase letters, representing the initials of STEM\npioneers, print all unique permutations in lexicographical (alphabetical) order, one per line.\nSample Input:\nmar\nSample Output:\namr\narm\nmar\nmra\nram\nrma\nYour Input: ada",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "aad\nada\ndaa",
+        "source_header": "L2 Q1 Output"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "level": "Intermediate",
+    "source_level": 2,
+    "source_number": 2,
+    "title": "Level 2 · Question 2",
+    "label": "Level 2 · Question 2",
+    "source_page": 3,
+    "source_file": "documents/gic-march-2025-intermediate.pdf",
+    "status": "archived",
+    "statement": "A company wants to standardize a set of numerical values by adjusting them to a common\ntarget in the most cost-efficient way. The cost of adjusting a value is the absolute difference\nbetween the original and new value.\nGiven an array of N values, determine the minimum total adjustment cost required to make all\nvalues equal.\nThe first line contains an integer N (1 ≤ N ≤ 100,000), the number of values.\nThe second line contains an array of N integers A₁, A₂, ..., A� (-1,000,000 ≤ Aᵢ ≤ 1,000,000),\nrepresenting the values.\nOutput a single integer representing the minimum total cost to make all values equal.\nSample Input:\n5\n50000 52000 54000 70000 75000\nSample Output:\n43000\nExplanation:\n1.   Sort the values: 50000, 52000, 54000, 70000, 75000\n2.   Choose the median value: 54000\n3.   Compute the adjustment cost:\n●    Adjust 50000 → 54000 (+4000)\n●    Adjust 52000 → 54000 (+2000)\n●    54000 stays the same (0)\n●    Adjust 70000 → 54000 (-16000)\n●    Adjust 75000 → 54000 (-21000)\n4.   Total cost = 43000\nFind the minimum total adjustment cost for the following input:\n6\n55000 60000 62000 75000 80000 50000",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "52000",
+        "source_header": "L2 Q2 Output"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "level": "Intermediate",
+    "source_level": 2,
+    "source_number": 3,
+    "title": "Level 2 · Question 3",
+    "label": "Level 2 · Question 3",
+    "source_page": 4,
+    "source_file": "documents/gic-march-2025-intermediate.pdf",
+    "status": "archived",
+    "statement": "You are tasked with simulating the growth of a population of bacteria in a controlled\nenvironment. Your goal is to create a program that models the increase in the bacterial\npopulation over a specified number of days.\nThe bacteria multiply based on a given growth rate, and the simulation should track the total\npopulation size each day.\nYou are given 3 numbers:\n• The first integer, b, is the initial number of bacteria.\n• The second integer, m, is the maximum carrying capacity of the environment.\n• The float, r, is the growth rate—a float between 0 and 1, representing the fraction of the\ncurrent bacterial population that multiplies each day.\nYou should return an answer that is the days until the population reaches or exceeds the\ncarrying capacity.\nSample Input and Output\nInput:\nb = 10\nm = 1000\nr = 0.2\nOutput: 26\nExplanation:\nDay 1: 10 → 10 + (10 * 0.2) = 12\nDay 2: 12 → 12 + (12 * 0.2) = 14.4\n…\nDay 26: Population reaches or exceeds 1000\nOutput the number of days for the following input:\nInput:\nb = 1000.076893438\nm = 7897654345678965345678907654323456789876534567432345698767890987.987678\nr = 0.3758938726",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "440",
+        "source_header": "L2 Q3 Output"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "level": "Intermediate",
+    "source_level": 2,
+    "source_number": 4,
+    "title": "Level 2 · Question 4",
+    "label": "Level 2 · Question 4",
+    "source_page": 5,
+    "source_file": "documents/gic-march-2025-intermediate.pdf",
+    "status": "archived",
+    "statement": "You are a cybersecurity specialist attempting to infiltrate a highly secure data center. The only\nway to gain access is by sending a data packet through a closed-loop network of servers.\nA terminal displays a challenge:\n“This network of servers is configured in a circular topology. To break through the firewall, your\ndata packet must traverse the network n times, collecting information from each server in the\nprocess.”\nWrite a Python function transmit_data that takes a list network (of integers, representing data\nvalues stored on each server) and an integer n (the number of times the packet must cycle\nthrough the network). The function should return the sum of all collected data values after\ncompleting n full cycles.\nSample Input and Output\nInput:\na = [3, 7, 2, 5]\nn = 2\nOutput:\n34\nExplanation:\nOne full cycle: 3 + 7 + 2 + 5 = 17\nTwo full cycles: 17 × 2 = 34\nFind the output for the following input:\nInput:\na = [-50, -43, 49, 4, 49, -39, -30, 13, 18, 28, 5, -21, -37, 11, 14, -41, 27, 45, 45, 23, -45, 50,\n-30, -13, 47, 16, -17, 50, 21, -29, 13, -39, 25, -36, 0, -21, -30, -15, 47, -31, 10, 31, -8, -14, 31,\n-49, -27, -38, -11, 19, -31, 14, -28, 24, 49, 5, 13, -16, 50, -30, -14, 0, 23, -31, 47, -42, 12, -12,\n-20, -43, 33, 27, -37, -38, -44, 35, 36, 5, -11, 2, 6, -31, 37, -33, 8, -46, 36, -45, 31, 48, -37, -44,\n10, -38, 42, -50, 31, -40, 39, -17, -37, 9, -34, -22, 46, -50, -3, 7, 34, -40, -37, 32, -9, -34, 9, 18,\n14, 4, 12, -23, -26, 4, -23, 40, 28, -8, 17, -41, -31, -47, -45, -34, -23, -35, -27, 47, -30, -26, -38,\n5, 41, 44, 35, -14, -5, -33, -13, 12, -46, 45, 35, 25, -10, 22, 20, 49, -34, 37, 27, -17, -8, 27, -12,\n8, 50, -6, -32, 24, -36, -34, -31, -38, 38, 50, -47, 13, 16, 1, -31, -6, -33, 5, 3, -40, -35, -12, 24,\n-23, 2, -4, -33, 31, -26, 31, -7, 5, 12, 10, 39, -29, 49, -22, -4, -37, 0, 40, 23, 21, 8, -38, -26, -50,\n-24, -40, 33, -16, -7, 15, -47, -43, -12, 46, 26, -25, 35, -19, -12, 1, 21]\nn = 215",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "-118895",
+        "source_header": "L2 Q4 Output"
+      }
+    ]
+  },
+  {
+    "number": 9,
+    "level": "Intermediate",
+    "source_level": 2,
+    "source_number": 5,
+    "title": "Level 2 · Question 5",
+    "label": "Level 2 · Question 5",
+    "source_page": 6,
+    "source_file": "documents/gic-march-2025-intermediate.pdf",
+    "status": "withdrawn",
+    "statement": "Withdrawn in the original booklet: “Please skip this question as there is a mistake.”\nYou have obtained two lists a and b, containing n and m elements respectively. For each integer\ni from 1 to n, you may choose an integer j such that 1 ≤ j ≤ m and set ai := bj - ai at most once. It\nis possible for ai to become non-positive as a result of this operation. Determine whether a can\nbe sorted in non-decreasing order.\nInput\nThe first line contains an integer t — the number of test cases.\nThe first line of each test case contains one integer n.\nThe following line of each test case contains n integers a1, a2, …, an\nThe following line of each test case contains one integer b\nOutput\nFor each test case, print “YES” on a new line if it is possible to sort a in non-decreasing order.\nOtherwise, print “NO” on a new line.\nSample Input                                                 Sample Output\n5                                                            YES\n1 1                                                          NO\n5                                                            YES\n9                                                            NO\n3 1                                                          YES\n1 4 3\n3\n4 1\n1 4 2 5\n6\n4 1\n5 4 10 5\n4\n3 1\n9 8 7\n8\nExplanation\nIn the first test case, [5] is already sorted.\nIn the second test case, it can be shown that it is impossible.\nIn the third test case, we can set a3 := bi - a3 = 6 - 2 = 4. The sequence [1, 4, 4, 5] is in\nnondecreasing order.\nIn the last case, we can apply operations on each index. The sequence becomes [−1, 0, 1]\nwhich is in nondecreasing order.\nFind the output for the following input:\n18\n8 1\n40 10 50 39 12 41 7 51\n39\n1 1\n59\n4\n2 1\n15 14\n89\n9 1\n64 75 9 49 79 94 89 18 16\n87\n10 1\n47 134 194 282 368 459 545 571 645 739\n96\n4 1\n18 77 53 29\n50\n6 1\n76 106 116 188 223 239\n91\n5 1\n72 47 25 11 76\n68\n3 1\n99 17 98\n84\n7 1\n1 9 14 17 22 29 30\n10\n5 1\n84 77 90 64 13\n7\n6 1\n58 75 97 123 139 139\n28\n5 1\n37 89 111 192 235\n99\n5 1\n23 44 54 48 21\n42\n7 1\n1 1 3 15 25 39 47\n15\n9 1\n30 93 89 72 75 83 83 62 85\n23\n7 1\n89 33 24 23 42 48 99\n19\n4 1\n12 21 88 46\n75",
+    "answers": []
+  },
+  {
+    "number": 10,
+    "level": "Intermediate",
+    "source_level": 2,
+    "source_number": 6,
+    "title": "Level 2 · Question 6",
+    "label": "Level 2 · Question 6",
+    "source_page": 8,
+    "source_file": "documents/gic-march-2025-intermediate.pdf",
+    "status": "archived",
+    "statement": "Given a string s, return the longest palindromic substring in s.\nInput: A string s\nOutput: The longest palindromic substring in s\nExample:\n●    Input: \"babad\"\n●    Output: \"bab\"\nNote: \"aba\" is also a valid answer.\nInput:\n“jfjkwegedagedigedagedaogieigosoidirijfgudfidhvsieuggfmfkdhcvosdjewfspisdoesuvbohairkcese\nnzezhousuhdbubakdutudvjbdsuehgbdszkutudibygjbdsuegoweoiefegoweoiebiofeabebaooeirhkfo\nwiegoodluckyallbfhmfoqielwrboeirhkfowiebfhmfoqielsihghilsjfiworiflskfhggiwueebfndjigpqpaabcd\nefghihisjfiejvjfpojojvjfpowfuohwgirlscodedocslrigajojgijriowoifnvkrirlhjshreifpsjdgjdlskfjb”",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "girlscodedocslrig",
+        "source_header": "L2 Q6 Output"
+      }
+    ]
+  },
+  {
+    "number": 11,
+    "level": "Intermediate",
+    "source_level": 2,
+    "source_number": 7,
+    "title": "Level 2 · Question 7",
+    "label": "Level 2 · Question 7",
+    "source_page": 9,
+    "source_file": "documents/gic-march-2025-intermediate.pdf",
+    "status": "archived",
+    "statement": "A GIC researcher has bred a new species called the alomomofa, which multiplies at an\nincredibly fast rate. Each alomomofa can breed 3 more alomomofa every minute. The GIC\nresearcher is working on a solution to stop them from multiplying, but she needs to know the\ntotal number of alomomofa after n minutes to determine how much of the solution to use to\nreduce the population back to 1. The alomomofa multiply in the following way:\n●    Initially, with 1 alomomofa, it breeds 3 more every minute\n●    When there are 20 alomomofa, they will merge into one alomomoja\nGiven that alomomoja are unable to reproduce, help the GIC scientist find out how many\nalomomofa will be present after n minutes if the initial number of alomomofa is 1.\nInput Format\nA single integer n, representing the number of minutes.\nOutput Format\nThe first line should contain the total number of alomomofa after n minutes.\nThe second line should contain the total number of alomomoja after n minutes.\nSample Input                                               Sample Output\n3                                                          4\n3\nExplanation\nAfter 1 minute, there will be 1 + 3 = 4 alomomofa.\nAfter 2 minutes, the total number of alomomofa will be 4 + 3 + 3 + 3 + 3 = 16.\nAfter 3 minutes, there will be 16 + 3 + 3 + 3 + 3 + 3 + 3 + 3 + 3 + 3 + 3 + 3 + 3 + 3 + 3 + 3 + 3 =\n64 alomomofa. Every 20 alomomofa will merge to form 1 alomomoja, so there will be 4\nalomomofa and  3 alomomoja remaining.\nFind the output for the following input:\n10000000",
+    "answers": [
+      {
+        "label": "Expected output",
+        "output": "16\n14999997",
+        "source_header": "L2 Q7 Output"
+      }
+    ]
+  },
+  {
+    "number": 1,
+    "level": "Advanced",
+    "source_level": null,
+    "source_number": 1,
+    "title": "Question 1",
+    "label": "Question 1",
+    "source_page": 1,
+    "source_file": "documents/gic-march-2025-advanced.pdf",
+    "status": "archived",
+    "statement": "You have two strings, A and B, each of length N. Both strings contain only the characters 'G'\nand 'H'. Your task is to make B identical to A by flipping sections of B.\nA flip means choosing a consecutive substring in B and swapping all 'G' and 'H' within that\nsection (i.e., every 'G' becomes 'H' and vice versa).\nOutput the minimum number of flips required to make B match A.\nThe first line of input contains N, and the next two lines contain the strings A and B.\nSample Input:\n7\nGHHHGHH\nGGHHHGG\nSample Output:\n2\nExplanation:\nFlip the first character in B → \"GHGGGHH\"\nFlip the third and fourth characters → \"GHHHGHH\" (now B matches A)\nInput\nCase 1:\n1000\nGHHHGHHHHGHHGHGGGHHGGHGHHGGGHHHHGGHHHGGGGGHGHHGGHHGH\nGHGHHGGHGHGGHHHGHGGHGHHHGHHHHGHHHHHGGHHGGGGHHGHHGHGGG\nGHGHHGGHHGGGHGGGGGGGHHHHGGHHHHHHGHGHHHGGHGHGHHGHGGHH\nHGGHHHGGGHHGGHGGGGGHHHHGHHHHHGGGGGHHHHHHGGHHGHHGGHGHH\nHHGHGHGGHHGHGGGGHHGGGHGGGGGGGHHGGHHGGHGHGGGHGGHGHHGH\nHGHHGHHHGGHGHGGHHGGGHGHHGGHHHHHGHGGGGHHGGGHHGHHHGHHHG\nGGGGGGGHHGHHGHHGGGGGHHGGGHGGHHGHGGGGGGHHGGHHHGHHGHHH\nGHGHHGHGGHHGHHGGHHHGGGHHHGHHHGHHGHGHHHHHGGHGGHGHHHHHG\nGGHGHGHGHHGGHHGHGHHGHHGGHGHHHGHGHGGGGGGGHGGGHGHHGHGH\nGGHGGHHGHGGGGGHGGHGHGHGHHHHHGHGHHGHGHGGGGGHGGGGHHHGH\nGGHHGGHGHHHGHGGGGGHGGGGHGHGHGGHGHGHHGGHHGHHHHGGGGHGH\nHHGHGGGGGHGHHHGHGGGGHGHGGHGGGHHHGHGGHHGGGGHGHGHHGGHH\nGHHGGGGHHGGHHHHHGHHGHGGGGGGGGHHGGHGHHGGGGGHGHGHHHGGG\nGGGHGGHGGHGGGGHHHHHHGGHHGGHHGHHHHHGGGHGGGHGGHGHGHGGH\nGHHGGGHGHGHGGHGGHHGHGGGHGHGGGGHGHGHHGGGHHHGHHGHGHHHH\nHHHGHHGHHHHGGGGGHGGGHGHGGGGGHGHGHGGGHGHGGHHGHHGGHGGG\nGHHHHHHGHGHHHHHGGHHGGGGHHGGGHGGHGHGHHHGGGHHHGHHGGGGG\nGGHHHHHGGGHGHGHGHHHHGGGHHGHHGGHHGHGHGGHGGHGHHGGGHHGG\nHGHHGGGHGGGHHGGHGGGGHGGGGGGGHGGGHHHHHGGGGGHHHHGHHGGG\nHGGHGHHH\nGHGHGHHGHGHHGHGGGGHGGHHHHGGHGGHHHGHHHGHGGGHGHHGGHGGH\nGHGHHHGHGGGGHGHGHGGHHGGHGHHHHGGHHGGGHHHHGHGHHGHHHGGG\nGGHHHHGHHHGGGGGGGGGGHHHGHGGHHGHHHGHGHGHHGHGHHHHGHHGG\nHHGGGHHGGGHHHGHGGGGGHHHHGHGHHHGHHGGHHHHHGGGGHGGHGHHHH\nGHHGGGHGGHGGGHGGGHHGGHHGGHGGGGHHGGHGGHHGHGHHGGHHGGHH\nHHGGHGHHHGGGGHGGGHGGGHGHGHGHHHHHGGGHHGHHGGGHGGHHHGHH\nHHGGGGGHHHHGGHGHHGGGGGGGGHHGGGHGHHGGGGGGHGHGHGHGHHGH\nHHGHGHHGHGHGHGHHGGGHHGGHGHHHHGHHHGGHGHHHGHGGHHGHGGHHH\nHGGGHGHGGGHHGGHHGHHHHGHHGGGGHGGGHHGGGGGHGGGHGHHGHHHG\nGGGGHGGHGGGHGGGGGGGHGHGHGHHHHGGHHHGGHHHHGGGGHHGGHGHH\nHHHHHHGHHHHHHGGGGGGGGGGGGGHHGGGHHHHGHHGHHHHHHHGGHGHHG\nHHGGHGGHGGHGGHHGHHGGGGGGGGHGGGHGGGHHGGHGGGGHGHHHHGGH\nHGHHGGHHGHGGGHHHHGGGGHGHGHGGGGHHGGHHHGGHGGGHGGGHHHGG\nGGGGHGHHGGGHGGHHHHGHGGGGHGHHHGHHHHHGHGHGHGHGGHGHGGGH\nHHHHGHGHGHHHGGGHGHHGHGGGHGGGGGGGGHGGHGGGGHHGHHGGGHHH\nHGHGGHHHHGHHGGGGGHHGGHGGGGGHGHGGHHGGGGGGGGGHGGHGGHGG\nGGHGHHHHHHGHHHHHGGHHGGGGHHGGGHHGHHHGHHHGGGHHHGGHGHHGG\nGGHHGHHGGGHGHGGHGHHHGGHHHGGHGGGHGHGHGHHGGHGHHGGGHHHH\nHGHHHGHGHHGHHGGHGGGGHGGGGGGGHGGHHHGHGHGGGGHHGHGHHHGH\nHGGGHHHH\nCase 2:\n900\nHHGHGGGHHGGGGHGHHGGGGHHGGHGGGHGGGGHGGHGHHGHGHGHGGHGG\nGHHGGHGHGGHGHGHHHHHHHGHGGGHHHHHGHGGHHHGHHHGGHHGHGHGHH\nHHGHGHGGGGHHHGGGHGHGGGGHGHHHHGGGHGHGHHGGGHHHHHHGHGHH\nGHGGGHHHHGHHGGHGHHGHGHGHGHGGGHHGGGHGHGHHGGGHGHHHGHHG\nGHHGHHGHGGHGGGGHHHGHHGGHHHHHGGHGHHHGGHHHHHHHHGHGHHGHG\nGGHGHHGHGHHHGHGHHHHGGGHGHGGHGHHGHGGHHHGGGHHGHHHGGGGH\nHHHGHHHHGGGGHGHGHHGHHGHGHHGGHGHGHGHHGGGGHGGGHHGGHHGG\nHHGGGGGGGHGHGHGGGHGHHHHGGHHHGHHHGHGHHGHHGHHGHHGHGGGG\nHHGGGHHHGHGHGGGGHHHHGGHHGHGGHGGHHHHGGGHHHHGGGGGHHHGH\nGHHGGHGHGHGHGHHGGGHHGHHGHHHGHHGHGHHGGHHGGGGGHHHHGGHG\nGGGHGHGHGGGGHHGHGHGHHGHHHGGHHHHHGHGGGGHGGHGHGGHGGHHH\nHHGGHHGGGHHGHGGHGHGHGGGGHHHHGGGHHHGHGGHGHHHGHHGHHGGH\nGHGHGHGHHHGHGGGGGHGGGHGHHGHGGHHHGHGHGHGGGGHGHHGHGGHH\nGGGHGHHHHGGHGGGGHGGHHHHGGHHHGHGGHGHHGGGHGGGGHHHGHHGG\nHHGHHGGHHGHGHGHHGGGGGGHHHGGHHGHGHGGGGGHHHGHGGGHGGHHH\nHGGHGGGHGHGGHGGHGGGHGHHHGGHGHGHHGGGGGGGHHGHHGHGGHHGG\nGHHGGGHHHGGHGGGHGGGGGHHGGHGGGGGHGHHGHGHGHGGHGGGHGGHG\nHGGGHGGGHGHHHG\nHHGGGGGHHHGGGGGHHGHGGGHGGHGGGGGGGGHGHHGGHGHGGGHGGHHG\nGHHGGHGHHGHHGGHGHHHGHGHGHHGHHGGHHGGHHHGHGGGGGHGHGHHG\nHHHGHGHGGGHHHHGGGHHHGGGHHGHHGHHGGHGHGHHGHGHHHHHHGGHHG\nHGGGHHHGHGHGGGGGHHGHGHHHGHGHGHHHGHGGHGGGGHHGHHHHGHHG\nGGHGHHGHGHHGGGHGHHGGGGGGGHHHGGHHGHGGGHHGHHHHGGHGHHGH\nGGGGGHHGHHHHGHHHGHHHHGGGHHGGHHGGHHHGHHHGHHGHGHHHHGGHH\nHHHGHHHGGGHHHHHGHHHHHHHGHHGHHGHHGHGGGGHGHGGGHHGGHHHGG\nHGGGGGHGHHHGGHGHHGHGHHHHHHGGHHHGHGHHGHHHGHGHGGGGGHGG\nGHGGGHHHHHGGGGGHHHGGGGGGGGGHGGGHHHHGGHHHGGHGGGHHGGGG\nGGGGGGHGHHHGHGGGGHHGHHGHHGHHHGHGGHGGHHHGGGGGHHHHHHGG\nHGGGHGGGGGGHHGHGHGHHGHGHHGHHHHHGHGHHGHHGGGGGGGHGGHHG\nHGGHHGHGHHGHGGHGHGHHGGGGHHHGGGGHHGHHGHHHHHGHHHHHGHHGH\nHGGHHHHHGHHGHHGHGGGHHHHGHHGHHGGHGGGHGGGHGHHHHHHGHHGGG\nHHGGHGGGHGGHHHGGHHHHGGHHHGHHGHGGHGGGHGHGGHGHGHHGGGGH\nHGHHHHGHHGHHGGGHGHHGHHGGGHGHGGGHGGGGHGGGGGHHGGGHHHGG\nHGHGHGHGGHGGHGGGHGGGHGGHGHGHHGHGGGGHHHHHGGGGHHGGHGHG\nGGGHHHGGHGGGHGGGHHHHGHHGGGGGHHHHGHGHHHGHHGGHGGGHGHHG\nGHHGGHGGHHG",
+    "answers": [
+      {
+        "label": "Case 1",
+        "output": "183",
+        "source_header": "Q1 Output (Case 1)"
+      },
+      {
+        "label": "Case 2",
+        "output": "172",
+        "source_header": "Q1 Output (Case 2)"
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "level": "Advanced",
+    "source_level": null,
+    "source_number": 2,
+    "title": "Question 2",
+    "label": "Question 2",
+    "source_page": 4,
+    "source_file": "documents/gic-march-2025-advanced.pdf",
+    "status": "archived",
+    "statement": "A long straight wall needs to be painted, and two painters have been assigned the task. The first\npainter paints the interval between x=a and x=b. For example, if a=3 and b=5, then the painter\npaints an interval of length 2. The other painter paints the interval from x=c to x=d, which may\npossibly overlap with part or all of Farmer John's interval. Please determine the total length of\nfence that is now covered with paint.\nThe first line of the input contains the integers a and b, separated by a space (a<b).\nThe second line contains integers c and d, separated by a space (c<d).\nThe values of a, b, c, and d all lie in the range 0…100, inclusive.\nPlease output a single line containing the total length of the fence covered with paint.\nSAMPLE INPUT:\n7 10\n4 8\nSAMPLE OUTPUT:\n6\nInput\nCase 1:\n52 76\n23 52\nCase 2:\n10 72\n33 72",
+    "answers": [
+      {
+        "label": "Case 1",
+        "output": "53",
+        "source_header": "Q2 Output (Case 1)"
+      },
+      {
+        "label": "Case 2",
+        "output": "62",
+        "source_header": "Q2 Output (Case 2)"
+      }
+    ]
+  },
+  {
+    "number": 3,
+    "level": "Advanced",
+    "source_level": null,
+    "source_number": 3,
+    "title": "Question 3",
+    "label": "Question 3",
+    "source_page": 5,
+    "source_file": "documents/gic-march-2025-advanced.pdf",
+    "status": "archived",
+    "statement": "A scientist is experimenting with liquid mixtures using three containers of different capacities.\nEach container initially holds a certain amount of liquid, but they are not necessarily full. The\nscientist performs a sequence of transfers in a cyclic manner:\nPouring from container 1 into container 2\nPouring from container 2 into container 3\nPouring from container 3 into container 1\nThis process repeats for a total of 100 pours (so the 100th pour would be from container 1 into\ncontainer 2). Each time, the scientist transfers as much liquid as possible from one container to\nthe next, stopping when either the source container is empty or the destination container is full.\nYour task is to determine how much liquid remains in each container after all 100 pours.\nThe first line of the input file contains two space-separated integers: the capacity c1 of the first\nbucket, and the amount of milk m1 in the first bucket. Both c1 and m1 are positive and at most 1\nbillion, with c1 ≥ m1. The second and third lines are similar, containing capacities and milk\namounts for the second and third buckets.\nPlease print three lines of output, giving the final amount of milk in each bucket, after 100 pour\noperations.\nSAMPLE INPUT:\n10 3\n11 4\n12 5\nSAMPLE OUTPUT:\n0\n10\n2\nInput\nCase 1:\n695789 393585\n705404 502652\n999933 95061\nCase 2:\n855636227 749698587\n687926653 660260757\n959997302 485560281",
+    "answers": [
+      {
+        "label": "Case 1",
+        "output": "0\n695789\n295509",
+        "source_header": "Q3 Output (Case 1)"
+      },
+      {
+        "label": "Case 2",
+        "output": "381199206\n687926653\n826393766",
+        "source_header": "Q3 Output (Case 2)"
+      }
+    ]
+  },
+  {
+    "number": 4,
+    "level": "Advanced",
+    "source_level": null,
+    "source_number": 4,
+    "title": "Question 4",
+    "label": "Question 4",
+    "source_page": 6,
+    "source_file": "documents/gic-march-2025-advanced.pdf",
+    "status": "archived",
+    "statement": "A driver is traveling along a straight 100-mile road, which is divided into 𝑁 segments. Each\nsegment has a specified length (in miles) and a speed limit (between 1 and 100 miles per hour).\nThe total length of all segments adds up to exactly 100 miles.\nThe driver’s journey is also divided into 𝑀 segments, where each segment specifies how many\nmiles they traveled and at what speed. The sum of all journey segments is also exactly 100\nmiles. The vehicle used can reach a maximum speed of 100 miles per hour.\nYour task is to determine the maximum amount by which the driver exceeded the speed limit at\nany point during the journey.\nInput format:\nThe first line of the input contains N and M, separated by a space.\nThe next N lines each contain two integers describing a road segment, giving its length and\nspeed limit.\nThe next M lines each contain two integers describing a segment in the driver’s journey, giving\nthe length and also the speed at which the driver was driving.\nOutput format:\nPlease output a single line containing the maximum amount over the speed limit the driver\ndrove during any part of the journey. If the driver never exceeds the speed limit, please output 0.\nSAMPLE INPUT:\n3 3\n40 75\n50 35\n10 45\n40 76\n20 30\n40 40\nSAMPLE OUTPUT:\n5\nInput\nCase 1:\n50 50\n1 35\n2 74\n2 44\n1 36\n1 4\n1 39\n4 98\n1 78\n1 65\n2 58\n1 26\n2 91\n1 53\n1 87\n2 69\n1 72\n3 5\n2 59\n7 75\n1 44\n1 54\n5 99\n1 25\n1 76\n3 43\n2 42\n4 15\n1 14\n2 44\n2 59\n1 17\n1 51\n1 55\n4 30\n2 51\n1 91\n2 3\n1 32\n4 66\n3 49\n2 34\n4 31\n2 97\n2 20\n2 87\n3 90\n1 74\n1 48\n2 71\n2 24\n1 50\n3 54\n2 30\n1 4\n3 19\n6 42\n1 12\n2 95\n1 43\n6 1\n2 2\n2 8\n1 66\n1 70\n2 23\n1 68\n2 44\n3 42\n1 78\n3 3\n2 22\n1 15\n1 20\n2 17\n1 10\n2 10\n1 7\n1 14\n1 33\n2 9\n4 11\n2 24\n2 21\n3 31\n2 2\n5 15\n1 30\n1 25\n3 40\n1 18\n4 22\n1 54\n2 8\n1 69\n1 57\n2 22\n2 61\n3 19\n1 12\n1 32\nCase 2:\n100 100\n1 57\n1 14\n1 37\n1 100\n1 69\n1 19\n1 97\n1 74\n1 66\n1 98\n1 77\n1 38\n1 4\n1 97\n1 39\n1 74\n1 51\n1 72\n1 68\n1 62\n1 66\n1 26\n1 65\n1 10\n1 99\n1 1\n1 91\n1 59\n1 59\n1 96\n1 19\n1 66\n1 8\n1 50\n1 69\n1 17\n1 57\n1 57\n1 32\n1 57\n1 10\n1 52\n1 67\n1 28\n1 77\n1 43\n1 27\n1 40\n1 76\n1 34\n1 81\n1 63\n1 56\n1 80\n1 37\n1 17\n1 9\n1 14\n1 15\n1 46\n1 11\n1 97\n1 37\n1 64\n1 37\n1 80\n1 73\n1 81\n1 43\n1 77\n1 96\n1 37\n1 57\n1 14\n1 95\n1 47\n1 90\n1 15\n1 30\n1 92\n1 99\n1 26\n1 38\n1 56\n1 25\n1 77\n1 7\n1 35\n1 88\n1 11\n1 62\n1 71\n1 56\n1 26\n1 34\n1 16\n1 63\n1 37\n1 82\n1 88\n1 67\n1 8\n1 29\n1 3\n1 48\n1 13\n1 69\n1 19\n1 7\n1 18\n1 55\n1 27\n1 1\n1 22\n1 5\n1 50\n1 19\n1 36\n1 40\n1 34\n1 14\n1 4\n1 16\n1 8\n1 18\n1 1\n1 72\n1 46\n1 43\n1 29\n1 7\n1 18\n1 8\n1 42\n1 48\n1 16\n1 56\n1 52\n1 7\n1 16\n1 2\n1 2\n1 19\n1 5\n1 51\n1 29\n1 11\n1 21\n1 20\n1 18\n1 52\n1 58\n1 38\n1 67\n1 31\n1 5\n1 7\n1 5\n1 6\n1 14\n1 4\n1 81\n1 32\n1 15\n1 13\n1 3\n1 67\n1 43\n1 28\n1 34\n1 23\n1 26\n1 29\n1 2\n1 74\n1 32\n1 29\n1 14\n1 30\n1 31\n1 91\n1 7\n1 5\n1 17\n1 12\n1 54\n1 12\n1 14\n1 9\n1 9\n1 40\n1 11\n1 12\n1 12\n1 7\n1 6\n1 44\n1 18\n1 1\n1 100",
+    "answers": [
+      {
+        "label": "Case 1",
+        "output": "15",
+        "source_header": "Q4 Output (Case 1)"
+      },
+      {
+        "label": "Case 2",
+        "output": "12",
+        "source_header": "Q4 Output (Case 2)"
+      }
+    ]
+  },
+  {
+    "number": 5,
+    "level": "Advanced",
+    "source_level": null,
+    "source_number": 5,
+    "title": "Question 5",
+    "label": "Question 5",
+    "source_page": 14,
+    "source_file": "documents/gic-march-2025-advanced.pdf",
+    "status": "archived",
+    "statement": "A researcher is studying traffic flow along a straight 𝑁-mile highway, where traffic moves in a\nsingle direction from mile 1 to mile 𝑁. To measure the flow of vehicles, they install 𝑁\nsensors—one per mile. However, due to a malfunction, each sensor only provides a range of\npossible values instead of an exact reading. For example, a sensor might report a traffic flow\nbetween 7 and 13 vehicles per unit time.\nSome segments of the highway have on-ramps where additional vehicles enter, while others\nhave off-ramps where vehicles exit. If a segment has an on-ramp, the sensor measures the\nnumber of vehicles entering. If a segment has an off-ramp, the sensor measures the number of\nvehicles exiting. If there are no ramps, the sensor directly measures the traffic flow along the\nhighway. Each segment contains at most one ramp.\nGiven the readings from the 𝑁 sensors, determine the most precise possible ranges for the\ninitial traffic flow entering the highway before mile 1 and for the remaining traffic continuing past\nmile 𝑁. These ranges should be consistent with all sensor readings.\nINPUT FORMAT:\nThe first line of input contains N (1≤N≤100). Each of the remaining N lines describes a 1-mile\nsegment of the road, in order from mile 1 to mile N. Each line contains a string that is either \"on\"\n(if there is an on-ramp on this segment), \"off\" (if there is an off-ramp), or \"none\" (if there is no\nramp), followed by two integers in the range 0…1000, indicating the lower and upper endpoints\nof the sensor range from this segment. If the segment contains a ramp, the sensor reading is\nfrom the ramp. Otherwise, it is from the main highway. At least one of the highway segments will\nbe designated as \"none\".\nOUTPUT FORMAT:\nThe first line of output should contain two integers giving the most specific range possible for the\nrate of traffic flow prior to mile 1. The second line of output should contain two integers giving\nthe most specific range possible for the rate of traffic flow after mile N. A valid solution is always\nguaranteed to exist.\nSAMPLE INPUT:\n4\non 1 1\nnone 10 14\nnone 11 15\noff 2 3\nSAMPLE OUTPUT:\n10 13\n8 12\nInput\nCase 1:\n81\non 1 2\non 0 2\nnone 484 535\nnone 474 534\noff 2 2\noff 2 2\noff 1 2\noff 0 0\noff 0 0\nnone 464 541\non 0 2\nnone 473 540\non 0 1\nnone 463 539\nnone 473 548\noff 1 1\non 1 3\noff 2 4\noff 0 0\non 1 1\noff 0 2\noff 0 2\non 2 2\non 0 1\non 0 0\nnone 476 548\noff 1 3\noff 0 1\non 1 3\noff 0 2\non 1 2\noff 1 2\non 0 0\non 1 2\nnone 464 544\noff 0 2\nnone 467 557\non 0 0\noff 1 3\non 0 2\nnone 464 542\noff 0 0\noff 1 1\non 0 0\non 1 3\non 0 1\nnone 460 554\noff 0 1\nnone 465 560\non 2 4\non 2 3\nnone 462 564\nnone 452 563\noff 1 1\non 2 4\non 1 1\noff 1 2\noff 2 4\non 2 4\nnone 452 556\nnone 466 565\noff 0 0\noff 0 0\nnone 465 565\non 2 4\non 0 2\non 1 3\non 1 2\noff 2 4\non 2 4\noff 0 0\nnone 466 582\noff 1 3\noff 1 3\nnone 464 570\non 2 2\non 2 2\noff 0 1\non 2 4\noff 2 2\nnone 450 587\nCase 2:\n100\noff 2 4\non 2 3\noff 1 1\noff 1 1\noff 2 3\non 2 2\nnone 468 524\noff 2 3\non 1 1\noff 0 2\nnone 467 537\non 2 4\nnone 461 537\non 1 3\noff 1 1\noff 1 2\noff 1 1\noff 0 0\noff 2 4\nnone 458 536\nnone 453 528\noff 1 2\non 1 1\non 1 2\noff 1 2\nnone 443 527\noff 0 0\nnone 451 529\noff 0 1\noff 0 2\nnone 443 527\non 0 0\noff 0 2\noff 0 2\noff 0 2\noff 2 4\nnone 438 524\noff 2 3\noff 0 2\noff 2 2\noff 0 1\non 2 3\noff 1 3\nnone 434 529\nnone 420 533\noff 2 4\noff 1 3\non 1 1\non 2 4\nnone 418 533\noff 1 1\non 1 3\noff 0 2\non 2 4\noff 0 1\noff 2 4\non 0 1\nnone 426 544\non 0 0\non 2 4\non 0 2\noff 2 4\nnone 419 539\noff 2 4\noff 2 4\nnone 409 539\nnone 417 532\nnone 411 538\non 0 0\non 2 2\non 0 1\non 1 3\noff 2 2\non 2 3\noff 0 2\nnone 415 545\non 0 2\nnone 409 537\non 0 1\nnone 416 549\nnone 402 543\noff 0 1\non 1 3\non 1 1\non 2 2\non 1 1\nnone 406 560\noff 2 2\noff 0 0\non 0 2\noff 0 2\non 1 3\noff 2 4\non 0 1\noff 2 3\nnone 409 549\noff 0 0\noff 2 3\noff 1 2\nnone 396 548",
+    "answers": [
+      {
+        "label": "Case 1",
+        "output": "480 533\n467 573",
+        "source_header": "Q5 Output (Case 1)"
+      },
+      {
+        "label": "Case 2",
+        "output": "469 529\n409 542",
+        "source_header": "Q5 Output (Case 2)"
+      }
+    ]
+  },
+  {
+    "number": 6,
+    "level": "Advanced",
+    "source_level": null,
+    "source_number": 6,
+    "title": "Question 6",
+    "label": "Question 6",
+    "source_page": 19,
+    "source_file": "documents/gic-march-2025-advanced.pdf",
+    "status": "archived",
+    "statement": "A courier needs to deliver a package along a straight road, represented as a number line. The\npackage must be transported from position 𝑎 to position 𝑏, and the goal is to minimize the total\ndistance traveled by vehicle.\nTo assist with transportation, there is a teleporter installed between two fixed locations, 𝑥 and 𝑦.\nIf the package reaches 𝑥, it can be instantly teleported to 𝑦, and vice versa. However, the courier\nstill needs to travel by vehicle to and from any locations that are not connected by teleportation.\nDetermine the shortest total distance the courier must travel by vehicle to move the package\nfrom 𝑎 to 𝑏.\nINPUT FORMAT:\nThe first and only line of input contains four space-separated integers: a and b, describing the\nstart and end locations, followed by x and y, describing the teleporter. All positions are integers\nin the range 0…100, and they are not necessarily distinct from each-other.\nOUTPUT FORMAT:\nA single integer, representing the minimum distance the courier must travel by vehicle to move\nthe package from 𝑎 to 𝑏.\nSAMPLE INPUT:\n3 10 8 2\nSAMPLE OUTPUT:\n3\nIn this example, the best strategy is to move the package from position 3 to position 2, teleport it\nto position 8, then move it to position 10. The total distance requiring the vehicle is therefore 1 +\n2 = 3.\nInput\nCase 1:\n35 68 2 30\nCase 2:\n58 23 67 70",
+    "answers": [
+      {
+        "label": "Case 1",
+        "output": "33",
+        "source_header": "Q6 Output (Case 1)"
+      },
+      {
+        "label": "Case 2",
+        "output": "35",
+        "source_header": "Q6 Output (Case 2)"
+      }
+    ]
+  },
+  {
+    "number": 7,
+    "level": "Advanced",
+    "source_level": null,
+    "source_number": 7,
+    "title": "Question 7",
+    "label": "Question 7",
+    "source_page": 19,
+    "source_file": "documents/gic-march-2025-advanced.pdf",
+    "status": "archived",
+    "statement": "A coding competition platform is hosting an online contest where participants answer\nchallenging problems to demonstrate their skills.\nTo accommodate a wide range of participants, the competition has four difficulty divisions:\nbronze, silver, gold, and platinum. All new participants start in the bronze division, and whenever\na participant achieves a perfect score in a contest, they are promoted to the next division. It is\neven possible for a participant to be promoted multiple times within the same contest.\nThe platform maintains a list of all participants and their current divisions, ensuring they start at\nthe correct level in future contests.\nAfter the latest contest, the organizers want to publish statistics on how many participants were\npromoted from bronze to silver, silver to gold, and gold to platinum. However, they forgot to track\npromotions in real time. Fortunately, they realize that they can deduce the number of promotions\nbased on the number of participants in each division before and after the contest.\nYour task is to calculate the number of promotions that occurred at each level.\nINPUT FORMAT:\nInput consists of four lines, each containing two integers in the range 0..1,000,000. The first line\nspecifies the number of bronze participants registered before and after the contest. The second\nline specifies the number of silver participants before and after the contest. The third line\nspecifies the number of gold participants before and after the contest. The last line specifies the\nnumber of platinum participants before and after the contest.\nOUTPUT FORMAT:\nPlease output three lines, each containing a single integer. The first line should contain the\nnumber of participants who were promoted from bronze to silver. The second line should\ncontain the number of participants who were promoted from silver to gold. The last line should\ncontain the number of participants who were promoted from gold to platinum.\nSAMPLE INPUT:\n1 2\n1 1\n1 1\n1 2\nSAMPLE OUTPUT:\n1\n1\n1\nIn this example, 1 participant was registered in each division prior to the contest. At the end of\nthe contest, 2 participants were registered in bronze and platinum. One way this could have\nhappened is that 2 new participants joined during the contest; one was promoted all the way to\nplatinum, and the other stayed in bronze.\nInput\nCase 1:\n61313 95144\n25857 1516\n16124 45241\n53895 75624\nCase 2:\n49676 130031\n93368 5835\n47739 52611\n10012 105072",
+    "answers": [
+      {
+        "label": "Case 1",
+        "output": "261005\n100846\n21729",
+        "source_header": "Q7 Output (Case 1)"
+      },
+      {
+        "label": "Case 2",
+        "output": "12399\n99932\n910060",
+        "source_header": "Q7 Output (Case 2)"
+      }
+    ]
+  },
+  {
+    "number": 8,
+    "level": "Advanced",
+    "source_level": null,
+    "source_number": 8,
+    "title": "Question 8",
+    "label": "Question 8",
+    "source_page": 21,
+    "source_file": "documents/gic-march-2025-advanced.pdf",
+    "status": "archived",
+    "statement": "You are given seven (not necessarily distinct) integers in the range 1…109, which represent the\nvalues of A, B, C, A+B, B+C, C+A, and A+B+C in some order. It is guaranteed that A, B, and C\nare positive integers and that A ≤ B ≤ C.\nDetermine and output the values of A, B, and C in ascending order.\nINPUT FORMAT:\nThe only line of input consists of seven space-separated integers.\nOUTPUT FORMAT:\nPrint A, B, and C separated by spaces.\nSAMPLE INPUT:\n2 2 11 4 9 7 9\nSAMPLE OUTPUT:\n2 2 7\nInput\nCase 1:\n75355967 870798864 541745076 946154831 466389109 404409755\n479765722\nCase 2:\n326552445 762589144 699462434 63126710 436036699 372909989\n389679155",
+    "answers": [
+      {
+        "label": "Case 1",
+        "output": "75355967 404409755 466389109",
+        "source_header": "Q8 Output (Case 1)"
+      },
+      {
+        "label": "Case 2",
+        "output": "63126710 326552445 372909989",
+        "source_header": "Q8 Output (Case 2)"
+      }
+    ]
+  }
+]

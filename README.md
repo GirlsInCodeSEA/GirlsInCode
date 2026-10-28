@@ -35,6 +35,8 @@ Competition questions and answers are stored in the database, allowing new compe
 
 ### Automatic Code Checking
 
+The 2023–2025 archives now offer instant **output practice checks**: participants run their code locally, paste its output, and receive feedback for each part. There are 107 active checks with worked answers, including clearly labelled checkpoints for open-ended or incomplete originals. The withdrawn March question remains ungraded. These attempts do not execute uploaded code, require a database, or award points. See [practice sources and limitations](data/competition_questions/PRACTICE.md) for corrected keys and input assumptions.
+
 Participants upload their Python solution to a question.
 
 The website runs the submitted program and compares its output against the expected answer. The submission is then marked as:
@@ -244,6 +246,8 @@ cd GirlsInCodeWebsite
 
 ### 2. Create a virtual environment
 
+Use Python 3.9–3.12 with the pinned dependencies. Virtual environments are machine-specific; recreate `venv` if its interpreter no longer exists.
+
 macOS/Linux:
 
 ```bash
@@ -290,7 +294,20 @@ submissions_lock
 
 These store information including user accounts, competition questions, expected answers, scores, and completed submissions.
 
-### 6. Start the Flask server
+Apply [`migrations/001_atomic_scoring.sql`](migrations/001_atomic_scoring.sql) in the Supabase SQL editor before enabling scored submissions. It adds unique email/team-name indexes and the transactional `award_submission` function, restricted to the service role. Resolve existing duplicate accounts before applying it. The migration does not repair historical duplicate scores.
+
+### 6. Build the optional classifier
+
+If model files are missing or incompatible, regenerate them using the same environment as the web server:
+
+```bash
+python3 extract_all_features.py
+python3 train_model.py
+```
+
+Rebuild both the dataset and model after changing feature extraction. Missing model files disable classification without preventing the website from starting.
+
+### 7. Start the Flask server
 
 ```bash
 flask --app app run --debug
@@ -407,7 +424,11 @@ solved
 
 ## Security Note
 
-The current code-execution system runs uploaded Python files as local subprocesses with a time limit.
+Uploaded-code execution is **disabled by default** because the local subprocess runner is not a security sandbox. Browsing questions, accounts, and the scoreboard still work.
+
+For trusted local testing only, set `ENABLE_UNSAFE_CODE_EXECUTION=1` in `.env` and restart the server. Never enable this setting on a public deployment: submitted programs still have the operating-system permissions of the web server. A clean environment, temporary working directory, upload size limit, and timeout do not prevent filesystem access or resource exhaustion. Public execution requires a separate sandboxed runner.
+
+Set a stable, random `SECRET_KEY` shared by all workers. Without one, a temporary key is generated at startup and sessions will not survive restarts or work reliably across multiple workers. Debug mode is off for `python3 app.py`; use `flask --app app run --debug` only for local development.
 
 This is suitable for development and controlled testing, but **should not be treated as a secure production sandbox for arbitrary public code**.
 
@@ -474,3 +495,11 @@ This project started as a way to run Girls In Code competitions more effectively
 Most importantly, we want Girls In Code to be a space where girls can **try coding, challenge themselves, build things, and meet other people who are interested in technology**.
 
 The website is one part of helping us make that possible.
+
+## Regression tests
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+The tests use an in-memory database double and never query or write the connected Supabase database. They cover routes, authentication, uploads, judging, scoring RPC calls, pagination, subprocess input/timeouts, and feature extraction. Applying the SQL migration and verifying concurrent awards against a staging database are separate deployment checks.

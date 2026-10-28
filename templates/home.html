@@ -1,68 +1,191 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="{{ url_for('static', filename = 'styles.css')}}">
-        <meta charset = "utf-8">
-        <link  rel="icon" href="https://yt3.googleusercontent.com/ytc/AIdro_mgnodbikJ-Ti1M2Eo9eR5HSjh69ZrKFbUMpactPIe1Xg=s900-c-k-c0x00ffffff-no-rj">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Girls In Code SEA</title>
-    </head>
-    <body>
-        <header>
-            <a id="home" href="{{ url_for('home') }}">Home</a>
-        
-            <a href="{{ url_for('home') }}">
-                <img id="logo" alt="Girls in Code SEA Logo" src="{{ url_for('static', filename='gic_logo.png') }}">
-            </a>
-        
-               <nav>
-    <ul>
-        <li class="dropdown">
-            <a href="{{ url_for('competitions') }}" class="dropbtn">Annual Competitions ▾</a>
-            <ul class="dropdown-content">
-                <li><a href="{{ url_for('scoreboard') }}">2025 Scoreboard</a></li>
-            </ul>
-        </li>
-        
-        <li><a href="{{ url_for('hackathon') }}">Hackathon</a></li>
-        
-                    {% if session.get("user_name") %}
-                        <li class="user-tag">👤 {{ session["user_name"] }}</li>
-                        <li><a href="{{ url_for('logout') }}">Logout</a></li>
-                    {% else %}
-                        <li><a href="{{ url_for('signIn') }}">Sign In</a></li>
-                    {% endif %}
-                </ul>
-            </nav>
-        </header>        
-        <h1 class = "title" >Girls In Code Southeast Asia</h1>
-
-        <section>
-            <p class="center-text">Click on the <a href = "{{ url_for('competitions') }}">competition tab</a> to have a go at some of our past competition questions</p>
-            <h2 class = "title">Who are we?</h2>
-            <p class="center-text">We are a group of girls from Garden International School dedicated to building a stronger female coding community through competitions, workshops, and events.</p>
-            <br>
-            <p class="center-text"> Have a go at our annual GIC Competition competition questions via the “Competitions” tab above, and be sure to watch out for our upcoming events!</p>
-        </section>
-        <section>
-            <br>
-            <h2 class = "title">Team Members</h2>
-            <div class="row">
-                <div class="member">
-                    <h3 class="name"><strong>Director:</strong> Natalie Wong (Year 13)</h3>
-                    <img class="pic" src ="{{ url_for('static', filename = 'mypic.jpg')}}">
+{% extends 'base.html' %}
+{% block content %}
+  <section class="hero container">
+    <div class="hero-copy">
+      <h1>
+        <img class="hero-logo" src="{{ url_for('static', filename='gic-hero-logo.svg') }}" alt="Girls In Code" width="828" height="659" fetchpriority="high">
+      </h1>
+      <p class="hero-description">We’re a student-led organisation founded in Garden International School, bringing girls together through coding, teaching, and community initiatives across Southeast Asia.</p>
+    </div>
+    <div class="hero-art">
+      <span class="art-orbit orbit-one" aria-hidden="true">
+      </span>
+      <span class="art-orbit orbit-two" aria-hidden="true">
+      </span>
+      <span class="art-spark" aria-hidden="true">✳</span>
+      <div class="code-window">
+        <div class="window-bar">
+          <span class="window-dots" aria-hidden="true">
+            <i>
+            </i>
+            <i>
+            </i>
+            <i>
+            </i>
+          </span>
+          <span>hello_gic.py</span>
+          <span aria-hidden="true">⌘</span>
+        </div>
+        <div class="code-body">
+          <span class="code-comment"># a little introduction</span>
+          <div class="code-line">
+            <span class="line-number">01</span>
+            <span>
+              <b>name</b> = <em>"Girls In Code"</em>
+            </span>
+          </div>
+          <div class="code-line">
+            <span class="line-number">02</span>
+            <span>
+              <b>print</b>(<em>"Hello from GIC!"</em>)</span>
+          </div>
+          <div class="code-line">
+            <span class="line-number">03</span>
+            <span>
+              <b>print</b>(<em>"Southeast Asia"</em>)</span>
+          </div>
+          <div class="code-line">
+            <span class="line-number">04</span>
+            <span class="code-cursor" aria-hidden="true">▍</span>
+          </div>
+        </div>
+        <div class="code-toolbar">
+          <span>HELLO FROM GIC</span>
+          <button class="run-demo" type="button" data-run-demo>
+            <span aria-hidden="true">▶</span> Run example</button>
+        </div>
+        <div class="code-output" data-demo-output aria-live="polite"><span class="output-prompt" aria-hidden="true">›</span><span>Competitions. Workshops. Community.</span></div>
+      </div>
+      <div class="belong-sticker">GIRLS<br>IN<br>CODE <span aria-hidden="true">↗</span>
+      </div>
+      <span class="art-caption">coding, learning & community.</span>
+      <span class="floating-braces" aria-hidden="true">{ }</span>
+    </div>
+  </section>
+  <div class="values-strip" aria-label="What GIC does">
+    <div class="container">
+      <span>CODING COMPETITIONS</span>
+      <span aria-hidden="true">✳</span>
+      <span>WORKSHOPS</span>
+      <span aria-hidden="true">✳</span>
+      <span>HACKATHONS</span>
+      <span aria-hidden="true">✳</span>
+      <span>COMMUNITY</span>
+      <span aria-hidden="true">✳</span>
+    </div>
+  </div>
+  <section class="story-section" id="about">
+    <div class="container story-grid">
+      <div>
+        <p class="eyebrow home-section-title">ABOUT GIRLS IN CODE</p>
+        <img class="story-photo" src="{{ url_for('static', filename='gic-team-2026-2027.jpg') }}" alt="Girls In Code team for 2026–2027 at Garden International School" width="1404" height="1053" loading="lazy">
+      </div>
+      <div class="story-copy">
+        <span class="story-star" aria-hidden="true">✳</span>
+        <p>Girls In Code began with a group of girls at Garden International School and a shared aim: to build a stronger female coding community.</p>
+        <p>We organise coding competitions and hackathons, teach young girls Octobuddy through our GIC CCA, and connect our chapter network. Fundraising and our NGO partnerships are also part of GIC’s work in the community.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section container" id="explore">
+    <div class="section-heading">
+      <h2 class="eyebrow home-section-title">WHAT WE DO</h2>
+    </div>
+    <div class="opportunity-grid">
+      <article class="opportunity-card challenge-card">
+        <div class="card-top">
+          <span class="eyebrow">01 / OUR COMPETITIONS</span>
+        </div>
+        <div class="card-illustration challenge-illustration" aria-hidden="true">
+          <svg class="illustration-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+            <path d="M16 3H8l1 7-4 4v2h14v-2l-4-4 1-7Z" fill="var(--petal)"/>
+            <path d="M12 16v6"/>
+          </svg>
+          <span>&lt;</span>
+          <span class="asterisk">✳</span>
+          <span>/&gt;</span>
+        </div>
+        <h3>The GIC<br>coding competitions.</h3>
+        <p>Our competitions include beginner, intermediate, and advanced challenges. The archives bring together past questions, results, and event resources.</p>
+      </article>
+      <article class="opportunity-card hack-card">
+        <div class="card-top">
+          <span class="eyebrow">02 / OUR HACKATHON</span>
+        </div>
+        <div class="card-illustration hack-illustration" aria-hidden="true">
+          <svg class="illustration-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+            <path d="M16 3H8l1 7-4 4v2h14v-2l-4-4 1-7Z" fill="var(--petal)"/>
+            <path d="M12 16v6"/>
+          </svg>
+          <span class="idea-box">idea</span>
+          <span>→</span>
+          <span class="build-box">impact<span>✦</span>
+          </span>
+        </div>
+        <h3>The GIC<br>hackathons.</h3>
+        <p>Our hackathons bring girls together to explore ideas, build creative solutions, and use technology to address real-world problems.</p>
+      </article>
+    </div>
+    {% if config.ENABLE_OTHER_INITIATIVES %}
+    <div class="home-initiatives">
+      <article class="home-initiative">
+        <p class="eyebrow">03 / GIC CCA</p>
+        <h3>Teaching with Octobuddy.</h3>
+        <p>Our GIC CCA teaches young girls Octobuddy through coding sessions, making learning part of our community’s everyday work.</p>
+      </article>
+      <article class="home-initiative">
+        <p class="eyebrow">04 / OUR CHAPTERS</p>
+        <h3>A connected community.</h3>
+        <p>Our chapters are another part of GIC’s network. We’re preparing a chapter directory and map, with locations to be added.</p>
+      </article>
+    </div>
+    {% endif %}
+  </section>
+  <section class="container home-fundraising" aria-labelledby="home-fundraising-heading">
+    <div class="home-fundraising-copy">
+      <p class="eyebrow home-section-title">FUNDRAISING & PARTNERSHIPS</p>
+      <h2 id="home-fundraising-heading">GIC in the<br>community.</h2>
+      <p>Our fundraising total so far, alongside the NGO partners we work with.</p>
+      <p class="home-partner-names"><span>OUR NGO PARTNERS</span> UNICEF <span aria-hidden="true">·</span> MACO</p>
+    </div>
+    <div class="home-fundraising-progress">
+      {% set percentage = (raised / target * 100)|round|int %}
+      <p class="eyebrow">RAISED SO FAR</p>
+      <p class="fundraising-amount"><span>RM</span> {{ '{:,.0f}'.format(raised) }}</p>
+      <p class="fundraising-target">toward our RM {{ '{:,.0f}'.format(target) }} goal</p>
+      <label class="progress-caption" for="home-fundraising-progress"><span>Fundraising progress</span><strong>{{ percentage }}%</strong></label>
+      <progress id="home-fundraising-progress" class="fundraising-progress" value="{{ raised }}" max="{{ target }}" aria-valuetext="RM {{ '{:,.0f}'.format(raised) }} raised toward RM {{ '{:,.0f}'.format(target) }}; {{ percentage }} percent of our goal">{{ percentage }}%</progress>
+    </div>
+  </section>
+  <section class="section container" id="team">
+    <div class="section-heading">
+      <h2 class="eyebrow home-section-title">THE GIC TEAM</h2>
+    </div>
+    {% set team_rows = [
+      [('Camelia Chew', 'Director', 'camelia', 'camelia.jpeg')],
+      [('Emily Xu', 'Co-Director', 'emily', 'emily.jpeg'), ('Ridhima Garodia', 'Co-Director & Events Lead', 'ridhima', 'ridhima.jpeg'), ('Jade Lim', 'Workshops Lead', 'jade', 'jade.jpeg')],
+      [('Kashvi Agarwal', 'Outreach Co-Lead', 'kashvi', 'kashvi.png'), ('Kokoro Minami', 'Outreach Co-Lead', 'kokoro', 'kokoro.png'), ('Myra Dhawan', 'Fundraising Lead', 'myra', 'myra.jpeg')]
+    ] %}
+    <div class="team-hierarchy">
+      {% for row in team_rows %}
+        <div class="team-grid{% if loop.first %} team-grid--director{% endif %}">
+          {% for name, role, portrait, image in row %}
+            <article class="team-member">
+              {% if image %}
+                <div class="portrait-wrap portrait-{{ portrait }}">
+                  <img src="{{ url_for('static', filename='team/' ~ image) }}" alt="{{ name }}{% if role %}, {{ role }}{% endif %}" loading="lazy">
                 </div>
-                <div class="member">
-                    <h3  class="name"><strong>Co-Director:</strong> Emily Xu (Year 12)</h3>
-                    <img class="pic" src ="{{ url_for('static', filename = 'emily.jpg')}}">
-                </div>
-                <div class="member">
-                    <h3 class="name"><strong>Co-Director:</strong> Camelia Chew (Year 12)</h3>
-                    <img class="pic" src ="{{ url_for('static', filename = 'camelia.jpeg')}}">
-                </div>
-            </div>
-            
-        </section>
-        {% include 'includes/footer.html' %}
-    </body>
-</html>
+              {% else %}
+                <div class="portrait-wrap portrait-placeholder" role="img" aria-label="{{ name }} — photo coming soon"></div>
+              {% endif %}
+              <div class="member-caption">
+                <h3>{{ name }}</h3>
+                {% if role %}<span>{{ role }}</span>{% endif %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

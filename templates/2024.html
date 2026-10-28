@@ -1,28 +1,33 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="{{ url_for('static', filename = 'styles.css')}}">
-        <meta charset = "utf-8">
-        <link  rel="icon" href="https://yt3.googleusercontent.com/ytc/AIdro_mgnodbikJ-Ti1M2Eo9eR5HSjh69ZrKFbUMpactPIe1Xg=s900-c-k-c0x00ffffff-no-rj">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Girls In Code SEA</title>
-    </head>
-    <body>
-        <header>
-            
-            <a id="home" href = "{{url_for('home')}}">Home</a>
-            <a href = "{{url_for('home')}}"><img id="logo" alt="Girls in Code SEA Logo" src ="{{ url_for('static', filename = 'gic_logo.png')}}"></a>
-            <nav>
-                <ul>
-                    <li><a href = "{{ url_for('competitions') }}">Competitions</a></li>
-                    <li><a href="{{ url_for('scoreboard') }}">Scoreboard</a></li>
-                    <li><a href = "{{ url_for('signIn') }}">Sign In</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main class="flex-grow">
-            <h1 class = "title" >2024</h1>
-        </main>
-        {% include 'includes/footer.html' %}
-    </body>
-</html>
+{% extends 'base.html' %}
+{% block title %}2024 questions — Girls In Code{% endblock %}
+{% block content %}
+  <section class="container page-intro">
+    <a class="back-link" href="{{ url_for('competitions') }}">← All competitions</a>
+    <p class="eyebrow">THE COMPETITION ARCHIVE</p>
+    <h1>2024<span>.</span></h1>
+    <p>Explore five lunar-landing coding questions from the GIC Futuristic Festival.</p>
+    <nav class="button-row" aria-label="Jump to a question">
+      {% for question in questions %}
+        <a class="button button-outline button-small" href="#question-{{ question.number }}">Question {{ question.number }}</a>
+      {% endfor %}
+    </nav>
+  </section>
+  <section class="container section section-first festival-questions" aria-label="2024 questions">
+    {% for question in questions %}
+      <article class="problem-panel festival-question" id="question-{{ question.number }}" aria-labelledby="question-{{ question.number }}-heading">
+        <div class="panel-heading">
+          <h2 id="question-{{ question.number }}-heading">Question {{ question.number }}</h2>
+        </div>
+        <div class="problem-body">
+          <p>{{ question.statement }}</p>
+          {% for example in question.examples %}
+            <h3>{{ example.label }}</h3>
+            <pre><code>{{ example.text }}</code></pre>
+          {% endfor %}
+        </div>
+        {% set practice_id = '2024-' ~ question.number %}
+        {% include 'includes/answer_check.html' %}
+      </article>
+    {% endfor %}
+  </section>
+{% endblock %}

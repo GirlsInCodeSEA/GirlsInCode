@@ -1,0 +1,182 @@
+[
+  {
+    "page": 13,
+    "text": "Behind The Screens\n\nGirls In Code SEA"
+  },
+  {
+    "page": 14,
+    "text": "Finnick\n\nAge: 18\n\nEthnicity: Scottish\n\nHobby: Cooking\n\nFavourite App: Instagram"
+  },
+  {
+    "page": 15,
+    "text": "Finnick has an Instagram account where he posts restaurant reviews. For consistency, every post he makes follows the format (variables)\n\nRestaurant Name:\n\nLocation:\n\nDish 1:\n\nDish 1 Rating:\n\nDish 2:\n\nDish 2 Rating:\n\nWould I return:\n\nFinnick recently visited a restaurant with the following details\n\nNobu\n\nFour Seasons Hotel Kuala Lumpur\n\nKanpachi Sashimi Salad\n\n7.5\n\nCrispy Soft Shell Crab with Ponzu\n\n8.3\n\nBeginner 1 by Elena\n\nWrite a program that allows Finnick to input these details into the stated variables. For the \"Would I return variable\", it should output yes if the total rating of dish 1 and dish 2 is 12 or higher.\n\nThe final output should look like this:\n\n(??? is to indicate that you have to find out what the correct output is\n\n???"
+  },
+  {
+    "page": 16,
+    "text": "Beginner 2 by Araa\n\nThe Instagram algorithm notes the type of content Finnick likes or skips past.\n\nFinnick likes cooking reels, clothing posts, rugby posts and anything meme related. Finnick skips past political posts, diving compilations, celebrity drama and pet posts.\n\nUse while loops to program an algorithm that decides what type of content will show up in Finnick’s feed again based on his likes and dislikes. The program should print out all eight examples of content with either “keep in feed” or “hide from feed” e.g.\n\nrugby posts: keep in feed\n\npolitical posts: hide from feed\n\nAnd at the end it should also print out the amount of posts that stay or do not stay in Finnicks feed e.g.\n\n​​Posts that will stay in Finnick's feed: 4\n\nPosts that will not stay in Finnick's feed: 4"
+  },
+  {
+    "page": 17,
+    "text": "Intermediate 1 by Eleonora\n\nFinnick has recently set up an Instagram account and needs to create a secure password for it. He has chosen to use an array of words and subroutines to do this for him. Do the following tasks:\n\nTask 1: Create an array of 10 words with at least 6 characters in each word.\n\nTask 2: Create a subroutine to randomly select one of the words from the array.\n\nTask 3: Create a subroutine to reverse the selected word.\n\n(Hint: For string reversal, explore a concept called \"slicing\")"
+  },
+  {
+    "page": 18,
+    "text": "Intermediate 2 by Elena\n\nFinnick wants to find the inspiration from the most successful food instagram account. To do this, he wants to find the best ratio between the number of posts and the number of followers out of a few instagram accounts.\n\nFirst, extract data from instagram using the Instagramy Module. Here is a resource that teaches you how to install and use this module:\n\nhttps://www.javatpoint.com/python-instagramy-module\n\nSecondly, extract the number of posts and followers from the following instagram accounts:\n\nbuzzfeedtasty\n\nmilktpapi\n\ndoobydobap\n\nThirdly, use the formula:\n\nratio = number of followers / number of posts\n\nThe instagram account with the largest value as its ratio is the most successful food instagram account.\n\nFinally, output all three ratios from the given instagram accounts and what the ratio of the most successful instagram account is.\n\nThe Instagramy module only works on Jupyter Notebook (google search it to use it)\n\n(Even though this is an intermediate question, I decided to introduce the concept of modules as it is what takes you from intermediate to advanced. If you are struggling with modules, that's ok! You can skip this question and move on)"
+  },
+  {
+    "page": 19,
+    "text": "Advanced 1 by Dhivyesh\n\nHere are a few arrays that represent properties such as number of likes, number of comments and number of views in Finnick's feed.\n\nposts = [1, 2, 3, 4, 5]\n\nlikes = [0, 0, 0, 0, 0]\n\ncomments = [[], [], [], [], []]\n\nviews = [0, 0, 0, 0, 0]\n\nUse these arrays to do the following:\n\nasks the user for an input as to which post he wants to view\n\nevery time the user views the element, increment the number of views by 1\n\ninclude functionality for likes and comments such as incrementing likes and appending comments"
+  },
+  {
+    "page": 20,
+    "text": "Advanced 2 by Aaleyah\n\nA social media star named Finnick wants to examine his Instagram account to determine which photos have received the most likes and comments. He wants to learn which postings receive the most likes, comments, and interactions. He keeps track of the likes and comments received on his Instagram postings. To read this data and determine the interaction for each article, he wants to create a Python programme.\n\nHe wants to apply the algorithm below to determine engagement:\n\nEngagement is calculated as (likes + comments) / the number of followers.\n\nTo see which posts are performing the best, he also wants to display the posts in descending order of interaction.\n\nTask:\n\nWrite a Python program that can read in the list of Instagram posts, calculate the engagement for each post using the formula provided, and display the posts in descending order of engagement.\n\nYour program should have the following functionalities:\n\nRead the list of Instagram posts from a CSV file:\n\nhttps://docs.google.com/spreadsheets/d/1fHIrVG8q9YDPMmga0XcidVsmZ8FiBXsGpDS7qM2zrSM/edit?usp=sharing\n\nThe CSV file will have two columns: \"likes\" and \"comments\". Each row will correspond to one post.\n\nStore the number of followers in a variable called num_followers.\n\nCalculate the engagement for each post using the formula provided and store it in an engagement list.\n\nDisplay the posts in descending order of engagement and the number of likes, comments, and engagement."
+  },
+  {
+    "page": 21,
+    "text": "Vignesh\n\nAge: 13\n\nEthnicity: Indian\n\nHobby: Chess\n\nFavourite App: Spotify"
+  },
+  {
+    "page": 22,
+    "text": "Beginner 1 by Tze Wey\n\nVignesh’s favourite Spotify artists are Sufjan Stevens and Bruno Major. He has decided that he wants the songs ‘Murder And Crime’, ‘To Let A Good Thing Die’ ‘Reach Out’, ‘Home’ and ‘Mystery of Love’ to be queued thrice each. Print his Spotify queue list in the following format ‘number. song name’, with each subsequent song starting on a new line. Use a loop function to generate the numbers of the song queue.\n\nThe output should look like this:"
+  },
+  {
+    "page": 23,
+    "text": "Beginner 2 by Elena\n\nVignesh likes to use the shuffle play function on Spotify so that he gets a diverse and unique listening experience. Shuffling happens at random.\n\nOutput a random track number e,g. \"Daydreaming by Harry Styles\" is 0 AND its track name. Use a count loop to output this three times.\n\n(Hint: explore the import random function)\n\nUse the following code as a starting point:\n\nimport random\n\ntrack = [[\"Daydreaming by Harry Styles\"],\n\n[ \"Workin Out by JID\"],\n\n[\"Old Love by yuji\"],\n\n[\"Eventually by Tame Impala\"],\n\n[\"After Hours by The Weekend\"],\n\n[\"Ghostin by Ariana Grande\"],\n\n[\"Hey, Mickey! by Baby Tate\"],\n\n[\"Low by SZA\"],\n\n[\"Pink + White by Frank Ocean\"],\n\n[\"Here With Me by d4vd\"]]\n\nExample of output (everyone's output will be different since it is randomised):"
+  },
+  {
+    "page": 24,
+    "text": "Intermediate 1 by Ariz\n\nVignesh discovers an artist, Laufey, on Spotify, however, he isn’t sure what songs to start with. He has heard the hits but he wants to find some deep cuts that he’d actually like. Vignesh prefers slow and sad songs. Create a Laufey playlist prioritising songs with slow and sad properties.\n\nStarter code:\n\nsongs = [[\"above the chinese restaurant\", \"slow\", \"sad\"],\n\n[\"love to keep me warm\", \"fast\", \"upbeat\"],\n\n[\"let you break my heart again\", \"slow\", \"sad\"],\n\n[\"street by street\", \"upbeat\"], [\"like the movies\", \"slow\"],\n\n[\"falling behind\", \"fast\", \"sad\"],\n\n[\"the christmas waltz\", \"slow\", \"upbeat\"],\n\n[\"i wish you love\", \"fast\", \"sad\"], [\"someone new\", \"slow\", \"sad\"],\n\n[\"james\", \"slow\"]]\n\nplaylist = []"
+  },
+  {
+    "page": 25,
+    "text": "Intermediate 2 by Elena\n\nVignesh likes his playlists to all be unique. But sometimes Vignesh accidentally adds the same song to different playlists. Program a function that does the following:\n\nasks the user to input a song from the list\n\noutputs the amount of times the song appears from all 3 playlists\n\nreturns and outputs True if the track is exclusively in one playlist\n\nreturns and outputs False if the track is in multiple playlists\n\nRun this code for two song inputs\n\nBad habit by Steve Lacy\n\nSolo by Future\n\n(Remember to screenshot outputs for both songs)\n\nStarter code:\n\nplaylist1 = [\"Solo by Future\", \"After Dark by Mr.Kitty\",\"Those Eyes by New West\",\"Golden Hour by JVKE\",\"505 by Arctic Monkeys\"]\n\nplaylist2 = [\"No Surprises by Radiohead\", \"Viva La Vida by Coldplay\",\"Woo by Rihanna\", \"Bad habit by Steve Lacy\", \"Hope by NF\"]\n\nplaylist3 = [\"Glue Song by beabadoobee\", \"About You by 1975\",\"Nonsense by Sabrina Carpenter\", \"Bad habit by Steve Lacy\", \"Midnight Rain by Taylor Swift\"]\n\nsong = input(\"What song do you want to check? \")\n\nnum_of_appears = 0"
+  },
+  {
+    "page": 26,
+    "text": "Advanced 1 by Amanda\n\nWho doesn't love Spotify Wrapped? Make a Spotify Wrapped for Vignesh. His song history has been compiled as a txt file (attached below) in the format “song;artist;genre;length of track”. Eg. Fireflies;Owl City;Pop;3:48.\n\nhttps://drive.google.com/file/d/1n_caCy8EiixYgIOB7Jwo31D_N19hRsac/view?usp=sharing\n\nThe Wrapped should include his top 5 artists, his top 5 songs, total minutes listened and his top genre (all determined individually based on how frequent they appear in his history).\n\n(Explore how to open and read text files)\n\nThe correct output is:"
+  },
+  {
+    "page": 27,
+    "text": "Advanced 2 by Dhivyesh\n\nMake a list of songs which can be cycled through with an interface using tkinter. Use the slider to show a bar that shows the progress of the song over time. Also, include a slider to change the volume. (You don’t need to actually play the song)\n\nStart Code:\n\nimport tkinter as tk"
+  },
+  {
+    "page": 28,
+    "text": "SOFEA\n\nAge: 12\n\nEthnicity: Malay\n\nHobby: Fashion\n\nFavourite App: Tik Tok"
+  },
+  {
+    "page": 29,
+    "text": "Beginner 1 by Amanda\n\nSofea is scrolling through TikTok and wants to change the speed on the videos she watches. Write a program that prompts her to input either 0.75, 1.0, 1.25, 1.5, 2.0 and prints a success message.\n\nExample of output:"
+  },
+  {
+    "page": 30,
+    "text": "Beginner 2 by Ella\n\nSofea is creating a new account on TikTok. The app has asked her to input a password with 8 to 20 characters. Write a program that validates the input of the user. The program should begin with the prompt “input password :”. The user should be able to input the password. If the user inputs a password that doesn’t fit these requirements display the message “Please input a password containing 8 to 20 letters: ” After the message, there should be an input prompt again. This loop should occur until an appropriate password is inputted. After an appropriate password is inputted the console should display “password has been validated”. The user must then retype the password as a double-entry check. This is done by prompting the user to type “Enter the same password :” until the user types in the same password. At the end of the program the console should display “logged in”\n\n(Explore if and while loops)"
+  },
+  {
+    "page": 31,
+    "text": "Intermediate 1 by Tze Wey\n\nSofea is a Tik Tok user. She only enjoys watching videos about wellness. These includes videos related to cooking, which she particularly enjoys, fitness and study methods. Sort the array provided below in an order where wellness videos appear at the top of her feed, with the cooking videos being prioritised at the start. Print the array with each element on a new line, numbering each element.\n\nStarter Code:\n\nVideos = [['painting','arts','visual'],\n\n['curry','wellness','cooking'],\n\n['schedule','wellness','study methods'],\n\n['dancing','arts','musicals'],\n\n['zumba','wellness','fitness'],\n\n['fried rice','wellness','cooking'],\n\n['workout','wellness','fitness'],\n\n['acrylics','arts','visual'],\n\n['tips','wellness','study methods'],\n\n['cardio','wellness','fitness'],\n\n['habits','wellness','study methods'],\n\n['singing','arts','musicals'],\n\n['noodles','wellness','cooking'],\n\n['marathon','wellness','fitness']]\n\nOutput should look like this:"
+  },
+  {
+    "page": 32,
+    "text": "Intermediate 2 by Amanda\n\nSofea has posted a TikTok video showing off her latest outfit. Her audience’s engagement and insights is saved as a string, where L is like, U is unlike, C is comment and S is shares.\n\n\"LUCLLSLLLULLLLLCLLLLLLLLULLLLLCLLULLLLLLLULLLLLLULLCLCCCLLLLLLLUULLLLLCLLLLLLLLLCLLLLLSLCLLLLLLCLLLLLLLLLLLCLLC\"\n\nPrint the number of likes, comments, and shares on her video."
+  },
+  {
+    "page": 33,
+    "text": "Advanced 1 by Ariz\n\nSofea is a content creator. She wants to find out how her videos are doing. Create a summary of her current videos and use it to predict how her next videos will do based on the tags and like percentage. The summary should include: the total views, total likes and calculate the percentage of how many people like the video for each video. The summary should also include the collective view count of each video, average like count and average like percentage. You should sort the video ideas by order of predicted success (in terms of like percentage)\n\n(Hint: Starter code can be sorted into a regular array or a numpy array)\n\nStarter Code:\n\nVideos :\n\n“Bench press PR”, tags: #gym #pr, likes: 13.6k, views: 17k\n\n“Leg day L”, tags: #gym #funny, likes: 21.6k, views: 24k\n\n“Travel vlog: Japan”, tags: #travel #japan, likes: 6.3k, views: 9k\n\n“5 types of gamers”, tags: #gaming #funny, likes: 17.1k views: 19k\n\n“Battle station tour”, tags: #gaming #pcsetup, likes: 7.7k, views: 11k\n\n“Ego lifter L”, tags: #gym #funny, likes: 23.4k views: 26k\n\n“1v5 clutch”, tags: #gaming #clips, likes: 8.4k, views: 12k\n\n“Squat PR” tags: #gym #pr, likes: 15.2k, views: 19k\n\nVideo Ideas :\n\n“Deadlift PR” topics: gym, pr\n\n“5 types of people at the gym” topics: gym, funny\n\n“Travel vlog: Switzerland” topics: travel,switzerland\n\n“Ranking up to plat” topics: gaming"
+  },
+  {
+    "page": 34,
+    "text": "Advanced 2 by Yu Shen\n\nSofea is a TikTok user. Topics she likes include gym, cooking, travel, gardening and art. Imagine her TikTok feed is a 1D array that starts with 5 elements and can constantly be updated. Make a text-based user interface where a subject she likes will be displayed as a string (simulating a post) with equal chance of being about gym, cooking, travel, gardening or art, Provide functions that allow her to like, scroll past, or refresh when given a new post. Make sure user input is validated.\n\nIf she likes the post, append a new element to the 1D array with a 5% increased chance of it being that topic (e.g. if she likes ‘easy cake recipe’, the future post should have an increased chance of it being about cooking), make sure the new probability of that topic is stored. Then, clear the console (not the 1D array) and print the next post.\n\nIf she scrolls past the post, append a new element to the 1D array with a 5% decreased chance of being that topic, make sure the new probability of that topic is stored. Then, clear the console and print the next post.\n\nIf she refreshes at that post, clear the 1D array and append 5 new elements to it based on the stored probabilities, repeating the process.\n\n(it’s ok if posts are repeated in the feed)\n\nStarter code:\n\nposts = [ [['gym etiquette'], ['shoulder workouts'], ['how to get a six pack fast'], ['stop doing this at the gym'], ['best leg day workouts']] , [['easy cake recipe'], ['essential ingredients for sushi'], ['my life as a 5* cook'], ['making subs in a subway'], ['top 5 chinese takeouts in London']] , [['how i got 9 for my IGCSE art'], ['tips for beginner artists'], ['draw spongebob, win $5'], ['the history of Banksy'], ['how to draw anime eyes']] , [['my trip to Ghana'], ['climbing 10 mountains in 100 days'], ['top 3 travel essentials'], ['how to pack efficiently'], ['top 5 places to visit in Mumbai']] , [['watching grass grow until 1M followers'], ['top 10 fruits to homegrow'], ['how to grow oranges'], ['this is the best fertiliser (not sponsored)'], ['why you should plant aloe vera at home']] ]\n\nfeed = []"
+  },
+  {
+    "page": 35,
+    "text": "Tristan\n\nAge: 17\n\nEthnicity: Hmong\n\nHobby: Photography\n\nFavourite App: Grab"
+  },
+  {
+    "page": 36,
+    "text": "Beginner 1 by Shriya\n\nTristan is on the way to Singapore for a photography competition. He wants to catch a grab to the airport at 8am from his house.\n\nShow a list of available drivers and the time it will take for them to take Tristan to the airport in minutes.\n\nCreate a userinput function that allows the user to choose which driver they want and then output the time Tristan reaches the airport. After that, also print a statement showing the driver is on the way.\n\n(Hint: the list should display the travel time in minutes. If he is to be picked up at 8am, then the time he reaches would have to be 8am + the travel time)"
+  },
+  {
+    "page": 37,
+    "text": "Beginner 2 by Amanda\n\nTristan wants to book a Grab driver. He inputs all his details, and the system finds a driver for him. The app now needs to output a message to inform Tristan about his driver and the details. It should include:\n\nA success message\n\nDriver’s name\n\nRating in stars (eg. * * * *)\n\nCar number plate\n\nCar model\n\nPrint all this information with centre alignment."
+  },
+  {
+    "page": 38,
+    "text": "Intermediate 1 by Natalie\n\nTristan is feeling hungry, he wants to eat something from: Restaurant Food, Fast Food, Beverages. Create a function which asks Tristan what he feels like eating. Then, from the list below, display the options based on what he wants to eat.\n\nStarter Code:\n\ngrab = [{\"Restaurant\": \"Esquire Kitchen\",\n\n\"Category\":\"Restaurant Food\"},\n\n{\"Restaurant\": \"McDonalds\",\"Category\":\"Fast Food\"},\n\n{\"Restaurant\": \"KFC\", \"Category\":\"Fast Food\"},\n\n{\"Restaurant\": \"Jin Xuan Hong Kong\",\n\n\"Category\": \"Restaurant Food\"},\n\n{\"Restaurant\": \"Gong Cha\", \"Category\": \"Beverages\"},\n\n{\"Restaurant\": \"Boost Juice\", \"Category\": \"Beverages\"},\n\n{\"Restaurant\": \"Sushi Zanmai\",\"Category\":\"Restaurant Food\"},\n\n{\"Restaurant\": \"Yomie's Rice X Yogurt\",\n\n\"Category\":\"Beverages\"}]"
+  },
+  {
+    "page": 39,
+    "text": "Intermediate 2 by Aaleyah\n\nThis question is not so much related to Tristan but more so about how Grab operates. Write a Python program that tracks the drivers' salaries. Information such as the driver's name, driver ID, start location of ride, end location of ride, total distance and total cost must be outputted at the end. Driver Name and ID are constant variables, however start location of ride, end location of ride, total distance and total cost must be updated with each new ride. Your should input three test cases of your choice and screenshot all three updated outputs."
+  },
+  {
+    "page": 40,
+    "text": "Advanced 1 by Phuong Nghi\n\nTristan would need to know the distance between the place he is standing right now and his destination in order to find out the Grab fare that he has to pay. Create a function in which it will takes two different set of longitude and latitude (staring point and destination) and return the displacement between the locations and calculate the fare using the following scheme:\n\nThe base fare is $0.75\n\nFor each next 10km the fare is $0.5/km\n\nFor each km after the first 10km, the fare is $0.35/km"
+  },
+  {
+    "page": 41,
+    "text": "Advanced 2 by Taysia\n\nTristan wants to order food to his house through Grab. The file below contains restaurants and their cuisines. Use this information to create a nested dictionary, which can then be filtered and displayed, so that Tristan can choose what cuisine he wants and see the restaurants that meet his criteria.\n\nhttps://drive.google.com/file/d/1HqdAe1InVlW00i3IMCNKwa6eAKOgUpr1/view?usp=sharing"
+  },
+  {
+    "page": 42,
+    "text": "Charlotte\n\nAge: 14\n\nEthnicity: Chinese\n\nHobby: Equestrianism\n\nFavourite App: Netflix"
+  },
+  {
+    "page": 43,
+    "text": "Beginner 1 by Shriya\n\nCharlotte loves watching horse riding shows. Create a two column user menu that lets you view a list of ten different horse riding movies of your choice.\n\nCreate a function allowing the user to look at the rating of the movie as well as age restriction (3 movies).\n\nFinally you want the user to be able to add whichever movie of choice to a watch later list that can be updated continuously (minimum of 2 movies)"
+  },
+  {
+    "page": 44,
+    "text": "Beginner 2 by Aaleyah\n\nCharlotte enjoys watching movies and television series on Netflix when she has free time. She has a to-do list of numerous films and TV episodes, but she frequently loses track of which ones she's already seen. She wants to programme in Python to keep track of her Netflix queue. There needs to be a user input function that asks Charlotte which movie she has watched and then output the current queue. Create 5 movie inputs of your choice which should also print the updated queue 5 times.\n\n(There are multiple ways to attempt this problem but you could use count loops)"
+  },
+  {
+    "page": 45,
+    "text": "Intermediate 1 by Phuong Nghi\n\nThe file provided in the question contains a list of movies. Charlotte would want to search for a film in which it has the word “space” in the title. Write a code that takes a string as an input and returns a list of films which contains the word that has been inputted, if there is no equivalent film return “No result found”\n\nhttps://drive.google.com/file/d/1jCT7W5Z0YqSRaF-sj8T-HR_G_OP2Wk0k/view?usp=sharing\n\n(Explore opening and reading text files)"
+  },
+  {
+    "page": 46,
+    "text": "Intermediate 2 by Taysia\n\nCharlotte is struggling to pick a movie to watch on Netflix. Import the .txt file of movies below and convert it into a list, to create a “Surprise me” function that randomly selects a movie for her to watch.\n\nhttps://drive.google.com/file/d/1eebscVivfUrpdifCPJU7u5IP32tnbS6V/view?usp=sharing\n\n(Hint: import random)"
+  },
+  {
+    "page": 47,
+    "text": "Advanced 1 by Natalie\n\nAfter a tiring week, Charlotte wants to have a movie marathon from the movies that she’s added to her list on Netflix. Below shows Charlotte's list of movies, help her choose the movies by randomly choosing movies from her list below that sums up to the duration she wants her movie marathon to be. Use 6 hours and 24 hours as inputs, remember to screenshot both test cases.\n\nStarter Code:\n\nMy_list = [{\"Movie\": \"The Incantation\", \"Duration\":2},\n\n{\"Movie\":\"The Invitation\", \"Duration\": 2},\n\n{\"Movie\":\"The School for good and evil\", \"Duration\": 2},\n\n{\"Movie\":\"Spirited Away\", \"Duration\": 2},\n\n{\"Movie\":\"Your Name\", \"Duration\": 2},\n\n{\"Movie\":\"Enola Holmes\", \"Duration\": 2},\n\n{\"Movie\":\"A Silent Voice\", \"Duration\": 2},\n\n{\"Movie\":\"The Tale of Princess Kaguya\", \"Duration\": 2},\n\n{\"Movie\":\"Corpse Bride\", \"Duration\": 1},\n\n{\"Movie\":\"Pitch Perfect 2\", \"Duration\": 2}]"
+  },
+  {
+    "page": 48,
+    "text": "Advanced 2 by Eleonora\n\nCharlotte has a Netflix account with thousands of movies and TV shows. She wants to create a program that can recommend a movie or TV show for her to watch based on her previous viewing history.\n\nTo do this, Charlotte has collected a dataset of her previous viewing history in a text file called \"viewing_history.txt\". Each line of the file contains the title of a movie or TV show she has watched, followed by a comma, and the genre of the movie or TV show.\n\nCharlotte also has a list of favorite genres, which she has stored in a separate text file called \"favorite_genres.txt\". Each line of the file contains a single genre.\n\nYour task is to write a program that uses this data to recommend a movie or TV show for Charlotte to watch. Your program should satisfy the following requirements:\n\n1. The program should read in the \"viewing_history.txt\" file and store the data in a list of tuples, where each tuple contains the title of a movie or TV show and its genre.\n\n2. The program should read in the \"favorite_genres.txt\" file and store the data in a list of strings.\n\n3. The program should define a subroutine that takes the list of tuples and the list of favorite genres as input, and returns a list of movies or TV shows that match one of the favorite genres.\n\n4. The program should use the \"random\" module to randomly select a movie or TV show from the list returned by the subroutine.\n\n5. The program should print the title of the selected movie or TV show to the console.\n\nThis question requires you to create your own text file\n\nStarter\n\nCode\n\non\n\nNext\n\nSlide ->"
+  },
+  {
+    "page": 49,
+    "text": "Advanced 2 by Eleonora"
+  },
+  {
+    "page": 50,
+    "text": "VALERIE\n\nAge: 15\n\nEthnicity: Thai\n\nHobby: Video Games\n\nFavourite App: Shopee"
+  },
+  {
+    "page": 51,
+    "text": "Beginner 1 by Shriya\n\nValerie enjoys buying various items from Shopee.\n\nDefine each of the following products to be a variable with its value being the price of the product which you must decide (can be any number).\n\nShoes, Phone case, Suitcase, Earphones, T-shirt, Sunscreen, Microwave, Bath towel, Socks, Dried fruit\n\nCreate a user prompt that asks the user what item they would like to purchase (they can enter the number associated with the product e.g. 1 for Shoes). There should be at least 3 prompts so the user can add 3 items to the cart.\n\nCreate a variable that is equal to the total price of the items added by the user.\n\nCreate a condition that adds the price of the item chosen to that total price value.\n\nCreate a user prompt asking for the user to choose between the following discount coupons:\n\n20% discount\n\n10rm cashback\n\n50% cashback (as a choice for purchases above RM150 only)\n\nCreate a condition that applies the appropriate discount to the total price value depending on the user’s choice.\n\nDisplay the total amount to be paid by the user."
+  },
+  {
+    "page": 52,
+    "text": "Beginner 2 by Amanda\n\nValerie received a package of headphones from Shoppee a week ago. She enjoys using them and wants to leave a review on the product. However, she does not want to show her username. Create a code that will prompt her to enter her review, which includes rating, performance, best feature, product quality, review and if she wants to leave her review anonymously. Her username is valerie8588. She would rate it 4/5, and likes that it has a powerful sound performance. She finds that the best feature is how it is easy to use and thinks the headphones are of superb quality. In her review she writes “Thank you for the fast and smooth transaction. The item arrived in good condition and is working well.” Print the review that is posted on the product’s page.\n\nHint: hidden usernames show only the first and last letter, and the rest are replaced with asterisks(eg. tristangrab would become t*********b)"
+  },
+  {
+    "page": 53,
+    "text": "Intermediate 1 by Ella\n\nValerie has ordered a few items off shoppee. However, once she got home She got a call saying they have lost the packages! Valerie needs her new headphones as she has a DJ gig and wants to find out where her package is. All the packages ordered are stored in a 2D array in which each index stores 3 variables in the corresponding order : [Name, Current location, item]. Search through the array to find where Valeries package is located and find the corresponding postcode.\n\nArray1 = [['Tristan', 'Hanoi', 'Book'], ['Tristan', 'Hanoi', 'HDMI'], ['Vignesh', 'Kuala Lumpur', 'Book'], ['Sofea', 'Jakarta', 'Book'], ['Finnick', 'Hanoi', 'Headphones'], ['Tristan', 'Manila', 'HDMI'], ['Charlotte', 'Manila', 'Shirt'], ['Valerie', 'Manila', 'Shirt'], ['Tristan', 'Hanoi', 'Headphones'], ['Valerie', 'Manila', 'Mouse'], ['Vignesh', 'Hanoi', 'Book'], ['Sofea', 'Taipei', 'Mama Noodles'], ['Sofea', 'Taipei', 'Mama Noodles'], ['Charlotte', 'Vientiane', 'HDMI'], ['Vignesh', 'Jakarta', 'HDMI'], ['Valerie', 'Hanoi', 'Headphones'], ['Tristan', 'Jakarta', 'Shirt'], ['Vignesh', 'Vientiane', 'Mama Noodles'], ['Vignesh', 'Kuala Lumpur', 'Book'], ['Charlotte', 'Vientiane', 'Shirt'], ['Valerie', 'Manila', 'Book'], ['Finnick', 'Manila', 'Headphones'], ['Finnick', 'Manila', 'Shirt']]\n\npostcodes = [[\"Bangkok\", \"10110\"], [\"Kuala Lumpur\", \"43200\"], [\"Manila\", \"1000\"], [\"Taipei\", \"100019\"], [\"Jakarta\", \"10120\"], [\"Hanoi\", \"11109\"], [\"Vientiane\", \"0604\"]]"
+  },
+  {
+    "page": 54,
+    "text": "Intermediate 2 by Elena\n\nValerie has ordered a few items off a shopee bakery. She wants the orders to arrive in the order they are completed. The bakery has informed her that the lesser orders will be completed quicker and thus also delivered sooner. Valerie wants to know which items will arrive first.\n\nHere is the quantity of each of her purchases:\n\nlist = [4, 9, 2, 1, 2, 6, 3]\n\nUse the bubble sort algorithm to sort the array so that it displays the least amount of purchases to the largest amount (from left to right)"
+  },
+  {
+    "page": 55,
+    "text": "Advanced 1 by Eleonora\n\nValerie is trying to order a birthday gift for her mom from Shopee. She has looked at the catalogue available on Shopee, and now she needs to find the item that she wants to buy. Valerie has downloaded a text file from the Shopee website which contains the item information for each item in the catalogue. The text file is made up of two columns. The first column contains the item ID and the second column has the item name and item price. Valerie wants to find the item with the lowest price so that she can buy it for her mom. She is going to use Python functions to find the item with the lowest price. Valerie first needs to read in the text file using the open() function. She will then use the readlines() function to create a list of the items in the file. Next, Valerie needs to create an empty list to store the item prices. She will use a for loop to iterate through the list of items and store the item prices in the empty list. Now Valerie has a list of all the item prices, she can use the min() function to find the item with the lowest price.\n\nThis question requires you to create your own text file"
+  },
+  {
+    "page": 56,
+    "text": "Advanced 2 by Yu Shen\n\nValerie is a Shopee user. She really likes buying tech-related stuff. Recently she has been looking to buy a Xiaomi 13, but is not sure which seller to buy from. Using the below dictionary, write a program for Valerie that tallies and displays the total cost of buying a Xiaomi 13 from each seller (including delivery fees and available discounts) then sorts them from least expensive to most expensive, telling her which ones she can afford. She starts with a random amount of money in her account between RM3000 and RM5000.\n\nValerie must then be able to select which seller she wants to visit and is given the option to buy the product or exit the seller’s page. Visiting a seller’s page clears the previous list from the screen.\n\nIf ‘buy’ is chosen, the program must check whether she has enough money in her account. If she does, she’ll be asked for her pin number (the pin number must be 6 digits long and must be a specific permutation of integers). Getting the pin number right will allow her to proceed with the purchase, while getting the pin number wrong more than twice in a row will suspend her account for 365 days. If she doesn’t have enough money, invalidate the purchase.\n\nIf ‘exit’ is chosen, the program will clear the screen and return to the previous list.\n\nxm13 = {'Official Xiaomi Store' : {'price' : 2999.0, 'dis%' : 30}, 'Official Siaome Store' : {'price' : 0.99, 'dis%' : 90}, 'mmgbpmall' : {'price' : 3499.0, 'dis%' : 40}, 'spraygadget' : {'price' : 4599.0, 'dis%' : 25}, 'calastore' : {'price' : 1905.0, 'dis%' : 33}, 'mayatech' : {'price' : 2555.0, 'dis%' : 22}, 'mcdecotech' : {'price' : 2359.0, 'dis%' : 20}, 'caviar' : {'price' : 59999.0, 'dis%' : 0}, 'rocketgadgets' : {'price' : 3349.0, 'dis%' : 12}, 'realstore' : {'price' : 20.0, 'dis%' : 50}}"
+  },
+  {
+    "page": 57,
+    "text": "END"
+  }
+]

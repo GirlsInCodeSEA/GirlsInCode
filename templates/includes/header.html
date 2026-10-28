@@ -1,0 +1,35 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ url_for('home') }}" aria-label="Girls In Code home">
+      <img src="{{ url_for('static', filename='gic_logo.png') }}" alt="Girls In Code" width="190" height="38">
+      <span>SOUTHEAST ASIA</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu <span aria-hidden="true">☰</span>
+    </button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <a href="{{ url_for('home') }}" {% if request.endpoint == 'home' %}aria-current="page"{% endif %}>About GIC</a>
+      {% set competition_active = request.endpoint in ['competitions','competitions_2025','competition_scoreboard_2025','y2025m','y2025n','y2024','y2023','question_2023','question','submissions','november_booklet_question','march_booklet_question','check_practice'] %}
+      {% set hackathon_active = request.endpoint in ['hackathon','hackathon_2025','hackathon_scoreboard_2025'] %}
+      <details class="nav-events{% if competition_active or hackathon_active %} is-current{% endif %}">
+        <summary>Events <span aria-hidden="true">⌄</span></summary>
+        <div class="events-dropdown">
+          <a href="{{ url_for('competitions') }}" {% if competition_active %}aria-current="location"{% endif %}>Competitions</a>
+          <a href="{{ url_for('hackathon') }}" {% if hackathon_active %}aria-current="location"{% endif %}>Hackathon</a>
+        </div>
+      </details>
+      <a href="{{ url_for('fundraising') }}" {% if request.endpoint == 'fundraising' %}aria-current="page"{% endif %}>Fundraising</a>
+      <a href="{{ url_for('contact') }}" {% if request.endpoint == 'contact' %}aria-current="page"{% endif %}>Contact</a>
+      {% if config.ENABLE_OTHER_INITIATIVES %}
+        <a href="{{ url_for('other_initiatives') }}" {% if request.endpoint == 'other_initiatives' %}aria-current="page"{% endif %}>Other Initiatives</a>
+      {% endif %}
+      {% if session.get('user_name') %}
+        <span class="nav-user" title="{{ session['user_name'] }}">{{ session['user_name'] }}</span>
+        <a class="button button-small" href="{{ url_for('logout') }}">Sign out <span aria-hidden="true">↗</span>
+        </a>
+      {% else %}
+        <a class="button button-outline button-small" href="{{ url_for('signIn') }}">Sign in <span aria-hidden="true">↗</span>
+        </a>
+      {% endif %}
+    </nav>
+  </div>
+</header>

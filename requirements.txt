@@ -9,3 +9,4 @@ supabase==2.4.5
 Flask-SocketIO==5.5.1
 python-socketio==5.15.0
 gunicorn==22.0.0
+matplotlib>=3.9,<4

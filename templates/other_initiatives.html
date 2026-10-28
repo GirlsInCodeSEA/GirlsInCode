@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}Other Initiatives — Girls In Code{% endblock %}
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='vendor/leaflet/leaflet.css') }}">
+  <script src="{{ url_for('static', filename='vendor/leaflet/leaflet.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='chapters.js') }}" defer></script>
+{% endblock %}
+{% block content %}
+  <section class="container page-intro">
+    <p class="eyebrow">LEARNING & COMMUNITY</p>
+    <h1>Other<br><span>initiatives.</span></h1>
+    <p>Alongside our events, GIC’s work includes teaching young girls<br class="desktop-break"> through our CCA and connecting our chapters.</p>
+  </section>
+  <section class="container cca-section" id="gic-cca" aria-labelledby="cca-heading">
+    <div class="cca-copy">
+      <p class="eyebrow">01 / GIC CCA</p>
+      <h2 id="cca-heading">Learning with<br><span>Octobuddy.</span></h2>
+      <p>Our GIC CCA teaches young girls Octobuddy as part of our coding sessions.</p>
+      {# Add further details about the CCA, activities, and sessions here when available. #}
+      <p class="subtle-note">More about our teaching sessions and activities will be shared here.</p>
+    </div>
+    <div class="cca-notebook" aria-label="GIC CCA teaching young girls Octobuddy">
+      <div class="notebook-heading"><span class="eyebrow">GIC / LEARNING NOTES</span><span aria-hidden="true">✳</span></div>
+      <p class="notebook-title">Octobuddy<span aria-hidden="true">_</span></p>
+      <div class="notebook-line"><span>01</span><p>GIC CCA</p></div>
+      <div class="notebook-line"><span>02</span><p>Teaching young girls</p></div>
+      <div class="notebook-line"><span>03</span><p>Learning through coding</p></div>
+    </div>
+  </section>
+  <section class="container section" id="chapters" aria-labelledby="chapters-heading">
+    <div class="section-heading">
+      <div><p class="eyebrow">02 / OUR CHAPTER NETWORK</p><h2 id="chapters-heading">Chapter distribution.</h2></div>
+    </div>
+    <div class="chapter-map-layout">
+      <div class="chapter-map-panel">
+        <div class="map-toolbar"><span class="eyebrow">GIC CHAPTER MAP</span><button class="button button-outline button-small" type="button" id="reset-chapter-map" disabled>Reset view ↺</button></div>
+        <div id="chapter-map" class="chapter-map" role="region" aria-label="Interactive GIC chapter map" aria-describedby="chapter-map-status" data-locations-url="{{ url_for('static', filename='data/chapters.json') }}" data-tiles-url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"></div>
+        <div class="map-caption"><span>Drag to explore · Use + and − to zoom</span><a href="https://www.openstreetmap.org/fixthemap" target="_blank" rel="noopener noreferrer">Report a map issue ↗</a></div>
+        <p id="map-load-warning" class="map-load-warning" role="status" hidden></p>
+        <noscript><p class="map-load-warning">Enable JavaScript to explore the map. Chapter locations will be added later.</p></noscript>
+      </div>
+      <aside class="chapter-directory" aria-labelledby="directory-heading">
+        <p class="eyebrow">CHAPTER DIRECTORY</p>
+        <h3 id="directory-heading">Our locations.</h3>
+        <p id="chapter-map-status" role="status">Locations to be added.</p>
+        <p id="chapter-empty-message">We’ll add chapter names and location pins here soon.</p>
+        <ul id="chapter-list" class="chapter-list" aria-label="GIC chapter locations"></ul>
+      </aside>
+    </div>
+  </section>
+{% endblock %}

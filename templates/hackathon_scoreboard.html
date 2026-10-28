@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}2025 hackathon scoreboard — Girls In Code{% endblock %}
+{% block content %}
+  <section class="container page-intro">
+    <a class="back-link" href="{{ url_for('hackathon_2025') }}">← 2025 hackathon archive</a>
+    <p class="eyebrow">2025 / HACKATHON / RESULTS</p>
+    <h1>Hackathon<br><span>scoreboard.</span></h1>
+    <p>The 2030 AI Challenge · Completed in 2025.</p>
+  </section>
+  <section class="container empty-state">
+    <span class="empty-symbol" aria-hidden="true">{…}</span>
+    <h2>Results to be added.</h2>
+    <p>The hackathon has finished. Its scoreboard hasn’t been added to the website yet.<br>Final scores and winners will be featured here later.</p>
+    <a class="button button-outline" href="{{ url_for('hackathon_2025') }}">Back to the event archive ↗</a>
+  </section>
+{% endblock %}

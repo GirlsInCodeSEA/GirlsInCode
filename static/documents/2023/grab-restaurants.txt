@@ -1,0 +1,51 @@
+##Restaurants and their cuisines
+
+Esquire Kitchen
+Chinese
+
+Din Tai Fung
+Chinese
+
+McDonald's
+Fast Food
+
+KFC
+Fast Food
+
+Kanna Curry House
+Indian
+
+Gajaa at 8
+Indian
+
+Portofino
+Italian
+
+Strato
+Italian
+
+Sushi Zanmai
+Japanese
+
+IPPUDO
+Japanese
+
+Daorae BBQ
+Korean
+
+Dubuyo
+Korean
+
+Ah Cheng Laksa
+Malaysian
+
+Nyonya House
+Malaysian
+
+Chica Bonita
+Mexican
+
+Los Tacos
+Mexican
+
+

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}{{ edition }} archive — Girls In Code{% endblock %}
+{% block content %}
+  <section class="container page-intro">
+    <a class="back-link" href="{{ url_for('competitions') }}">← All competitions</a>
+    <p class="eyebrow">AN EARLIER CHAPTER</p>
+    <h1>{{ edition }}<span>.</span>
+    </h1>
+  </section>
+  <section class="container empty-state">
+    <span class="empty-symbol" aria-hidden="true">{…}</span>
+    <h2>A chapter still to be shared.</h2>
+    <p>Resources for this edition haven’t been added yet.<br>There’s plenty to explore in our 2025 competition archives.</p>
+    <a class="button" href="{{ url_for('competitions') }}">Explore other editions ↗</a>
+  </section>
+{% endblock %}

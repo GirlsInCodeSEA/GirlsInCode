@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Your practice result — Girls In Code{% endblock %}
+{% block content %}
+  <section class="container challenge-page archive-question-page">
+    <a class="back-link" href="{{ back_url }}">← Back to the question</a>
+    <h1>Your practice result.</h1>
+    {% include 'includes/answer_check.html' %}
+  </section>
+{% endblock %}

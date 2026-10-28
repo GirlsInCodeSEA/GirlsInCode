@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block title %}{{ edition }} · {{ question.level }} · {{ question.title }} — Girls In Code{% endblock %}
+{% block content %}
+  <section class="container challenge-page">
+    <a class="back-link" href="{{ url_for(archive_endpoint) }}">← {{ edition }} questions</a>
+    <div class="challenge-heading">
+      <div>
+        <p class="eyebrow">{{ edition|upper }} / {{ question.level|upper }} / {% if question.label %}{{ question.label|upper }}{% else %}QUESTION {{ question.number }}{% endif %}</p>
+        <h1>{{ question.title }}</h1>
+      </div>
+      <span class="pill">{% if question.status == 'withdrawn' %}Withdrawn question{% else %}Archived question{% endif %}</span>
+    </div>
+    {% if question.status == 'withdrawn' %}
+      <p class="subtle-note">This question was withdrawn because the original booklet identifies a mistake. No answer was provided in the answer key.</p>
+    {% else %}
+      <p class="subtle-note">Try the question in your own editor, then check your output below.</p>
+    {% endif %}
+    <div class="button-row">
+      <a class="button button-outline button-small" href="{{ url_for('static', filename=question.source_file|default('documents/gic-november-2025-booklet.pdf')) }}#page={{ question.source_page }}" target="_blank" rel="noopener noreferrer">View original booklet · page {{ question.source_page }} ↗</a>
+    </div>
+    <article class="problem-panel booklet-problem">
+      <div class="panel-heading"><span class="eyebrow">THE QUESTION</span></div>
+      <div class="problem-body">
+        <p class="subtle-note">Text from the official booklet. Refer to the PDF for original mathematical notation, formatting, and linked input files. Printed samples and inputs are reproduced as published.</p>
+        <pre class="booklet-transcript">{{ question.statement }}</pre>
+      </div>
+    </article>
+    {% set practice_id = '2025-' ~ month ~ '-' ~ question.level|lower ~ '-' ~ question.number %}
+    {% include 'includes/answer_check.html' %}
+    {% if question.answers %}
+      <details class="booklet-answers">
+        <summary>Reveal supplied answer{% if question.answers|length > 1 %}s{% endif %}</summary>
+        <p class="subtle-note">From the supplied {{ question.level }} answer key. Outputs are reproduced as provided.</p>
+        {% for answer in question.answers %}
+          <h2>{{ answer.label }}</h2>
+          <pre>{{ answer.output }}</pre>
+        {% endfor %}
+      </details>
+    {% endif %}
+    {% if month == 'november' %}
+    <p class="subtle-note">Source: Girls in Code SEA 2025 Fall Competition, 29 November 2025. Booklet created by Emily Xu and the GIC question authors. Shared for non-commercial educational use with attribution, as permitted in the booklet.</p>
+    {% else %}
+      <p class="subtle-note">Source: GIC 2025 {{ question.level }} Questions and the supplied {{ question.level }} answer key, March 2025 archive.</p>
+    {% endif %}
+    <nav class="button-row" aria-label="Question navigation">
+      {% if previous %}
+        <a class="button button-outline button-small" href="{{ url_for(booklet_endpoint, level=previous.level|lower, number=previous.number) }}">← Previous question</a>
+      {% endif %}
+      {% if next_question %}
+        <a class="button button-small" href="{{ url_for(booklet_endpoint, level=next_question.level|lower, number=next_question.number) }}">Next question →</a>
+      {% endif %}
+    </nav>
+  </section>
+{% endblock %}
