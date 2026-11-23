@@ -1,6 +1,8 @@
 # Girls In Code — design direction
 
-The current design uses shades of pink: rose buttons and headings, blush panels, pale pink backgrounds, and deep rose sections. The homepage introduces Girls In Code, its purpose, team, events, CCA teaching, chapters, fundraising, and NGO partners. Its content has no navigation links or calls to action: the header is the main page navigation, and the footer contains only contact links. Competitions and Hackathon are grouped under the Events menu. Sign-in stays secondary and explains that accounts are for competition participation.
+The design follows the block logo (`static/gic-hero-logo.svg`): near-black `#231F20` and off-white `#FAFAF7` as the base, with the five logo blocks (pink `#FF3275`, lavender `#A486E0`, orange `#F6921E`, lime `#D6DE23`, blue `#26A9E0`) used only as small square accents. Headings use Bricolage Grotesque, labels and navigation use JetBrains Mono, and body text uses Inter. Code-style touches are kept light: `// label` section markers, file-tab card headers, a `gic.py` card in the dark homepage hero, and dark code blocks. The white logo variant for dark backgrounds is `static/gic-logo-white.svg`. The homepage introduces Girls In Code, its purpose, events, fundraising, and team. Its content has no navigation links or calls to action: the header is the main page navigation, and the footer contains only contact links. Competitions and Hackathon are grouped under the Events menu. Sign-in stays secondary and explains that accounts are for competition participation.
+
+The previous pink design is saved in `redesign/backup-before-redesign/`.
 
 ## Where to make changes
 
@@ -17,11 +19,11 @@ The current design uses shades of pink: rose buttons and headings, blush panels,
 - `templates/scoreboard.html`: archived November 2025 competition standings.
 - `templates/hackathon_scoreboard.html`: dedicated place for the 2025 hackathon results when supplied.
 - `templates/challenge.html`: shared practice and scored-submission layout.
-- `static/site.js`: mobile navigation, the illustrative code example, account-form switching, and upload feedback.
+- `static/site.js`: mobile navigation, account-form switching, upload feedback, and practice answer checks.
 
-The code example on the homepage illustrates two Python print statements introducing GIC; it does not execute uploaded Python. Existing backend judging and scoring behavior is unchanged by the redesign.
+The code card on the homepage is a static illustration; it does not execute Python. Existing backend judging and scoring behavior is unchanged by the redesign.
 
-Google Fonts supplies Space Grotesk and DM Sans; the layout falls back to local sans-serif fonts if the font service is unavailable. Existing team photography, competition results, and event resources are retained. The completed hackathon is archived under 2025. Competition and hackathon scoreboards each live within their own 2025 archive; there is no global scoreboard link. The competition results retain the supplied November 2025 standings. Hackathon results are marked as not yet added.
+Google Fonts supplies Bricolage Grotesque, Inter, and JetBrains Mono; the layout falls back to local sans-serif fonts if the font service is unavailable. Existing team photography, competition results, and event resources are retained. The completed hackathon is archived under 2025. Competition and hackathon scoreboards each live within their own 2025 archive; there is no global scoreboard link. The competition results retain the supplied November 2025 standings. Hackathon results are marked as not yet added.
 
 ## Local review
 

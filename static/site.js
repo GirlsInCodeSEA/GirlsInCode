@@ -32,13 +32,6 @@ if (eventsMenu) {
     if (!eventsMenu.contains(event.relatedTarget)) eventsMenu.open = false;
   });
 }
-const demoButton = document.querySelector('[data-run-demo]');
-if (demoButton) demoButton.addEventListener('click', () => {
-  const output = document.querySelector('[data-demo-output]');
-  output.textContent = "› Hello from GIC!\n› Southeast Asia";
-  output.classList.add('has-run');
-  demoButton.textContent = '↻ Run again';
-});
 document.querySelectorAll('[data-auth-mode]').forEach(button => {
   button.addEventListener('click', () => {
     const mode = button.dataset.authMode;
@@ -117,7 +110,7 @@ document.querySelectorAll('[data-answer-check]').forEach(form => {
     } finally {
       clearTimeout(timeout);
       button.disabled = false;
-      button.textContent = 'Check answer →';
+      button.textContent = 'Check answer';
     }
   });
 });

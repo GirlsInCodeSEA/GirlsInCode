@@ -2,43 +2,38 @@
 {% block title %}{{ question.title }} — Girls In Code{% endblock %}
 {% block content %}
   <div class="container challenge-page">
-    <a class="back-link" href="{{ url_for('competitions') }}">← Explore competitions</a>
+    <p class="crumbs"><a href="{{ url_for('competitions') }}">competitions</a> <span class="sep">/</span> {{ question.year }} <span class="sep">/</span> {{ question.level|lower }}</p>
     <div class="challenge-heading">
       <div>
-        <p class="eyebrow">{{ question.year }} / {{ question.level }}</p>
         <h1>{{ question.title }}</h1>
       </div>
-      <span class="pill">
-        {% if scored %}{{ question.points or 0 }} points{% else %}Practice mode{% endif %}
+      <span class="tag{% if not scored %} tag-muted{% endif %}">
+        {% if scored %}{{ question.points or 0 }} points{% else %}practice mode{% endif %}
       </span>
     </div>
     <div class="challenge-layout">
-      <article class="problem-panel">
-        <div class="panel-heading">
-          <span class="eyebrow">THE CHALLENGE</span>
-          <span aria-hidden="true">{ }</span>
-        </div>
-        <div class="problem-body">
-          <h2>Let’s work it out.</h2>
+      <article class="card problem-panel c-pink">
+        <div class="card-head">challenge.md</div>
+        <div class="card-body problem-body">
           <p class="problem-prompt">{{ question.prompt }}</p>
           <div class="sample-grid">
             <div>
-              <h3>Sample input</h3>
+              <h3>sample input</h3>
               <pre>{{ question.sample_input or 'No input required.' }}</pre>
             </div>
             <div>
-              <h3>Sample output</h3>
+              <h3>sample output</h3>
               <pre>{{ question.sample_output or 'No sample output available.' }}</pre>
             </div>
           </div>
-          <h3>Your input</h3>
+          <h3>your input</h3>
           <pre>{{ question.your_input or 'No input required.' }}</pre>
           <p class="subtle-note">Your program will be checked against the input above. Match the expected output and keep an eye on spacing.</p>
         </div>
       </article>
       <aside class="submission-panel">
-        <span class="eyebrow">GIVE IT A GO</span>
-        <h2>Your next<br>lightbulb moment.</h2>
+        <p class="label c-lime">submit</p>
+        <h2>Upload your solution</h2>
         <p>Write your solution in Python, then upload your file below.</p>
         {% if not solved %}
           <form method="POST" enctype="multipart/form-data" data-submit-form>
@@ -49,14 +44,11 @@
               <span>.py files · up to 1 MB</span>
             </label>
             <input id="code-file" class="file-input" type="file" name="code_file" accept=".py" required>
-            <button class="button" type="submit">Check my solution <span aria-hidden="true">↗</span>
-            </button>
+            <button class="button" type="submit">Check my solution</button>
           </form>
         {% else %}
-          <div class="solved-note">
-            <span aria-hidden="true">✓</span> Challenge completed. Nice work!</div>
+          <div class="solved-note"><span aria-hidden="true">✓</span> Challenge completed. Nice work!</div>
         {% endif %}
-        <p class="form-footnote">Progress happens one attempt at a time.</p>
       </aside>
     </div>
     {% if not scored %}
@@ -64,17 +56,17 @@
     {% endif %}
     {% if result %}
       <section class="result-panel {% if result.startswith('Correct') or result == 'Already solved' %}result-success{% endif %}" aria-live="polite">
-        <p class="eyebrow">YOUR RESULT</p>
+        <p class="label {% if result.startswith('Correct') or result == 'Already solved' %}c-lime{% else %}c-pink{% endif %}">result</p>
         <h2>{{ result }}</h2>
         {% if addscore %}
           <p>Points awarded: {{ addscore }}</p>
         {% endif %}
         {% if output is not none %}
-          <h3>Your output</h3>
+          <h3>your output</h3>
           <pre>{{ output }}</pre>
         {% endif %}
         {% if not scored and answer is not none and output is not none %}
-          <h3>Expected output</h3>
+          <h3>expected output</h3>
           <pre>{{ answer }}</pre>
         {% endif %}
         {% if classification %}

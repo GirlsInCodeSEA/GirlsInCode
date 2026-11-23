@@ -24,7 +24,10 @@ class Query:
         self.filters.append((column, value))
         return self
 
-    def order(self, *_):
+    def order(self, *_, **__):
+        return self
+
+    def limit(self, *_):
         return self
 
     def range(self, start, end):
@@ -52,7 +55,7 @@ class Database:
         self.rows = {
             'questions': [{'id': 1, 'title': 'Question 1', 'year': '2025 March',
                            'level': 'Beginner', 'points': 10, 'your_input': '42\n'}],
-            'answers': [{'id': 1, 'answer_text': '42'}],
+            'answers': [{'id': 1, 'question_id': 1, 'answer_text': '42'}],
         }
         self.rpc = Mock(return_value=Mock(execute=Mock(return_value=Mock(data=True))))
 
@@ -63,7 +66,8 @@ class Database:
 class AppTests(unittest.TestCase):
     def setUp(self):
         website.app.config.update(TESTING=True, SECRET_KEY='test-secret',
-                                  ENABLE_UNSAFE_CODE_EXECUTION=False, CODE_TIMEOUT=5)
+                                  ENABLE_UNSAFE_CODE_EXECUTION=False, CODE_TIMEOUT=5,
+                                  DASHBOARD_LOCKDOWN=False)
         self.client = website.app.test_client()
         self.db = Database()
         self.db_patch = patch.object(website, 'supabase', self.db)
@@ -94,10 +98,29 @@ class AppTests(unittest.TestCase):
     def test_all_pages_render(self):
         for path in ('/', '/contact', '/competitions', '/hackathon', '/fundraising', '/2023', '/2024',
                      '/2025m', '/2025n', '/signIn', '/question/1',
-                     '/competitions/2025', '/competitions/2025/scoreboard',
+                     '/competitions/2026', '/competitions/2025', '/competitions/2025/scoreboard',
                      '/hackathon/2025', '/hackathon/2025/scoreboard'):
             with self.subTest(path=path):
                 self.assertEqual(self.client.get(path).status_code, 200)
+
+    def test_2026_announcement_keeps_questions_private(self):
+        with patch.object(website, 'database', side_effect=AssertionError('Announcement needs no database')):
+            response = self.client.get('/competitions/2026')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'28 November 2026', response.data)
+        self.assertIn(b'550 points', response.data)
+        self.assertNotIn(b'<form', response.data)
+        for path in (
+            '/competitions/2026/questions/B1',
+            '/competitions/2026/questions/beginner/1',
+            '/competitions/2026/answers',
+            '/data/competition_questions/private/2026/questions.json',
+            '/data/competition_questions/private/2026/answers.json',
+            '/static/data/competition_questions/private/2026/questions.json',
+            '/static/data/competition_questions/private/2026/answers.json',
+        ):
+            with self.subTest(path=path):
+                self.assertEqual(self.client.get(path).status_code, 404)
         self.login()
         self.assertEqual(self.client.get('/submissions/1').status_code, 200)
 
@@ -349,7 +372,8 @@ class AppTests(unittest.TestCase):
         archive = self.client.get('/hackathon/2025').data
         self.assertIn(b'Held in 2025', archive)
         self.assertIn(b'COMPLETED', archive)
-        self.assertNotIn(b'2026', archive)
+        archive_content = archive.split(b'<main id="main">', 1)[1].split(b'</main>', 1)[0]
+        self.assertNotIn(b'2026', archive_content)
         scoreboard = self.client.get('/hackathon/2025/scoreboard').data
         self.assertIn(b'Results to be added.', scoreboard)
         self.assertNotIn(b'<table', scoreboard)

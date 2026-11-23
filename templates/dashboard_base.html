@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#231f20">
+    <meta name="robots" content="noindex">
+    <title>{% block title %}Competition dashboard — Girls In Code{% endblock %}</title>
+    <link rel="icon" href="{{ url_for('static', filename='gic-hero-logo.svg') }}" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='site.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='dashboard.js') }}" defer></script>
+  </head>
+  <body class="dash" data-start="{{ state.start_iso }}" data-end="{{ state.end_iso }}" data-phase="{{ state.phase }}" data-now="{{ state.now_iso }}">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="dash-bar">
+      <div class="container dash-bar-inner">
+        <a class="brand" href="{{ url_for('dashboard') }}" aria-label="Competition dashboard">
+          <img src="{{ url_for('static', filename='gic-logo-white.svg') }}" alt="Girls In Code" width="50" height="40">
+          <span>2026<br>COMPETITION</span>
+        </a>
+        <div class="dash-bar-status mono">
+          <span class="dash-phase dash-phase-{{ state.phase }}">{% if state.phase == 'before' %}not started{% elif state.phase == 'live' %}live{% else %}finished{% endif %}</span>
+          <span class="dash-clock" data-clock hidden></span>
+        </div>
+        <nav class="dash-bar-nav mono" aria-label="Account">
+          {% if is_admin %}<a href="{{ url_for('admin_submissions') }}">submissions</a>{% endif %}
+          <span class="nav-user" title="{{ session['user_name'] }}">{{ session['user_name'] }}</span>
+          <a class="button button-small" href="{{ url_for('logout') }}">sign out</a>
+        </nav>
+      </div>
+    </header>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-messages container" role="status">
+          {% for category, message in messages %}
+            <p class="flash-{{ category }}">{{ message }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+    <main id="main">
+      {% block content %}{% endblock %}
+    </main>
+    <footer class="dash-footer">
+      <div class="container mono">technical issue / questions? <a href="mailto:girlsincodesea@gmail.com">girlsincodesea@gmail.com</a></div>
+    </footer>
+  </body>
+</html>

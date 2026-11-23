@@ -3,20 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#fff7f9">
+    <meta name="theme-color" content="#231f20">
     <meta name="description" content="Learn about Girls In Code Southeast Asia, our student-led team, coding competitions, workshops, and events.">
-    <title>
-      {% block title %}Girls In Code — Southeast Asia{% endblock %}
-    </title>
-    <link rel="icon" href="{{ url_for('static', filename='gic_logo.png') }}">
+    <title>{% block title %}Girls In Code — Southeast Asia{% endblock %}</title>
+    <link rel="icon" href="{{ url_for('static', filename='gic-hero-logo.svg') }}" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <script src="{{ url_for('static', filename='site.js') }}" defer>
-    </script>
-    {% block head %}
-    {% endblock %}
+    <script src="{{ url_for('static', filename='site.js') }}" defer></script>
+    {% block head %}{% endblock %}
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -31,11 +27,9 @@
       {% endif %}
     {% endwith %}
     <main id="main">
-      {% block content %}
-      {% endblock %}
+      {% block content %}{% endblock %}
     </main>
     {% include 'includes/footer.html' %}
-    {% block scripts %}
-    {% endblock %}
+    {% block scripts %}{% endblock %}
   </body>
 </html>

@@ -3,56 +3,44 @@
 {% block content %}
   <section class="container auth-layout">
     <div class="auth-story">
-      <p class="eyebrow">GIC 2026 DECEMBER CODING COMPETITION</p>
-      <h1>Competition<br>
-        <span>sign-up.</span>
-      </h1>
-      <p>Sign up for the <strong>GIC 2026 December Coding Competition</strong> as an individual or a team. Already have a GIC account? Sign in to get started.</p>
-      <div class="auth-art" aria-hidden="true">
-        <span>{</span>
-        <span class="auth-star">✳</span>
-        <span>}</span>
-      </div>
-      <span class="eyebrow">GIRLS IN CODE SOUTHEAST ASIA</span>
+      <p class="crumbs">sign in</p>
+      <h1>Competition<br><em>sign-up</em></h1>
+      <p class="lede">Sign up for the <strong>GIC 2026 December Coding Competition</strong> as an individual or a team. Already have a GIC account? Sign in to get started.</p>
     </div>
     <div class="auth-panel">
       <div class="auth-switch" aria-label="Choose account form">
-        <button type="button" data-auth-mode="register" aria-pressed="true" aria-controls="register-panel">Create account</button>
-        <button type="button" data-auth-mode="login" aria-pressed="false" aria-controls="login-panel">Sign in</button>
+        <button type="button" data-auth-mode="register" aria-pressed="true" aria-controls="register-panel">create account</button>
+        <button type="button" data-auth-mode="login" aria-pressed="false" aria-controls="login-panel">sign in</button>
       </div>
       <div id="register-panel" data-auth-panel="register">
-        <h2>Create an account.</h2>
+        <h2>Create an account</h2>
         <p>Create your participant account for the GIC 2026 December Coding Competition.</p>
         <form method="POST" class="auth-form">
           <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
           <input type="hidden" name="action" value="register">
-          <label for="register-name">Your name / team name</label>
+          <label for="register-name">name / team name</label>
           <input id="register-name" type="text" name="name" autocomplete="nickname" placeholder="What should we call you?" required>
-          <label for="register-email">Email address</label>
+          <label for="register-email">email</label>
           <input id="register-email" type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
-          <label for="register-password">Password</label>
-          <input id="register-password" type="password" name="password" autocomplete="new-password" placeholder="Make it a good one" maxlength="4096" required>
-          <button class="button" type="submit">Create account <span aria-hidden="true">↗</span>
-          </button>
+          <label for="register-password">password</label>
+          <input id="register-password" type="password" name="password" autocomplete="new-password" placeholder="Choose a password" maxlength="4096" required>
+          <button class="button" type="submit">Create account</button>
         </form>
-        <p class="form-footnote">Already have an account? <button class="inline-button" type="button" data-auth-mode="login">Sign in</button>
-        </p>
+        <p class="form-footnote">Already have an account? <button class="inline-button" type="button" data-auth-mode="login">Sign in</button></p>
       </div>
       <div id="login-panel" data-auth-panel="login" hidden>
-        <h2>Welcome back.</h2>
+        <h2>Welcome back</h2>
         <p>Sign in to your participant account for the GIC 2026 December Coding Competition.</p>
         <form method="POST" class="auth-form">
           <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
           <input type="hidden" name="action" value="login">
-          <label for="login-email">Email address</label>
+          <label for="login-email">email</label>
           <input id="login-email" type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
-          <label for="login-password">Password</label>
+          <label for="login-password">password</label>
           <input id="login-password" type="password" name="password" autocomplete="current-password" placeholder="Your password" maxlength="4096" required>
-          <button class="button" type="submit">Sign in <span aria-hidden="true">↗</span>
-          </button>
+          <button class="button" type="submit">Sign in</button>
         </form>
-        <p class="form-footnote">New here? <button class="inline-button" type="button" data-auth-mode="register">Create an account</button>
-        </p>
+        <p class="form-footnote">New here? <button class="inline-button" type="button" data-auth-mode="register">Create an account</button></p>
       </div>
       <noscript>
         <style>[data-auth-panel][hidden]{display:block!important;margin-top:40px}.auth-switch{display:none}</style>

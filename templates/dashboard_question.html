@@ -1,0 +1,86 @@
+{% extends 'dashboard_base.html' %}
+{% block title %}{{ question.id }} · {{ question.title }} — Girls In Code{% endblock %}
+{% block content %}
+  <div class="container challenge-page">
+    <p class="crumbs"><a href="{{ url_for('dashboard') }}">dashboard</a> <span class="sep">/</span> {{ question.level|lower }} <span class="sep">/</span> {{ question.id|lower }}</p>
+    <div class="challenge-heading">
+      <div><h1>{{ question.title }}</h1></div>
+      <div class="tag-row">
+        {% if solved %}<span class="tag">✓ solved</span>{% endif %}
+        <span class="tag tag-muted">{{ question.points }} points</span>
+      </div>
+    </div>
+    <div class="challenge-layout">
+      <article class="card problem-panel {{ colour }}">
+        <div class="card-head">{{ question.id|lower }}.md{% if question.theme %}<span>{{ question.theme|lower }}</span>{% endif %}</div>
+        <div class="card-body problem-body">
+          <p class="problem-prompt">{{ question.statement }}</p>
+          <div class="input-head">
+            <h3>your input</h3>
+            {% if question.question_input %}
+              <div class="button-row">
+                <button class="button button-outline button-small" type="button" data-copy="#question-input">copy</button>
+                <button class="button button-outline button-small" type="button" data-download="#question-input" data-filename="{{ question.id|lower }}_input.txt">download .txt</button>
+              </div>
+            {% endif %}
+          </div>
+          <pre id="question-input">{{ question.question_input or 'No input required.' }}</pre>
+          <p class="subtle-note">Run your program on this input in your own editor, then submit what it prints.</p>
+        </div>
+      </article>
+
+      <aside class="submission-panel">
+        <p class="label c-lime">submit</p>
+        <h2>Your answer</h2>
+        {% if solved %}
+          <div class="solved-note"><span aria-hidden="true">✓</span> Solved. {{ question.points }} points added to your team.</div>
+        {% elif state.phase != 'live' %}
+          <div class="solved-note">Submissions are closed.</div>
+        {% else %}
+          <p>Paste the exact output, and attach the code that produced it.</p>
+          <form method="POST" enctype="multipart/form-data" data-submit-form class="dash-form">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <label for="output">output</label>
+            <textarea id="output" name="output" rows="4" maxlength="20000" required spellcheck="false" autocomplete="off"></textarea>
+            <label class="upload-zone" for="code-file">
+              <span class="upload-icon" aria-hidden="true">↑</span>
+              <strong data-file-label>Choose your Python file</strong>
+              <span>.py or .ipynb · up to 200 KB</span>
+            </label>
+            <input id="code-file" class="file-input" type="file" name="code_file" accept=".py,.ipynb" required>
+            <button class="button" type="submit">Submit answer</button>
+          </form>
+          <p class="form-footnote">All code is checked for AI use. Please write your own.</p>
+        {% endif %}
+      </aside>
+    </div>
+
+    {% if attempts %}
+      <section class="attempts" aria-labelledby="attempts-heading">
+        <p class="label c-blue">history</p>
+        <h2 id="attempts-heading">Your attempts</h2>
+        <div class="table-wrap" role="region" aria-label="Your attempts" tabindex="0">
+          <table class="data-table">
+            <thead><tr><th scope="col">time</th><th scope="col">result</th><th scope="col">output</th><th scope="col">file</th></tr></thead>
+            <tbody>
+              {% for attempt in attempts %}
+                <tr>
+                  <td class="num"><time data-local-time datetime="{{ attempt.created_at }}">{{ attempt.created_at[11:16] }}</time></td>
+                  <td>{% if attempt.correct %}<span class="tag">correct{% if attempt.points_awarded %} +{{ attempt.points_awarded }}{% endif %}</span>{% else %}<span class="tag tag-muted">incorrect</span>{% endif %}</td>
+                  <td class="num attempt-output">{{ attempt.output|truncate(60) }}</td>
+                  <td class="num">{{ attempt.code_filename }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    {% endif %}
+
+    <nav class="button-row" aria-label="Question navigation" style="margin-top:32px">
+      {% if previous %}<a class="button button-outline button-small" href="{{ url_for('dashboard_question', question_id=previous) }}">← {{ previous }}</a>{% endif %}
+      <a class="button button-outline button-small" href="{{ url_for('dashboard') }}">all questions</a>
+      {% if next_question %}<a class="button button-small" href="{{ url_for('dashboard_question', question_id=next_question) }}">{{ next_question }} →</a>{% endif %}
+    </nav>
+  </div>
+{% endblock %}

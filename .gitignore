@@ -20,3 +20,11 @@ Thumbs.db
 instance/
 *.sqlite3
 temp/
+
+# Unreleased competition questions and answer keys (never publish with source).
+data/competition_questions/private/
+
+# Local secrets
+.env
+.env.*
+!.env.example

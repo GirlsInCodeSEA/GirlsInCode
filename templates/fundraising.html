@@ -2,43 +2,37 @@
 {% block title %}Fundraising & NGO partners — Girls In Code{% endblock %}
 {% block content %}
   {% set percentage = (raised / target * 100)|round|int %}
+  {% set filled = (percentage / 5)|round|int %}
   <section class="container fundraising-intro">
-    <div class="page-intro">
-      <p class="eyebrow">GIC IN THE COMMUNITY</p>
-      <h1>Our<br><span>fundraising.</span></h1>
-      <p>GIC’s community extends beyond coding. Here’s a look at our fundraising so far and the NGO partners we work with.</p>
+    <div class="page-head">
+      <p class="crumbs">fundraising</p>
+      <h1>Our<br><em>fundraising</em></h1>
+      <p class="lede">GIC’s community extends beyond coding. Here’s a look at our fundraising so far and the NGO partners we work with.</p>
     </div>
-    <section class="fundraising-total" aria-labelledby="raised-heading">
-      <div class="fundraising-total-heading">
-        <h2 id="raised-heading" class="eyebrow">RAISED SO FAR</h2>
-        <span class="fundraising-spark" aria-hidden="true">✳</span>
+    <section class="meter meter-dark" aria-labelledby="raised-heading">
+      <h2 id="raised-heading" class="visually-hidden">Raised so far</h2>
+      <p class="amount"><small>RM</small>{{ '{:,.0f}'.format(raised) }}</p>
+      <p class="goal">raised toward our RM {{ '{:,.0f}'.format(target) }} goal</p>
+      <div class="blocks" role="progressbar" aria-label="Fundraising progress" aria-valuemin="0" aria-valuemax="{{ target }}" aria-valuenow="{{ raised }}" aria-valuetext="RM {{ '{:,.0f}'.format(raised) }} raised toward RM {{ '{:,.0f}'.format(target) }}; {{ percentage }} percent of our goal">
+        {% for i in range(20) %}<i{% if i < filled %} class="on"{% endif %}></i>{% endfor %}
       </div>
-      <p class="fundraising-amount"><span>RM</span> {{ '{:,.0f}'.format(raised) }}</p>
-      <p class="fundraising-target">toward our RM {{ '{:,.0f}'.format(target) }} goal</p>
-      <label class="progress-caption" for="fundraising-progress">
-        <span>Our fundraising progress</span>
-        <strong>{{ percentage }}%</strong>
-      </label>
-      <progress id="fundraising-progress" class="fundraising-progress" value="{{ raised }}" max="{{ target }}" aria-valuetext="RM {{ '{:,.0f}'.format(raised) }} raised toward RM {{ '{:,.0f}'.format(target) }}; {{ percentage }} percent of our goal">{{ percentage }}%</progress>
-      <div class="fundraising-scale" aria-hidden="true"><span>RM 0</span><span>RM {{ '{:,.0f}'.format(target) }}</span></div>
+      <div class="bar-label"><span>RM 0</span><b>{{ percentage }}%</b><span>RM {{ '{:,.0f}'.format(target) }}</span></div>
       <p class="fundraising-thanks">Thank you to everyone who has contributed.</p>
     </section>
   </section>
-  <section class="container section section-first" id="partners">
-    <div class="section-heading">
-      <div><p class="eyebrow">THE ORGANISATIONS WE WORK WITH</p><h2>Our NGO partners.</h2></div>
-    </div>
+  <section class="container section" id="partners" style="padding-bottom:96px">
+    <div class="section-head"><div><p class="label c-orange">partners</p><h2>Our NGO partners</h2></div></div>
     <div class="partner-grid">
-      <article class="partner-unicef" aria-label="UNICEF">
+      <article class="card partner-unicef" aria-label="UNICEF">
         <img class="partner-logo" src="{{ url_for('static', filename='unicef.jpg') }}" alt="UNICEF — for every child" width="900" height="900" loading="lazy">
       </article>
-      <article class="partner-panel" aria-labelledby="maco-name">
-        <div class="partner-top"><span class="eyebrow">NGO PARTNER</span><span aria-hidden="true">✳</span></div>
-        <h3 id="maco-name">MACO</h3>
-        <div class="partner-about">
+      <article class="card partner-panel c-lime" aria-labelledby="maco-name">
+        <div class="card-head">ngo partner</div>
+        <div class="card-body">
+          <h3 id="maco-name">MACO</h3>
           <h4>Medical Awareness Camp Outreach</h4>
           <p>GIC donated to MACO to support the refurbishment of IT classrooms in underfunded government schools, helping improve access to technology for students.</p>
-          <a class="text-link" href="https://www.facebook.com/maco.malaysia/" target="_blank" rel="noopener noreferrer">Visit MACO on Facebook <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://www.facebook.com/maco.malaysia/" target="_blank" rel="noopener noreferrer">MACO on Facebook</a>
         </div>
       </article>
     </div>

@@ -1,0 +1,67 @@
+{% extends 'dashboard_base.html' %}
+{% block title %}All submissions — Girls In Code{% endblock %}
+{% block content %}
+  <div class="container challenge-page">
+    <p class="crumbs"><a href="{{ url_for('dashboard') }}">dashboard</a> <span class="sep">/</span> admin <span class="sep">/</span> submissions</p>
+    <div class="challenge-heading">
+      <div><h1>All submissions</h1></div>
+      <span class="tag tag-muted">{{ submissions|length }} shown</span>
+    </div>
+
+    <form class="admin-filter mono" method="GET">
+      <label>team <input name="team_name" value="{{ filters.get('team_name', '') }}" placeholder="any"></label>
+      <label>question <input name="question_id" value="{{ filters.get('question_id', '') }}" placeholder="e.g. B1"></label>
+      <button class="button button-small" type="submit">filter</button>
+      {% if filters %}<a class="text-link" href="{{ url_for('admin_submissions') }}">clear</a>{% endif %}
+    </form>
+
+    <h2 class="admin-subhead">Scoreboard</h2>
+    {% if board %}
+      <div class="table-wrap" role="region" aria-label="Scoreboard" tabindex="0">
+        <table class="data-table scoreboard-table">
+          <thead><tr><th scope="col">rank</th><th scope="col">team</th><th scope="col">solved</th><th scope="col">points</th><th scope="col">last solve</th></tr></thead>
+          <tbody>
+            {% for row in board %}
+              <tr>
+                <td class="num">{{ row.rank }}</td>
+                <th scope="row"><a class="text-link" href="{{ url_for('admin_submissions', team_name=row.team) }}">{{ row.team }}</a></th>
+                <td class="num">{{ row.solved }}</td>
+                <td class="num"><b>{{ row.score }}</b></td>
+                <td class="num"><time data-local-time datetime="{{ row.last_solve }}">{{ row.last_solve[11:19] }}</time></td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    {% else %}
+      <p class="lede">No solves yet.</p>
+    {% endif %}
+
+    <h2 class="admin-subhead">Submissions</h2>
+    {% if submissions %}
+      <div class="admin-list">
+        {% for row in submissions %}
+          <details class="admin-row">
+            <summary>
+              <span class="num">#{{ row.id }}</span>
+              <time class="num" data-local-time datetime="{{ row.created_at }}">{{ row.created_at[5:16]|replace('T', ' ') }}</time>
+              <b>{{ row.team_name }}</b>
+              <span class="num">{{ row.question_id }}</span>
+              {% if row.correct %}<span class="tag">correct{% if row.points_awarded %} +{{ row.points_awarded }}{% endif %}</span>{% else %}<span class="tag tag-muted">incorrect</span>{% endif %}
+              {% if row.classification and row.classification != 'Unavailable' %}<span class="mono admin-class">classifier: {{ row.classification }}</span>{% endif %}
+            </summary>
+            <div class="admin-detail">
+              <p class="mono">{{ row.email }} · {{ row.code_filename }}</p>
+              <h3>output</h3>
+              <pre>{{ row.output }}</pre>
+              <h3>code</h3>
+              <pre class="admin-code">{{ row.code }}</pre>
+            </div>
+          </details>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="lede">No submissions{% if filters %} match this filter{% endif %}.</p>
+    {% endif %}
+  </div>
+{% endblock %}

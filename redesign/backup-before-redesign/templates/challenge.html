@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block title %}{{ question.title }} — Girls In Code{% endblock %}
+{% block content %}
+  <div class="container challenge-page">
+    <a class="back-link" href="{{ url_for('competitions') }}">← Explore competitions</a>
+    <div class="challenge-heading">
+      <div>
+        <p class="eyebrow">{{ question.year }} / {{ question.level }}</p>
+        <h1>{{ question.title }}</h1>
+      </div>
+      <span class="pill">
+        {% if scored %}{{ question.points or 0 }} points{% else %}Practice mode{% endif %}
+      </span>
+    </div>
+    <div class="challenge-layout">
+      <article class="problem-panel">
+        <div class="panel-heading">
+          <span class="eyebrow">THE CHALLENGE</span>
+          <span aria-hidden="true">{ }</span>
+        </div>
+        <div class="problem-body">
+          <h2>Let’s work it out.</h2>
+          <p class="problem-prompt">{{ question.prompt }}</p>
+          <div class="sample-grid">
+            <div>
+              <h3>Sample input</h3>
+              <pre>{{ question.sample_input or 'No input required.' }}</pre>
+            </div>
+            <div>
+              <h3>Sample output</h3>
+              <pre>{{ question.sample_output or 'No sample output available.' }}</pre>
+            </div>
+          </div>
+          <h3>Your input</h3>
+          <pre>{{ question.your_input or 'No input required.' }}</pre>
+          <p class="subtle-note">Your program will be checked against the input above. Match the expected output and keep an eye on spacing.</p>
+        </div>
+      </article>
+      <aside class="submission-panel">
+        <span class="eyebrow">GIVE IT A GO</span>
+        <h2>Your next<br>lightbulb moment.</h2>
+        <p>Write your solution in Python, then upload your file below.</p>
+        {% if not solved %}
+          <form method="POST" enctype="multipart/form-data" data-submit-form>
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <label class="upload-zone" for="code-file">
+              <span class="upload-icon" aria-hidden="true">↑</span>
+              <strong data-file-label>Choose your Python file</strong>
+              <span>.py files · up to 1 MB</span>
+            </label>
+            <input id="code-file" class="file-input" type="file" name="code_file" accept=".py" required>
+            <button class="button" type="submit">Check my solution <span aria-hidden="true">↗</span>
+            </button>
+          </form>
+        {% else %}
+          <div class="solved-note">
+            <span aria-hidden="true">✓</span> Challenge completed. Nice work!</div>
+        {% endif %}
+        <p class="form-footnote">Progress happens one attempt at a time.</p>
+      </aside>
+    </div>
+    {% if not scored %}
+      {% include 'includes/answer_check.html' %}
+    {% endif %}
+    {% if result %}
+      <section class="result-panel {% if result.startswith('Correct') or result == 'Already solved' %}result-success{% endif %}" aria-live="polite">
+        <p class="eyebrow">YOUR RESULT</p>
+        <h2>{{ result }}</h2>
+        {% if addscore %}
+          <p>Points awarded: {{ addscore }}</p>
+        {% endif %}
+        {% if output is not none %}
+          <h3>Your output</h3>
+          <pre>{{ output }}</pre>
+        {% endif %}
+        {% if not scored and answer is not none and output is not none %}
+          <h3>Expected output</h3>
+          <pre>{{ answer }}</pre>
+        {% endif %}
+        {% if classification %}
+          <details class="classifier-details">
+            <summary>Experimental code classifier</summary>
+            <p>Classifier result: {{ classification }}. This is an experimental estimate, not proof of how code was written.</p>
+          </details>
+        {% endif %}
+      </section>
+    {% endif %}
+  </div>
+{% endblock %}

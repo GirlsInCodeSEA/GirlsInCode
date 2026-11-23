@@ -296,6 +296,14 @@ These store information including user accounts, competition questions, expected
 
 Apply [`migrations/001_atomic_scoring.sql`](migrations/001_atomic_scoring.sql) in the Supabase SQL editor before enabling scored submissions. It adds unique email/team-name indexes and the transactional `award_submission` function, restricted to the service role. Resolve existing duplicate accounts before applying it. The migration does not repair historical duplicate scores.
 
+### 5b. Set up the 2026 competition dashboard
+
+1. Run [`migrations/002_competition_2026.sql`](migrations/002_competition_2026.sql) in the Supabase SQL editor. It creates `competition_questions_2026`, `competition_answers_2026`, `competition_submissions_2026` (every attempt, with its code) and `competition_solves_2026` (first correct answer per team, which the scoreboard sums), plus the `record_competition_submission_2026` function and a `competition_scoreboard_2026` view. For a future competition, copy the migration with the new year and set `COMPETITION_YEAR` in `app.py`.
+2. Load the questions from the private folder: `python3 scripts/seed_competition_2026.py`.
+3. Set `ADMIN_EMAILS` to the organisers' account emails to unlock `/admin/submissions`.
+
+Signed-in users only see `/dashboard`: a countdown and timeline before the start, then the questions and live scoreboard. Competitors run code on their own machines, paste the output, and upload the `.py`/`.ipynb` file; the server compares output and never runs the code. The window defaults to 28 November 2026, 09:00–17:00 Malaysia time, and can be changed with `COMPETITION_START` / `COMPETITION_END`.
+
 ### 6. Build the optional classifier
 
 If model files are missing or incompatible, regenerate them using the same environment as the web server:

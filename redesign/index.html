@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Girls In Code — Southeast Asia (redesign mockup)</title>
+  <link rel="icon" href="../static/gic-hero-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="redesign.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Girls In Code home">
+        <img src="../static/gic-hero-logo.svg" alt="Girls In Code" width="63" height="50">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">menu</button>
+      <nav id="nav" class="nav" aria-label="Main">
+        <a href="index.html" aria-current="page">about</a>
+        <details>
+          <summary>events</summary>
+          <div class="dropdown">
+            <a href="competition-2026.html">2026 competition</a>
+            <a href="#">competitions archive</a>
+            <a href="#">hackathon</a>
+          </div>
+        </details>
+        <a href="#">fundraising</a>
+        <a href="#">contact</a>
+        <a class="btn" href="#">sign in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <h1><img class="hero-logo" src="gic-logo-white.svg" alt="Girls In Code" width="828" height="659"></h1>
+          <p class="lede">A student-led organisation founded at Garden International School, bringing girls together through coding, teaching, and community initiatives across Southeast Asia.</p>
+        </div>
+        <div class="code-card" aria-label="Code snippet describing Girls In Code">
+          <div class="code-tabs"><span class="code-dots" aria-hidden="true"><i style="background:var(--pink)"></i><i style="background:var(--lavender)"></i><i style="background:var(--orange)"></i></span><span class="active">gic.py</span><span>events.py</span></div>
+          <div class="code-body">
+<div><span class="k">class</span> <span class="c">GirlsInCode</span>:</div>
+<div>    <span class="n">founded</span> = <span class="s">"Garden International School"</span></div>
+<div>    <span class="n">region</span>  = <span class="s">"Southeast Asia"</span></div>
+<div>    <span class="n">runs</span>    = [<span class="s">"competitions"</span>,</div>
+<div>               <span class="s">"hackathons"</span>,</div>
+<div>               <span class="s">"workshops"</span>]</div>
+<div></div>
+<div>    <span class="m"># fundraising with UNICEF & MACO</span></div>
+<div>    <span class="n">partners</span> = [<span class="s">"UNICEF"</span>, <span class="s">"MACO"</span>]<span class="cursor"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <img class="about-photo" src="../static/gic-team-2026-2027.jpg" alt="Girls In Code team for 2026–2027 at Garden International School" loading="lazy">
+        <div class="about-copy">
+          <p class="label" style="--c:var(--pink)">about</p>
+          <h2 class="title">Who we are</h2>
+          <p>Girls In Code began with a group of girls at Garden International School and a shared aim: to build a stronger female coding community.</p>
+          <p>We organise coding competitions and hackathons, teach young girls Octobuddy through our GIC CCA, and connect our chapter network. Fundraising and our NGO partnerships are also part of GIC’s work in the community.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="what-we-do">
+      <div class="container">
+        <p class="label" style="--c:var(--lavender)">what we do</p>
+        <h2 class="title">Our events</h2>
+        <div class="files">
+          <article class="file">
+            <div class="file-head">competitions.md<span>01</span></div>
+            <div class="file-body">
+              <h3>Coding competitions</h3>
+              <p>Beginner, intermediate, and advanced challenges. The archives bring together past questions, results, and event resources.</p>
+            </div>
+          </article>
+          <article class="file" style="--c:var(--blue)">
+            <div class="file-head">hackathon.md<span>02</span></div>
+            <div class="file-body">
+              <h3>The hackathon</h3>
+              <p>Girls come together to explore ideas, build creative solutions, and use technology to address real-world problems.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="fundraising">
+      <div class="container fund">
+        <div>
+          <p class="label" style="--c:var(--orange)">fundraising</p>
+          <h2 class="title">In the community</h2>
+          <p class="lede" style="margin-top:20px">Our fundraising total so far, alongside the NGO partners we work with.</p>
+          <p class="partners">partners = [<b>UNICEF</b>, <b>MACO</b>]</p>
+        </div>
+        <div class="meter">
+          <p class="amount"><small>RM</small>4,000</p>
+          <p class="goal">raised toward our RM 10,000 goal</p>
+          <div class="blocks" role="progressbar" aria-valuemin="0" aria-valuemax="10000" aria-valuenow="4000" aria-valuetext="RM 4,000 of RM 10,000, 40 percent"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="bar-label"><span>progress</span><b>40%</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="team">
+      <div class="container">
+        <p class="label" style="--c:var(--blue)">team</p>
+        <h2 class="title">The GIC team</h2>
+        <div class="team">
+          <article class="member lead">
+            <img src="../static/team/camelia.jpeg" alt="Camelia Chew" loading="lazy">
+            <div><h3>Camelia Chew</h3><span>Director</span></div>
+          </article>
+          <article class="member"><img src="../static/team/emily.jpeg" alt="Emily Xu" loading="lazy"><h3>Emily Xu</h3><span>Co-Director</span></article>
+          <article class="member"><img src="../static/team/ridhima.jpeg" alt="Ridhima Garodia" loading="lazy"><h3>Ridhima Garodia</h3><span>Co-Director &amp; Events Lead</span></article>
+          <article class="member"><img src="../static/team/jade.jpeg" alt="Jade Lim" loading="lazy"><h3>Jade Lim</h3><span>Workshops Lead</span></article>
+          <article class="member"><img src="../static/team/kashvi.png" alt="Kashvi Agarwal" loading="lazy"><h3>Kashvi Agarwal</h3><span>Outreach Co-Lead</span></article>
+          <article class="member"><img src="../static/team/kokoro.png" alt="Kokoro Minami" loading="lazy"><h3>Kokoro Minami</h3><span>Outreach Co-Lead</span></article>
+          <article class="member"><img src="../static/team/myra.jpeg" alt="Myra Dhawan" loading="lazy"><h3>Myra Dhawan</h3><span>Fundraising Lead</span></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img src="gic-logo-white.svg" alt="Girls In Code">
+      <div class="footer-links">
+        <a href="https://www.instagram.com/girlsincodesea/">instagram</a>
+        <a href="mailto:girlsincodesea@gmail.com">girlsincodesea@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const t = document.querySelector('.menu-toggle'), n = document.getElementById('nav');
+    t.addEventListener('click', () => { const o = n.classList.toggle('open'); t.setAttribute('aria-expanded', o); });
+  </script>
+</body>
+</html>

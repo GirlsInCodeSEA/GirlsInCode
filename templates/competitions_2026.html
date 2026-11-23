@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block title %}2026 Girls in Code Competition{% endblock %}
+{% block content %}
+  <section class="container page-head">
+    <p class="crumbs"><a href="{{ url_for('competitions') }}">competitions</a> <span class="sep">/</span> 2026</p>
+    <h1>Code for a<br><em>changing climate</em></h1>
+    <p class="lede">This year’s theme is <strong>climate change</strong>. Explore global warming, season changes, scarcity of resources, and climate data through code.</p>
+    <dl class="stats">
+      <div><dt>questions</dt><dd>32</dd></div>
+      <div><dt>points</dt><dd>550</dd></div>
+      <div><dt>tiers</dt><dd>4</dd></div>
+    </dl>
+  </section>
+
+  <section class="container" aria-labelledby="release-heading">
+    <div class="notice">
+      <span class="tag">LOCKED</span>
+      <div>
+        <strong id="release-heading">Questions release on <time datetime="2026-11-28">28 November 2026</time>.</strong>
+        <p>The questions are hidden for now. Come back on 28 November to take on the challenges.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container dash-notices" aria-label="Competition rules and help" style="padding-bottom:88px">
+    <div class="dash-notice c-pink">
+      <p class="label">no ai</p>
+      <h3>Write your own code</h3>
+      <p>We use an AI checker on every submission, and organisers also review the code independently. Please don’t use AI tools to write your solutions.</p>
+    </div>
+    <div class="dash-notice c-blue">
+      <p class="label">help</p>
+      <h3>Technical issue or question?</h3>
+      <p>Contact <a class="text-link" href="mailto:girlsincodesea@gmail.com">girlsincodesea@gmail.com</a></p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="tiers-heading">
+    <div class="container">
+      <div class="section-head"><div><p class="label c-lavender">tiers</p><h2 id="tiers-heading">At a glance</h2></div></div>
+      <div class="table-wrap" role="region" aria-label="Competition tiers and points" tabindex="0">
+        <table class="data-table" style="min-width:640px">
+          <caption>32 questions across four tiers, worth 550 points in total.</caption>
+          <thead><tr><th scope="col">tier</th><th scope="col">theme</th><th scope="col">questions</th><th scope="col">points each</th><th scope="col">tier total</th></tr></thead>
+          <tbody>
+            <tr><th scope="row"><span class="swatch" style="--c:var(--pink)"></span>Beginner</th><td>Global warming</td><td class="num">B1–B10 (10)</td><td class="num">10</td><td class="num">100</td></tr>
+            <tr><th scope="row"><span class="swatch" style="--c:var(--lavender)"></span>Intermediate</th><td>Season changes</td><td class="num">I1–I10 (10)</td><td class="num">15</td><td class="num">150</td></tr>
+            <tr><th scope="row"><span class="swatch" style="--c:var(--blue)"></span>Advanced</th><td>Scarcity of resources</td><td class="num">A1–A10 (10)</td><td class="num">20</td><td class="num">200</td></tr>
+            <tr><th scope="row"><span class="swatch" style="--c:var(--orange)"></span>Bonus (ML)</th><td>Climate data</td><td class="num">ML1–ML2 (2)</td><td class="num">50</td><td class="num">100</td></tr>
+          </tbody>
+          <tfoot><tr><th scope="row" colspan="2">Total overall</th><td class="num">32 questions</td><td></td><td class="num">550 points</td></tr></tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="how-heading">
+    <div class="container">
+      <p class="label c-blue">how it works</p>
+      <h2 id="how-heading" style="margin-top:12px">Three steps</h2>
+      <p class="lede" style="margin-top:16px">Every question includes a worked sample to help you understand the task.</p>
+      <ol class="steps">
+        <li>Read the question and its worked sample.</li>
+        <li>Write your code and run it on the question input.</li>
+        <li>Submit the output your code produces.</li>
+      </ol>
+    </div>
+  </section>
+{% endblock %}

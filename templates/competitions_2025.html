@@ -1,24 +1,23 @@
 {% extends 'base.html' %}
 {% block title %}2025 competitions — Girls In Code{% endblock %}
 {% block content %}
-  <section class="container page-intro">
-    <a class="back-link" href="{{ url_for('competitions') }}">← All competition years</a>
-    <p class="eyebrow">GIC COMPETITION ARCHIVE</p>
-    <h1>2025<span>.</span></h1>
-    <p>Two editions of our coding competition.<br class="desktop-break"> Explore the questions, event resources, winners, and results.</p>
+  <section class="container page-head">
+    <p class="crumbs"><a href="{{ url_for('competitions') }}">competitions</a> <span class="sep">/</span> 2025</p>
+    <h1><em>2025</em></h1>
+    <p class="lede">Two editions of our coding competition. Explore the questions, event resources, winners, and results.</p>
     <div class="button-row">
-      <a class="button" href="{{ url_for('competition_scoreboard_2025') }}">2025 competition scoreboard ↗</a>
+      <a class="button" href="{{ url_for('competition_scoreboard_2025') }}">2025 scoreboard</a>
     </div>
   </section>
-  <section class="container section section-first">
-    <div class="section-heading"><div><p class="eyebrow">THE 2025 EDITIONS</p><h2>Our competitions.</h2></div></div>
-    <div class="archive-list">
-      {% for month, description, endpoint in [('November','Questions, winners, event slides, and the question booklet.','y2025n'),('March','Questions, winners, and ceremony resources.','y2025m')] %}
-        <a class="archive-row" href="{{ url_for(endpoint) }}">
-          <span class="archive-index">0{{ loop.index }}</span>
-          <div><span class="eyebrow">2025 / COMPETITION ARCHIVE</span><h3>{{ month }} 2025</h3></div>
+  <section class="container section section-tight">
+    <div class="section-head"><div><p class="label c-pink">editions</p><h2>Our 2025 competitions</h2></div></div>
+    <div class="file-list">
+      {% for month, description, endpoint, colour in [('November','Questions, winners, event slides, and the question booklet.','y2025n','c-orange'),('March','Questions, winners, and ceremony resources.','y2025m','c-lime')] %}
+        <a class="file-row {{ colour }}" href="{{ url_for(endpoint) }}">
+          <span class="idx">0{{ loop.index }}</span>
+          <div><span class="meta">2025 edition</span><h3>{{ month }} 2025</h3></div>
           <p>{{ description }}</p>
-          <span class="circle-arrow" aria-hidden="true">↗</span>
+          <span class="open">open</span>
         </a>
       {% endfor %}
     </div>

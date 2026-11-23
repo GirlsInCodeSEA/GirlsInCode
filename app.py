@@ -7,6 +7,7 @@ import signal
 import subprocess
 import sys
 import tempfile
+from datetime import timedelta
 
 from flask import Flask, abort, flash, jsonify, redirect, render_template, request, session, url_for
 from dotenv import load_dotenv
@@ -15,6 +16,7 @@ from postgrest.exceptions import APIError
 import pandas as pd
 from httpx import HTTPError
 
+import competition
 from db import supabase
 from extract_all_features import extract_all_features
 from practice import answer_keys, check_answers
@@ -34,6 +36,15 @@ app.config.update(
     # Shared by the homepage and fundraising page.
     FUNDRAISING_RAISED=4000,
     FUNDRAISING_TARGET=10000,
+    # Supabase tables for this competition all end in _<year>, e.g. competition_questions_2026.
+    COMPETITION_YEAR='2026',
+    # Competition day, Malaysia time (UTC+8). Override with env vars to rehearse locally.
+    COMPETITION_START=competition.parse_time(os.getenv('COMPETITION_START', '2026-11-28T09:00:00+08:00')),
+    COMPETITION_END=competition.parse_time(os.getenv('COMPETITION_END', '2026-11-28T17:00:00+08:00')),
+    # Comma-separated emails that can open /admin/submissions.
+    ADMIN_EMAILS={e.strip().lower() for e in os.getenv('ADMIN_EMAILS', '').split(',') if e.strip()},
+    # Signed-in users only see the competition dashboard, not the public site.
+    DASHBOARD_LOCKDOWN=True,
 )
 
 model = scaler = None
@@ -73,6 +84,17 @@ def validate_request():
             abort(400, description='The form expired. Reload the page and try again.')
 
 
+# Pages a signed-in competitor can still reach; everything else goes to the dashboard.
+DASHBOARD_ENDPOINTS = {'dashboard', 'dashboard_question', 'admin_submissions', 'logout', 'static'}
+
+
+@app.before_request
+def competition_lockdown():
+    if (app.config['DASHBOARD_LOCKDOWN'] and session.get('user_email')
+            and request.endpoint not in DASHBOARD_ENDPOINTS):
+        return redirect(url_for('dashboard'))
+
+
 def database():
     if supabase is None:
         abort(503, description='The database is not configured.')
@@ -87,7 +109,7 @@ def get_question(question_id):
 
 
 def get_answer(question_id):
-    rows = database().table('answers').select('answer_text').eq('id', question_id).execute().data
+    rows = database().table('answers').select('answer_text').eq('question_id', question_id).execute().data
     return rows[0].get('answer_text') if rows else None
 
 
@@ -125,6 +147,23 @@ def run_code(filepath, input_text=''):
             return '', 'Error: Unable to start the Python interpreter.'
 
 
+def classify(path):
+    """Experimental AI/human estimate for a Python file; never used for scoring."""
+    if model is None or scaler is None:
+        return 'Unavailable'
+    try:
+        features = extract_all_features(path)
+        if 'error' in features:
+            raise ValueError(features['error'])
+        frame = pd.DataFrame([features])
+        if hasattr(scaler, 'feature_names_in_'):
+            frame = frame[list(scaler.feature_names_in_)]
+        return str(model.predict(scaler.transform(frame))[0])
+    except Exception:
+        app.logger.warning('Could not classify submission', exc_info=True)
+        return 'Unavailable'
+
+
 def judge_submission(question, answer):
     if answer is None:
         return None, 'This question does not have an answer configured yet.', None
@@ -136,18 +175,7 @@ def judge_submission(question, answer):
         upload.save(path)
         if path.stat().st_size == 0:
             return None, 'The uploaded file is empty.', None
-        classification = 'Unavailable'
-        if model is not None and scaler is not None:
-            try:
-                features = extract_all_features(path)
-                if 'error' in features:
-                    raise ValueError(features['error'])
-                frame = pd.DataFrame([features])
-                if hasattr(scaler, 'feature_names_in_'):
-                    frame = frame[list(scaler.feature_names_in_)]
-                classification = str(model.predict(scaler.transform(frame))[0])
-            except Exception:
-                app.logger.warning('Could not classify submission', exc_info=True)
+        classification = classify(path)
         output, error = run_code(path, question.get('your_input', ''))
         result = error or ('Correct' if output.strip() == str(answer).strip() else 'Incorrect')
         return output, result, classification
@@ -180,6 +208,12 @@ def other_initiatives():
 @app.route('/competitions')
 def competitions():
     return render_template('competitions.html')
+
+
+@app.route('/competitions/2026')
+def competitions_2026():
+    # Announcement only: unreleased questions and keys are never loaded here.
+    return render_template('competitions_2026.html')
 
 
 @app.route('/hackathon')
@@ -421,6 +455,193 @@ def submissions(question_id):
                            classification=classification, addscore=addscore, solved=solved)
 
 
+def ctable(name):
+    """Year-specific competition table/function name, e.g. competition_questions_2026."""
+    year = app.config['COMPETITION_YEAR']
+    if name == 'record_submission':
+        return f'record_competition_submission_{year}'
+    return f'competition_{name}_{year}'
+
+
+def fetch_all(table, columns, order, **filters):
+    """Every matching row; Supabase caps a single response at 1,000 rows."""
+    rows, offset = [], 0
+    while True:
+        query = database().table(table).select(columns)
+        for column, value in filters.items():
+            query = query.eq(column, value)
+        for column in order:
+            query = query.order(column)
+        page = query.range(offset, offset + 999).execute().data or []
+        rows.extend(page)
+        if len(page) < 1000:
+            return rows
+        offset += len(page)
+
+
+def competition_state():
+    start, end = app.config['COMPETITION_START'], app.config['COMPETITION_END']
+    local_start, local_end = (moment.astimezone(competition.MALAYSIA) for moment in (start, end))
+    hours = []
+    tick = local_start.replace(minute=0, second=0, microsecond=0)
+    while tick <= local_end:
+        hours.append({'label': f'{tick:%H}:00',
+                      'at': max(0.0, min(1.0, (tick - local_start) / (local_end - local_start)))})
+        tick += timedelta(hours=1)
+    return {
+        'phase': competition.phase(start, end),
+        'start_iso': start.isoformat(), 'end_iso': end.isoformat(),
+        'now_iso': competition.now().isoformat(),
+        'start_day': f'{local_start:%A} {local_start.day} {local_start:%B %Y}',
+        'start_time': f'{local_start:%H:%M}', 'end_time': f'{local_end:%H:%M}',
+        'hours': hours,
+    }
+
+
+def scoreboard_rows():
+    return competition.rank(fetch_all(ctable('solves'), 'team_name,question_id,points,solved_at',
+                                      ('team_name', 'question_id')))
+
+
+@app.context_processor
+def admin_flag():
+    return {'is_admin': session.get('user_email') in app.config['ADMIN_EMAILS']}
+
+
+def require_competitor():
+    if not session.get('user_email') or not session.get('user_name'):
+        flash('Please sign in first.')
+        return redirect(url_for('signIn'))
+    return None
+
+
+@app.route('/dashboard')
+def dashboard():
+    if (response := require_competitor()):
+        return response
+    state = competition_state()
+    team = session['user_name']
+    tiers, board, solved, unavailable = {}, [], set(), False
+    try:
+        # Titles stay on the server until the competition starts.
+        columns = 'id,level,points,position' + ('' if state['phase'] == 'before' else ',title,theme')
+        questions = (database().table(ctable('questions')).select(columns)
+                     .eq('competition', app.config['COMPETITION_YEAR']).order('position').execute().data or [])
+        for item in questions:
+            tiers.setdefault(item['level'], []).append(item)
+        if state['phase'] != 'before':
+            board = scoreboard_rows()
+            solved = {row['question_id'] for row in fetch_all(
+                ctable('solves'), 'question_id', ('question_id',), team_name=team)}
+    except (HTTPError, APIError):
+        app.logger.warning('Competition data is temporarily unavailable.', exc_info=True)
+        unavailable = True
+    me = next((row for row in board if row['team'] == team), None)
+    return render_template('dashboard.html', state=state, tiers=tiers, board=board, me=me,
+                           solved=solved, unavailable=unavailable, colours=competition.LEVEL_COLOURS,
+                           total_points=sum(q['points'] for items in tiers.values() for q in items))
+
+
+def read_code_upload():
+    """Return (filename, text) for the uploaded solution, or raise ValueError with a reason."""
+    upload = request.files.get('code_file')
+    if not upload or not upload.filename:
+        raise ValueError('Attach the code file you used to get this output.')
+    filename = Path(upload.filename).name[:200]
+    if not filename.lower().endswith(('.py', '.ipynb')):
+        raise ValueError('Upload a Python file (.py or .ipynb).')
+    data = upload.read(competition.MAX_CODE_BYTES + 1)
+    if not data.strip():
+        raise ValueError('The uploaded file is empty.')
+    if len(data) > competition.MAX_CODE_BYTES:
+        raise ValueError('The code file is too large (200 KB maximum).')
+    return filename, data.decode('utf-8', errors='replace').replace('\x00', '')
+
+
+@app.route('/dashboard/<question_id>', methods=['GET', 'POST'])
+def dashboard_question(question_id):
+    if (response := require_competitor()):
+        return response
+    state = competition_state()
+    if state['phase'] == 'before':
+        flash('Questions unlock when the competition starts.')
+        return redirect(url_for('dashboard'))
+    rows = (database().table(ctable('questions'))
+            .select('id,level,theme,title,points,statement,question_input,position')
+            .eq('id', question_id).eq('competition', app.config['COMPETITION_YEAR']).execute().data)
+    if not rows:
+        abort(404)
+    item = rows[0]
+    team, email = session['user_name'], session['user_email']
+    solved = bool(database().table(ctable('solves')).select('question_id')
+                  .eq('team_name', team).eq('question_id', question_id).execute().data)
+    if request.method == 'POST':
+        output = request.form.get('output', '')
+        if state['phase'] != 'live':
+            flash('Submissions are closed.', 'error')
+        elif solved:
+            flash('You have already solved this question.', 'correct')
+        elif not output.strip() or len(output) > competition.MAX_OUTPUT_CHARS:
+            flash('Paste the output your program printed (up to 20,000 characters).', 'error')
+        else:
+            try:
+                filename, code = read_code_upload()
+            except ValueError as problem:
+                flash(str(problem), 'error')
+                return redirect(url_for('dashboard_question', question_id=question_id))
+            classification = None
+            if filename.lower().endswith('.py'):
+                with tempfile.TemporaryDirectory() as directory:
+                    path = Path(directory) / 'submission.py'
+                    path.write_text(code, encoding='utf-8')
+                    classification = classify(path)
+            answers = (database().table(ctable('answers')).select('answer')
+                       .eq('question_id', question_id).execute().data)
+            if not answers:
+                flash('This question has no answer configured yet. Please tell an organiser.', 'error')
+                return redirect(url_for('dashboard_question', question_id=question_id))
+            correct = competition.is_correct(output, answers[0]['answer'])
+            try:
+                awarded = database().rpc(ctable('record_submission'), {
+                    'p_team_name': team, 'p_email': email, 'p_question_id': question_id,
+                    'p_output': output.strip(), 'p_code': code, 'p_code_filename': filename,
+                    'p_classification': classification, 'p_correct': correct,
+                }).execute().data
+            except (HTTPError, APIError):
+                app.logger.exception('Could not record competition submission')
+                flash('Your submission could not be saved. Please try again.', 'error')
+            else:
+                if correct and awarded:
+                    flash(f'Correct! +{awarded} points.', 'correct')
+                elif correct:
+                    flash('Correct. This question was already solved, so no extra points.', 'correct')
+                else:
+                    flash('Not quite. Check your output against the question input and try again.', 'error')
+        return redirect(url_for('dashboard_question', question_id=question_id))
+    attempts = (database().table(ctable('submissions'))
+                .select('created_at,correct,points_awarded,output,code_filename')
+                .eq('team_name', team).eq('question_id', question_id)
+                .order('created_at', desc=True).limit(20).execute().data or [])
+    order = [row['id'] for row in (database().table(ctable('questions')).select('id')
+                                   .eq('competition', app.config['COMPETITION_YEAR']).order('position').execute().data or [])]
+    index = order.index(question_id) if question_id in order else -1
+    return render_template('dashboard_question.html', state=state, question=item, solved=solved,
+                           attempts=attempts, colour=competition.LEVEL_COLOURS.get(item['level'], 'c-pink'),
+                           previous=order[index - 1] if index > 0 else None,
+                           next_question=order[index + 1] if 0 <= index < len(order) - 1 else None)
+
+
+@app.route('/admin/submissions')
+def admin_submissions():
+    if session.get('user_email') not in app.config['ADMIN_EMAILS']:
+        abort(404)
+    filters = {key: request.args[key] for key in ('team_name', 'question_id') if request.args.get(key)}
+    rows = fetch_all(ctable('submissions'), '*', ('id',), **filters)
+    rows.reverse()
+    return render_template('admin_submissions.html', submissions=rows, board=scoreboard_rows(),
+                           filters=filters, state=competition_state())
+
+
 @app.route('/signIn', methods=['GET', 'POST'])
 def signIn():
     if request.method == 'POST':
@@ -464,7 +685,7 @@ def signIn():
         session.clear()
         session['user_email'], session['user_name'] = email, name
         flash('Logged in!' if action == 'login' else 'Account created!')
-        return redirect(url_for('home'))
+        return redirect(url_for('dashboard'))
     return render_template('signIn.html')
 
 

@@ -1,24 +1,23 @@
 {% extends 'base.html' %}
 {% block title %}2024 questions — Girls In Code{% endblock %}
 {% block content %}
-  <section class="container page-intro">
-    <a class="back-link" href="{{ url_for('competitions') }}">← All competitions</a>
-    <p class="eyebrow">THE COMPETITION ARCHIVE</p>
-    <h1>2024<span>.</span></h1>
-    <p>Explore five lunar-landing coding questions from the GIC Futuristic Festival.</p>
+  <section class="container page-head">
+    <p class="crumbs"><a href="{{ url_for('competitions') }}">competitions</a> <span class="sep">/</span> 2024</p>
+    <h1>Futuristic<br><em>festival</em></h1>
+    <p class="lede">Five lunar-landing coding questions from the 2024 GIC Futuristic Festival.</p>
     <nav class="button-row" aria-label="Jump to a question">
       {% for question in questions %}
         <a class="button button-outline button-small" href="#question-{{ question.number }}">Question {{ question.number }}</a>
       {% endfor %}
     </nav>
   </section>
-  <section class="container section section-first festival-questions" aria-label="2024 questions">
+  <section class="container section section-tight festival-questions" aria-label="2024 questions" style="padding-bottom:96px">
+    {% set colours = ['c-pink','c-lavender','c-orange','c-lime','c-blue'] %}
     {% for question in questions %}
-      <article class="problem-panel festival-question" id="question-{{ question.number }}" aria-labelledby="question-{{ question.number }}-heading">
-        <div class="panel-heading">
-          <h2 id="question-{{ question.number }}-heading">Question {{ question.number }}</h2>
-        </div>
-        <div class="problem-body">
+      <article class="card festival-question {{ colours[loop.index0 % 5] }}" id="question-{{ question.number }}" aria-labelledby="question-{{ question.number }}-heading">
+        <div class="card-head">question_{{ question.number }}.md</div>
+        <div class="card-body">
+          <h2 id="question-{{ question.number }}-heading" style="font-size:28px;margin-bottom:14px">Question {{ question.number }}</h2>
           <p>{{ question.statement }}</p>
           {% for example in question.examples %}
             <h3>{{ example.label }}</h3>

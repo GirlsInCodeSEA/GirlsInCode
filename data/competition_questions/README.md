@@ -1,5 +1,15 @@
 # Competition question archive
 
+## 2026 competition announcement
+
+`/competitions/2026` currently displays general information only, with a questions-coming notice for 28 November 2026. It is linked from Events and the competition listing. It does not load questions, expose an answer checker, or automatically release content based on the date.
+
+The supplied 32 questions and answer key are staged locally in `private/2026/questions.json` and `private/2026/answers.json`. Original pasted text is preserved in `private/2026/sources/`. This directory is ignored by Git and sits outside Flask's static directory; keep it private when sharing or deploying source. These drafts are not included in a clone or deployment. Their supplied wording and answers are preserved, not certified as validated judging fixtures.
+
+Publishing the questions on 28 November requires a separate release change. Review the drafts and samples first, expose only participant-facing question content, and keep the answer key private. The pasted ML2 network diagram is missing; restore or confirm its equations before release.
+
+## Previous competitions
+
 `2023.json` contains all 36 questions from the official [GIC 2023 Behind the Screens Canva presentation](https://www.canva.com/design/DAFcblycHmM/Tz8z3c5wRGYUCG4fGsy6YA/view), recovered on 28 October 2026. The archive groups the questions by their six app themes and numbers them 1–36. Original author credits, difficulty labels, and slide numbers remain in the data; difficulty categories are not used for navigation. The short descriptive titles are editorial additions.
 
 `sources/2023/slides.json` preserves the original accessible slide text. `sources/2023/image-transcripts.json` contains the manually checked starter code and sample outputs from image elements on slides 15, 22, 23, 26, 29, 31, and 49. The Netflix recommendation question spans slides 48–49 and is one question. Its wrapped code lines have been joined while preserving indentation. Original wording, inputs, and samples are retained, including inconsistencies such as Kanpachi/Kampachi in the restaurant-review question. Only whitespace, zero-width characters, heading placement, and the obsolete “next slide” direction are normalised. The website does not embed the slide illustrations or run participant code. Output practice checks are documented in [PRACTICE.md](PRACTICE.md).

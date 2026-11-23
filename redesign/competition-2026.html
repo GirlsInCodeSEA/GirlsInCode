@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026 Girls in Code Competition (redesign mockup)</title>
+  <link rel="icon" href="../static/gic-hero-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="redesign.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Girls In Code home">
+        <img src="../static/gic-hero-logo.svg" alt="Girls In Code" width="63" height="50">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">menu</button>
+      <nav id="nav" class="nav" aria-label="Main">
+        <a href="index.html">about</a>
+        <details>
+          <summary aria-current="location">events</summary>
+          <div class="dropdown">
+            <a href="competition-2026.html" aria-current="page">2026 competition</a>
+            <a href="#">competitions archive</a>
+            <a href="#">hackathon</a>
+          </div>
+        </details>
+        <a href="#">fundraising</a>
+        <a href="#">contact</a>
+        <a class="btn" href="#">sign in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container page-head">
+      <p class="crumbs"><a href="#">competitions</a><span>/</span>2026</p>
+      <h1>Code for a<br><em>changing climate</em></h1>
+      <p class="lede">This year’s theme is <strong>climate change</strong>. Explore global warming, season changes, scarcity of resources, and climate data through code.</p>
+      <dl class="stats">
+        <div><dt>questions</dt><dd>32</dd></div>
+        <div><dt>points</dt><dd>550</dd></div>
+        <div><dt>tiers</dt><dd>4</dd></div>
+      </dl>
+    </section>
+
+    <section class="container" style="padding-bottom:72px">
+      <div class="notice">
+        <span class="tag">LOCKED</span>
+        <div>
+          <strong>Questions release on <time datetime="2026-11-28">28 November 2026</time>.</strong>
+          <p>The questions are hidden for now. Come back on 28 November to take on the challenges.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="label" style="--c:var(--lavender)">tiers</p>
+        <h2 class="title">At a glance</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>tier</th><th>theme</th><th>questions</th><th>points each</th><th>total</th></tr></thead>
+            <tbody>
+              <tr><th><span class="tier" style="background:var(--pink)"></span>Beginner</th><td>Global warming</td><td class="num">B1–B10</td><td class="num">10</td><td class="num">100</td></tr>
+              <tr><th><span class="tier" style="background:var(--lavender)"></span>Intermediate</th><td>Season changes</td><td class="num">I1–I10</td><td class="num">15</td><td class="num">150</td></tr>
+              <tr><th><span class="tier" style="background:var(--blue)"></span>Advanced</th><td>Scarcity of resources</td><td class="num">A1–A10</td><td class="num">20</td><td class="num">200</td></tr>
+              <tr><th><span class="tier" style="background:var(--orange)"></span>Bonus (ML)</th><td>Climate data</td><td class="num">ML1–ML2</td><td class="num">50</td><td class="num">100</td></tr>
+            </tbody>
+            <tfoot><tr><th colspan="2">Total</th><td class="num">32</td><td></td><td class="num">550</td></tr></tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="label" style="--c:var(--blue)">how it works</p>
+        <h2 class="title">Three steps</h2>
+        <p class="lede" style="margin-top:16px">Every question includes a worked sample to help you understand the task.</p>
+        <ol class="steps">
+          <li>Read the question and its worked sample.</li>
+          <li>Write your code and run it on the question input.</li>
+          <li>Submit the output your code produces.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img src="gic-logo-white.svg" alt="Girls In Code">
+      <div class="footer-links">
+        <a href="https://www.instagram.com/girlsincodesea/">instagram</a>
+        <a href="mailto:girlsincodesea@gmail.com">girlsincodesea@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const t = document.querySelector('.menu-toggle'), n = document.getElementById('nav');
+    t.addEventListener('click', () => { const o = n.classList.toggle('open'); t.setAttribute('aria-expanded', o); });
+  </script>
+</body>
+</html>
