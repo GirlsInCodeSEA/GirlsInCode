@@ -22,15 +22,11 @@
       <h3>An archived GIC event</h3>
       <p>The hackathon has ended. This page preserves its event information and original poster.</p>
       <h3>Results</h3>
-      <p>The hackathon scoreboard will be added to this archive later. It is separate from the coding competition results.</p>
+      <p>Five projects won awards: three placings, plus most creative and most impactful. See the winners below.</p>
     </div>
   </section>
   <section class="container section">
-    <div class="section-head"><div><p class="label c-orange">awards</p><h2>Award categories</h2></div></div>
-    <div class="award-grid">
-      {% for award in ['1st place','2nd place','3rd place','Best video presentation','Best technical report'] %}
-        <div class="award" style="--c:var(--{{ ['lime','lavender','orange','pink','blue'][loop.index0] }})"><h3>{{ award }}</h3></div>
-      {% endfor %}
-    </div>
+    <div class="section-head"><div><p class="label c-orange">winners</p><h2>The winning projects</h2></div></div>
+    {% include 'includes/hackathon_winners.html' %}
   </section>
 {% endblock %}

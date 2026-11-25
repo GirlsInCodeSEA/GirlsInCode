@@ -302,7 +302,7 @@ Apply [`migrations/001_atomic_scoring.sql`](migrations/001_atomic_scoring.sql) i
 2. Load the questions from the private folder: `python3 scripts/seed_competition_2026.py`.
 3. Set `ADMIN_EMAILS` to the organisers' account emails to unlock `/admin/submissions`.
 
-Signed-in users only see `/dashboard`: a countdown and timeline before the start, then the questions and live scoreboard. Competitors run code on their own machines, paste the output, and upload the `.py`/`.ipynb` file; the server compares output and never runs the code. The window defaults to 28 November 2026, 09:00–17:00 Malaysia time, and can be changed with `COMPETITION_START` / `COMPETITION_END`.
+Signed-in users only see `/dashboard`: a countdown and timeline before the start, then the questions and live scoreboard. Competitors run code on their own machines, paste the output, and upload the `.py`/`.ipynb` file; the server compares output and never runs the code. The window defaults to 6 December 2026, 10:00–18:00 Malaysia time, and can be changed with `COMPETITION_START` / `COMPETITION_END`.
 
 ### 6. Build the optional classifier
 

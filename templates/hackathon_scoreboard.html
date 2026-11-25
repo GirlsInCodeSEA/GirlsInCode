@@ -1,20 +1,30 @@
 {% extends 'base.html' %}
-{% block title %}2025 hackathon scoreboard — Girls In Code{% endblock %}
+{% block title %}2025 hackathon results — Girls In Code{% endblock %}
 {% block content %}
   <section class="container page-head">
-    <p class="crumbs"><a href="{{ url_for('hackathon') }}">hackathon</a> <span class="sep">/</span> <a href="{{ url_for('hackathon_2025') }}">2025</a> <span class="sep">/</span> scoreboard</p>
-    <h1>Hackathon<br><em>scoreboard</em></h1>
+    <p class="crumbs"><a href="{{ url_for('hackathon') }}">hackathon</a> <span class="sep">/</span> <a href="{{ url_for('hackathon_2025') }}">2025</a> <span class="sep">/</span> results</p>
+    <h1>Hackathon<br><em>results</em></h1>
     <p class="lede">The 2030 AI Challenge · Completed in 2025.</p>
   </section>
-  <section class="container empty-state">
-    <div class="card c-blue">
-      <div class="card-head">scoreboard.csv</div>
-      <div class="card-body">
-        <span class="empty-blocks" aria-hidden="true"><i style="background:var(--blue)"></i><i style="background:var(--line)"></i><i style="background:var(--line)"></i></span>
-        <h2>Results to be added.</h2>
-        <p>The hackathon has finished. Its scoreboard hasn’t been added to the website yet. Final scores and winners will be featured here later.</p>
-        <a class="button button-outline" href="{{ url_for('hackathon_2025') }}">Back to the event archive</a>
-      </div>
+  <section class="container" style="padding-bottom:40px">
+    <div class="table-wrap" role="region" aria-label="2025 hackathon results" tabindex="0">
+      <table class="data-table">
+        <thead><tr><th scope="col">award</th><th scope="col">project</th><th scope="col">what it does</th><th scope="col"><span class="visually-hidden">link</span></th></tr></thead>
+        <tbody>
+          {% for project in winners %}
+            <tr>
+              <th scope="row"><span class="swatch" style="--c:var(--{{ project.colour }})"></span>{{ project.award }}</th>
+              <td><b>{{ project.title }}</b></td>
+              <td>{{ project.summary }}</td>
+              <td class="num"><a class="text-link" href="https://devpost.com/software/{{ project.slug }}" target="_blank" rel="noopener noreferrer">devpost ↗</a></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
+  </section>
+  <section class="container section">
+    {% include 'includes/hackathon_winners.html' %}
+    <div class="button-row" style="margin-top:36px"><a class="button button-outline" href="{{ url_for('hackathon_2025') }}">Back to the event archive</a></div>
   </section>
 {% endblock %}

@@ -34,13 +34,13 @@ app.config.update(
     CODE_TIMEOUT=5,
     ENABLE_OTHER_INITIATIVES=False,
     # Shared by the homepage and fundraising page.
-    FUNDRAISING_RAISED=4000,
+    FUNDRAISING_RAISED=5167,
     FUNDRAISING_TARGET=10000,
     # Supabase tables for this competition all end in _<year>, e.g. competition_questions_2026.
     COMPETITION_YEAR='2026',
     # Competition day, Malaysia time (UTC+8). Override with env vars to rehearse locally.
-    COMPETITION_START=competition.parse_time(os.getenv('COMPETITION_START', '2026-11-28T09:00:00+08:00')),
-    COMPETITION_END=competition.parse_time(os.getenv('COMPETITION_END', '2026-11-28T17:00:00+08:00')),
+    COMPETITION_START=competition.parse_time(os.getenv('COMPETITION_START', '2026-12-06T10:00:00+08:00')),
+    COMPETITION_END=competition.parse_time(os.getenv('COMPETITION_END', '2026-12-06T18:00:00+08:00')),
     # Comma-separated emails that can open /admin/submissions.
     ADMIN_EMAILS={e.strip().lower() for e in os.getenv('ADMIN_EMAILS', '').split(',') if e.strip()},
     # Signed-in users only see the competition dashboard, not the public site.
@@ -184,7 +184,7 @@ def judge_submission(question, answer):
 @app.route('/')
 def home():
     return render_template('home.html', raised=app.config['FUNDRAISING_RAISED'],
-                           target=app.config['FUNDRAISING_TARGET'])
+                           target=app.config['FUNDRAISING_TARGET'], state=competition_state())
 
 
 @app.route('/contact')
@@ -221,14 +221,39 @@ def hackathon():
     return render_template('hackathons.html')
 
 
+# The 2030 AI Challenge (2025) winners, as announced on Devpost.
+HACKATHON_2025_WINNERS = [
+    {'award': '1st place', 'colour': 'lime', 'title': 'EARTH', 'slug': 'earth-jg1qic', 'image': 'earth.jpg',
+     'summary': 'A voice-first digital toolkit built for rural India, covering health, education, farming and '
+                'women’s safety, in people’s own language, on their phone.',
+     'built_with': ['React', 'Node.js', 'MongoDB', 'Deepgram', 'Google TTS']},
+    {'award': '2nd place', 'colour': 'lavender', 'title': 'CarbonCredible', 'slug': 'carboncredible',
+     'image': 'carboncredible.jpg', 'logo': True, 'summary': 'An AI-driven solution to screen for feasible carbon projects.',
+     'built_with': ['Machine learning', 'Computer vision', 'NLP']},
+    {'award': '3rd place', 'colour': 'orange', 'title': 'ReefGuard AI', 'slug': 'reefguard-ai', 'image': 'reefguard.jpg',
+     'summary': 'A web app that analyses coral reef photos, detects bleaching and damage, scores reef health out '
+                'of 10, and recommends conservation actions.',
+     'built_with': ['Flask', 'Gemma 3', 'Featherless AI', 'JavaScript']},
+    {'award': 'Most creative', 'colour': 'pink', 'title': 'sustAIn', 'slug': 'sustain-rvm8pc', 'image': 'sustain.jpg',
+     'summary': 'Makes AI more sustainable by compressing prompts without hurting quality, cutting token use, '
+                'cost, and the water and energy needed to power AI.',
+     'built_with': ['TypeScript', 'JavaScript', 'HTML', 'CSS']},
+    {'award': 'Most impactful', 'colour': 'blue', 'title': 'NeuroSketch', 'slug': 'neurosketch',
+     'image': 'neurosketch.jpg', 'logo': True,
+     'summary': 'An AI screening tool that helps paramedical workers spot early signs of Parkinson’s through '
+                'simple motor, voice and movement tests.',
+     'built_with': ['Python', 'OpenCV', 'scikit-learn', 'Gemini', 'Streamlit']},
+]
+
+
 @app.route('/hackathon/2025')
 def hackathon_2025():
-    return render_template('hackathon.html')
+    return render_template('hackathon.html', winners=HACKATHON_2025_WINNERS)
 
 
 @app.route('/hackathon/2025/scoreboard')
 def hackathon_scoreboard_2025():
-    return render_template('hackathon_scoreboard.html')
+    return render_template('hackathon_scoreboard.html', winners=HACKATHON_2025_WINNERS)
 
 
 @app.route('/competitions/2025')

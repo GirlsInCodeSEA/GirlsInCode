@@ -1,6 +1,7 @@
 // Competition dashboard: countdown, day timeline, local times, copy/download of inputs.
 (() => {
-  const body = document.body;
+  // The homepage countdown carries its own times; dashboard pages put them on <body>.
+  const body = document.querySelector('[data-competition]') || document.body;
   const start = Date.parse(body.dataset.start);
   const end = Date.parse(body.dataset.end);
   const phase = body.dataset.phase;

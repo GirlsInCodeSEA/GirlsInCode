@@ -1,0 +1,19 @@
+<div class="winners">
+  {% for project in winners %}
+    {% set url = 'https://devpost.com/software/' ~ project.slug %}
+    <article class="winner{% if loop.first %} winner-first{% endif %}" style="--c:var(--{{ project.colour }})">
+      <a class="winner-photo{% if project.logo %} is-logo{% endif %}" href="{{ url }}" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+        <img src="{{ url_for('static', filename='hackathon/2025/' ~ project.image) }}" alt="" width="800" height="533" loading="lazy">
+      </a>
+      <div class="winner-body">
+        <span class="winner-award">{{ project.award }}</span>
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.summary }}</p>
+        <ul class="winner-stack mono" aria-label="Built with">
+          {% for item in project.built_with %}<li>{{ item }}</li>{% endfor %}
+        </ul>
+        <a class="text-link" href="{{ url }}" target="_blank" rel="noopener noreferrer">view on Devpost ↗</a>
+      </div>
+    </article>
+  {% endfor %}
+</div>

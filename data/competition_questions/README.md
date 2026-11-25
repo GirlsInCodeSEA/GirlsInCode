@@ -2,11 +2,11 @@
 
 ## 2026 competition announcement
 
-`/competitions/2026` currently displays general information only, with a questions-coming notice for 28 November 2026. It is linked from Events and the competition listing. It does not load questions, expose an answer checker, or automatically release content based on the date.
+`/competitions/2026` currently displays general information only, with a questions-coming notice for 6 December 2026. It is linked from Events and the competition listing. It does not load questions, expose an answer checker, or automatically release content based on the date.
 
 The supplied 32 questions and answer key are staged locally in `private/2026/questions.json` and `private/2026/answers.json`. Original pasted text is preserved in `private/2026/sources/`. This directory is ignored by Git and sits outside Flask's static directory; keep it private when sharing or deploying source. These drafts are not included in a clone or deployment. Their supplied wording and answers are preserved, not certified as validated judging fixtures.
 
-Publishing the questions on 28 November requires a separate release change. Review the drafts and samples first, expose only participant-facing question content, and keep the answer key private. The pasted ML2 network diagram is missing; restore or confirm its equations before release.
+The questions are released through the signed-in competition dashboard at 10:00 on 6 December 2026 (see the main README). Review the drafts and samples first, expose only participant-facing question content, and keep the answer key private. The pasted ML2 network diagram is missing; restore or confirm its equations before release.
 
 ## Previous competitions
 

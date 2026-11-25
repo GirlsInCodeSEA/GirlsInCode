@@ -107,7 +107,7 @@ class AppTests(unittest.TestCase):
         with patch.object(website, 'database', side_effect=AssertionError('Announcement needs no database')):
             response = self.client.get('/competitions/2026')
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'28 November 2026', response.data)
+        self.assertIn(b'6 December 2026', response.data)
         self.assertIn(b'550 points', response.data)
         self.assertNotIn(b'<form', response.data)
         for path in (
@@ -368,16 +368,17 @@ class AppTests(unittest.TestCase):
                 with self.subTest(event=event, year=year):
                     self.assertEqual(self.client.get(f'/{event}/{year}/scoreboard').status_code, 404)
 
-    def test_hackathon_is_completed_2025_archive_with_pending_results(self):
+    def test_hackathon_is_completed_2025_archive_with_results(self):
         archive = self.client.get('/hackathon/2025').data
         self.assertIn(b'Held in 2025', archive)
         self.assertIn(b'COMPLETED', archive)
         archive_content = archive.split(b'<main id="main">', 1)[1].split(b'</main>', 1)[0]
         self.assertNotIn(b'2026', archive_content)
+        self.assertIn(b'https://devpost.com/software/earth-jg1qic', archive)
         scoreboard = self.client.get('/hackathon/2025/scoreboard').data
-        self.assertIn(b'Results to be added.', scoreboard)
-        self.assertNotIn(b'<table', scoreboard)
-        self.assertNotIn(b'Yashvi/Melissa', scoreboard)
+        for project in (b'EARTH', b'CarbonCredible', b'ReefGuard AI', b'sustAIn', b'NeuroSketch'):
+            self.assertIn(project, scoreboard)
+        self.assertNotIn(b'_gl=', scoreboard)
 
 
 class RunnerTests(unittest.TestCase):

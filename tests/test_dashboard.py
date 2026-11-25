@@ -10,9 +10,9 @@ import app as website
 import competition
 from test_app import Database
 
-BEFORE = datetime(2026, 11, 27, 12, tzinfo=timezone.utc)
-LIVE = datetime(2026, 11, 28, 3, tzinfo=timezone.utc)      # 11:00 in Malaysia
-ENDED = datetime(2026, 11, 29, 12, tzinfo=timezone.utc)
+BEFORE = datetime(2026, 12, 5, 12, tzinfo=timezone.utc)
+LIVE = datetime(2026, 12, 6, 3, tzinfo=timezone.utc)       # 11:00 in Malaysia
+ENDED = datetime(2026, 12, 7, 12, tzinfo=timezone.utc)
 
 
 class DashboardTests(unittest.TestCase):
@@ -89,8 +89,8 @@ class DashboardTests(unittest.TestCase):
         self.login()
         page = self.client.get('/dashboard').data
         self.assertIn(b'Starts in', page)
-        self.assertIn(b'Saturday 28 November 2026', page)
-        self.assertIn(b'09:00', page)
+        self.assertIn(b'Sunday 6 December 2026', page)
+        self.assertIn(b'10:00', page)
         self.assertNotIn(b'Climate Bulletin', page)
         self.assertNotIn(b'/dashboard/B1', page)
         response = self.client.get('/dashboard/B1')
@@ -194,7 +194,7 @@ class CompetitionHelperTests(unittest.TestCase):
                          [('Top', 25, 1), ('Early', 10, 2), ('Late', 10, 3)])
 
     def test_phase(self):
-        start, end = competition.parse_time('2026-11-28T09:00'), competition.parse_time('2026-11-28T17:00')
+        start, end = competition.parse_time('2026-12-06T10:00'), competition.parse_time('2026-12-06T18:00')
         self.assertEqual(start.utcoffset().total_seconds(), 8 * 3600)
         self.assertEqual(competition.phase(start, end, BEFORE), 'before')
         self.assertEqual(competition.phase(start, end, LIVE), 'live')

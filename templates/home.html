@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% block head %}<script src="{{ url_for('static', filename='dashboard.js') }}" defer></script>{% endblock %}
 {% block content %}
   <section class="hero">
     <div class="container hero-inner">
@@ -20,6 +21,29 @@
     </div>
   </section>
 
+  {% if state.phase != 'ended' %}
+  <section class="home-countdown" aria-labelledby="countdown-heading" data-competition data-start="{{ state.start_iso }}" data-end="{{ state.end_iso }}" data-phase="{{ state.phase }}" data-now="{{ state.now_iso }}">
+    <div class="container home-countdown-inner">
+      <div>
+        <p class="label c-lime">gic coding competition 2026</p>
+        <h2 id="countdown-heading">{% if state.phase == 'before' %}Starts in{% else %}Live now. Ends in{% endif %}</h2>
+        <p class="home-countdown-desc">Our 2026 online coding competition for girls: 32 coding challenges on climate change, across beginner, intermediate, advanced and machine-learning levels.</p>
+        <p class="home-countdown-when"><time datetime="{{ state.start_iso }}">{{ state.start_day }}</time> · {{ state.start_time }} Malaysia time (UTC+8)</p>
+        <div class="button-row">
+          <a class="button" href="{{ url_for('signIn') }}">sign in to compete</a>
+          <a class="text-link" href="{{ url_for('competitions_2026') }}">details</a>
+        </div>
+      </div>
+      <div class="countdown countdown-compact" data-countdown aria-live="off">
+        <div><b data-unit="d">--</b><span>days</span></div>
+        <div><b data-unit="h">--</b><span>hours</span></div>
+        <div><b data-unit="m">--</b><span>minutes</span></div>
+        <div><b data-unit="s">--</b><span>seconds</span></div>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
   <section class="section" id="about">
     <div class="container about-grid">
       <img class="about-photo" src="{{ url_for('static', filename='gic-team-2026-2027.jpg') }}" alt="Girls In Code team for 2026–2027 at Garden International School" width="1404" height="1053" loading="lazy">
@@ -27,75 +51,108 @@
         <p class="label c-pink">about</p>
         <h2>Who we are</h2>
         <p>Girls In Code began with a group of girls at Garden International School and a shared aim: to build a stronger female coding community.</p>
-        <p>We organise coding competitions and hackathons, teach young girls Octobuddy through our GIC CCA, and connect our chapter network. Fundraising and our NGO partnerships are also part of GIC’s work in the community.</p>
+        <p>We organise coding competitions and hackathons, teach girls in Year 4 and below Scratch and Octobuddy through our GIC CCA, and connect our chapter network. Fundraising and our NGO partnerships are also part of GIC’s work in the community.</p>
       </div>
     </div>
   </section>
 
-  <section class="section" id="what-we-do">
-    <div class="container">
-      <div class="section-head"><div><p class="label c-lavender">what we do</p><h2>Our events</h2></div></div>
-      <div class="two-up">
-        <article class="card c-pink">
-          <div class="card-head">competitions.md<span>01</span></div>
-          <div class="card-body">
-            <h3>Coding competitions</h3>
-            <p>Beginner, intermediate, and advanced challenges. The archives bring together past questions, results, and event resources.</p>
-          </div>
-        </article>
-        <article class="card c-blue">
-          <div class="card-head">hackathon.md<span>02</span></div>
-          <div class="card-body">
-            <h3>The hackathon</h3>
-            <p>Girls come together to explore ideas, build creative solutions, and use technology to address real-world problems.</p>
-          </div>
-        </article>
-      </div>
-      {% if config.ENABLE_OTHER_INITIATIVES %}
-      <div class="two-up home-initiatives">
-        <article class="card c-orange">
-          <div class="card-head">gic_cca.md<span>03</span></div>
-          <div class="card-body">
-            <h3>Teaching with Octobuddy</h3>
-            <p>Our GIC CCA teaches young girls Octobuddy through coding sessions, making learning part of our community’s everyday work.</p>
-          </div>
-        </article>
-        <article class="card c-lime">
-          <div class="card-head">chapters.md<span>04</span></div>
-          <div class="card-body">
-            <h3>A connected community</h3>
-            <p>Our chapters are another part of GIC’s network. We’re preparing a chapter directory and map, with locations to be added.</p>
-          </div>
-        </article>
-      </div>
-      {% endif %}
-    </div>
-  </section>
-
-  <section class="section" id="fundraising" aria-labelledby="home-fundraising-heading">
+  <section class="section" id="what-we-do" aria-labelledby="what-we-do-heading">
     {% set percentage = (raised / target * 100)|round|int %}
     {% set filled = (percentage / 5)|round|int %}
-    <div class="container fund">
-      <div>
-        <p class="label c-orange">fundraising</p>
-        <h2 id="home-fundraising-heading">In the community</h2>
-        <p class="lede">Our fundraising total so far, alongside the NGO partners we work with.</p>
-        <p class="partners-line">partners = [<b>UNICEF</b>, <b>MACO</b>]</p>
-      </div>
-      <div class="meter">
-        <p class="amount"><small>RM</small>{{ '{:,.0f}'.format(raised) }}</p>
-        <p class="goal">raised toward our RM {{ '{:,.0f}'.format(target) }} goal</p>
-        <div class="blocks" role="progressbar" aria-label="Fundraising progress" aria-valuemin="0" aria-valuemax="{{ target }}" aria-valuenow="{{ raised }}" aria-valuetext="RM {{ '{:,.0f}'.format(raised) }} raised toward RM {{ '{:,.0f}'.format(target) }}; {{ percentage }} percent of our goal">
-          {% for i in range(20) %}<i{% if i < filled %} class="on"{% endif %}></i>{% endfor %}
-        </div>
-        <div class="bar-label"><span>progress</span><b>{{ percentage }}%</b></div>
+    <div class="container">
+      <div class="section-head"><div><p class="label c-lavender">what we do</p><h2 id="what-we-do-heading">What we do</h2></div></div>
+      <div class="board">
+
+        <article class="pin pin-wide pin-tall c-pink">
+          <p class="pin-tag">01 · competition</p>
+          <h3>Coding competitions</h3>
+          <p>Our online coding competitions for girls run at beginner, intermediate and advanced levels. Each year has a new theme. 2023 was “Behind the Screens”, and in 2026 it’s climate change.</p>
+          <ul class="pin-facts mono">
+            <li><b>80+</b> girls in 2023</li>
+            <li><b>38</b> schools</li>
+            <li><b>5</b> countries</li>
+          </ul>
+          <a class="text-link" href="{{ url_for('competitions') }}">competitions &amp; archives</a>
+        </article>
+
+        <article class="pin clip c-blue" id="press-the-star">
+          <a class="clip-photo" href="https://www.thestar.com.my/news/education/2023/05/21/promoting-coding-for-girls" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='press/the-star-2023.jpg') }}" alt="Girls In Code SEA organisers discussing logic gates at a whiteboard, holding laptops" width="1000" height="507" loading="lazy">
+          </a>
+          <p class="pin-tag">in the press · The Star · 21 May 2023</p>
+          <h3>Promoting coding for girls</h3>
+          <blockquote>“Some 80 girls aged between 12 and 18 from 38 schools across Malaysia, Singapore, Hong Kong, Thailand and Vietnam got together recently to participate in a virtual coding competition organised by Girls In Code SEA.”</blockquote>
+          <a class="text-link" href="https://www.thestar.com.my/news/education/2023/05/21/promoting-coding-for-girls" target="_blank" rel="noopener noreferrer">read on thestar.com.my ↗</a>
+        </article>
+
+        <article class="pin c-blue">
+          <p class="pin-tag">02 · hackathon</p>
+          <h3>The hackathon</h3>
+          <p>Girls team up to explore ideas, build creative solutions, and use technology to tackle real-world problems.</p>
+          <a class="text-link" href="{{ url_for('hackathon') }}">the hackathon</a>
+        </article>
+
+        <article class="pin c-lime">
+          <p class="pin-tag">03 · gic cca</p>
+          <h3>Teaching young girls</h3>
+          <p>In our GIC CCA, we teach girls in Year 4 and below to code with <b>Scratch</b> and <b>Octobuddy</b>.</p>
+        </article>
+
+        <article class="pin clip clip-portrait c-lavender" id="press-gis">
+          <a class="clip-photo" href="https://www.gardenschool.edu.my/gis-news/girls-in-code-sea-inspiring-future-female-tech-leaders/" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='press/gis-news-2023.jpg') }}" alt="Four Girls In Code SEA founders sitting together on a bench at Garden International School" width="675" height="900" loading="lazy">
+          </a>
+          <p class="pin-tag">in the press · GIS News · 20 Apr 2023</p>
+          <h3>Inspiring future female tech leaders</h3>
+          <blockquote>“The community comprises more than 80 female participants between the ages of 12 to 18, representing 38 international schools across Malaysia, Singapore, Thailand, Vietnam, and Hong Kong.”</blockquote>
+          <a class="text-link" href="https://www.gardenschool.edu.my/gis-news/girls-in-code-sea-inspiring-future-female-tech-leaders/" target="_blank" rel="noopener noreferrer">read on gardenschool.edu.my ↗</a>
+        </article>
+
+        <article class="pin pin-wide c-orange" id="fundraising" aria-labelledby="home-fundraising-heading">
+          <p class="pin-tag">04 · fundraising</p>
+          <div class="pin-fund">
+            <div>
+              <h3 id="home-fundraising-heading">Fundraising</h3>
+              <p>We raise money for causes in our community, alongside our NGO partners.</p>
+              <p class="partners-line">partners = [<b>UNICEF</b>, <b>MACO</b>]</p>
+              <a class="text-link" href="{{ url_for('fundraising') }}">fundraising</a>
+            </div>
+            <div class="meter">
+              <p class="amount"><small>RM</small>{{ '{:,.0f}'.format(raised) }}</p>
+              <p class="goal">raised toward our RM {{ '{:,.0f}'.format(target) }} goal</p>
+              <div class="blocks" role="progressbar" aria-label="Fundraising progress" aria-valuemin="0" aria-valuemax="{{ target }}" aria-valuenow="{{ raised }}" aria-valuetext="RM {{ '{:,.0f}'.format(raised) }} raised toward RM {{ '{:,.0f}'.format(target) }}; {{ percentage }} percent of our goal">
+                {% for i in range(20) %}<i{% if i < filled %} class="on"{% endif %}></i>{% endfor %}
+              </div>
+              <div class="bar-label"><span>progress</span><b>{{ percentage }}%</b></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pin clip c-pink" id="press-children4change">
+          <a class="clip-photo" href="https://children4change.my/meet-the-young-malaysians-achieving-the-sustainable-development-goals/" target="_blank" rel="noopener noreferrer">
+            <img src="{{ url_for('static', filename='press/children4change-2023.jpg') }}" alt="Illustration of young people around a globe ringed by the colours of the Sustainable Development Goals" width="650" height="366" loading="lazy">
+          </a>
+          <p class="pin-tag">in the press · Children4Change · 13 Sep 2023</p>
+          <h3>Young Malaysians achieving the SDGs</h3>
+          <blockquote>“GirlsInCode Southeast Asia was founded by a group of secondary school students trying to overcome the stigma against girls who code in Southeast Asia.”</blockquote>
+          <a class="text-link" href="https://children4change.my/meet-the-young-malaysians-achieving-the-sustainable-development-goals/" target="_blank" rel="noopener noreferrer">read on children4change.my ↗</a>
+        </article>
+
+        {% if config.ENABLE_OTHER_INITIATIVES %}
+        <article class="pin home-initiatives c-lime">
+          <p class="pin-tag">05 · chapters</p>
+          <h3>A connected community</h3>
+          <p>Our chapters are another part of GIC’s network. A chapter directory and map are on the way.</p>
+          <a class="text-link" href="{{ url_for('other_initiatives') }}">other initiatives</a>
+        </article>
+        {% endif %}
       </div>
     </div>
   </section>
 
   <section class="section" id="team">
     <div class="container">
-      <div class="section-head"><div><p class="label c-blue">team</p><h2>The GIC team</h2></div></div>
+      <div class="section-head"><div><p class="label c-blue">team</p><h2>The GIC 2026/27 team</h2></div></div>
       {% set team = [
         ('Camelia Chew', 'Director', 'camelia', 'camelia.jpeg'),
         ('Emily Xu', 'Co-Director', 'emily', 'emily.jpeg'),
